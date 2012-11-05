@@ -1,0 +1,11 @@
+[user]
+	name = Viranch Mehta
+	email = viranch.mehta@gmail.com
+[url "git://anongit.kde.org/"]
+	insteadOf = kde:
+[url "git@git.kde.org:"]
+	pushInsteadOf = kde:
+[url "git@github.com:"]
+	insteadOf = gh:
+[alias]
+  lol = "log --all --pretty=format:\"%h %cd %s (%an)\""
