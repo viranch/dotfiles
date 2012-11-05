@@ -125,6 +125,9 @@ compdef _git gp=git-push
 alias glg='git log --max-count=5'
 compdef _git glg=git-log
 
+alias gll='git log --all --pretty=format:"%h %cd %s (%an)"'
+compdef _git gll=git-log
+
 # Show no. of commits by each author
 alias ginf='git shortlog -sn'
 compdef _git ginf=git-shortlog
