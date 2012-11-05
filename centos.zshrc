@@ -32,11 +32,7 @@ import urllib, urllib2
 
 paste = sys.stdin.read()
 
-f = urllib2.urlopen("http://pb.internal.directi.com/", urllib.urlencode({"name":"Viranch Mehta", "lang":"text", "code":paste, "submit":"submit"}))
-url = f.url
-f.close()
-
-print url 
+print urllib2.urlopen("http://pb.internal.directi.com/", urllib.urlencode({"name":"Viranch Mehta", "lang":"text", "code":paste, "submit":"submit"})).url
 EOF
     python /tmp/pb.py
     rm -f /tmp/pb.py
