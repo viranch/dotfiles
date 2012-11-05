@@ -33,6 +33,7 @@ alias vimrc='vim ~/.vimrc'
 alias zshrc='vim ~/.zshrc'
 alias gitconfig='vim ~/.gitconfig'
 alias sshconfig='vim ~/.ssh/config'
+alias s='. ~/.zshrc'
 
 function chpwd() { 
   emulate -L zsh
