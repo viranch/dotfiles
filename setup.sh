@@ -1,10 +1,15 @@
 #!/bin/bash
 
-rm -f ~/.gitconfig ~/.ssh/config ~/.vimrc
+rm -f ~/.gitconfig ~/.ssh/config ~/.vimrc ~/.vim/plugin/dwm.vim
 cwd="$(cd "$(dirname "$0")" && pwd)"
+
 ln -s $cwd/gitconfig ~/.gitconfig
+
 mkdir -p ~/.ssh && ln -s $cwd/sshconfig ~/.ssh/config
+
 ln -s $cwd/vimrc ~/.vimrc
+mkdir -p ~/.vim/plugin && ln -s $cwd/vimplugins/dwm.vim ~/.vim/plugin/dwm.vim
+
 platform=`uname`
 if [[ "$platform" == "Linux" ]]; then
     rm -f ~/.zshrc && ln -s $cwd/ohmyzsh-arch/zshrc ~/.zshrc
