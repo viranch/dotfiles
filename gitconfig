@@ -5,5 +5,7 @@
     insteadOf = kde:
 [url "git@git.kde.org:"]
     pushInsteadOf = kde:
-[url "git@github.com:"]
+[url "git://github.com/"]
     insteadOf = gh:
+[url "git@github.com:"]
+    pushInsteadOf = gh:
