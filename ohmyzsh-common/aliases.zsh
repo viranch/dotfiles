@@ -29,6 +29,10 @@ alias sv='SUDO_EDITOR=vim sudoedit' #sudo vim
 alias pg='ps aux | grep'
 alias ss='ssh'
 aws='ec2-184-169-223-159.us-west-1.compute.amazonaws.com'
+alias vimrc='vim ~/.vimrc'
+alias zshrc='vim ~/.zshrc'
+alias gitconfig='vim ~/.gitconfig'
+alias sshconfig='vim ~/.ssh/config'
 
 function chpwd() { 
   emulate -L zsh
