@@ -9,7 +9,7 @@ Host slante
 Hostname slant-es
 
 Host aws
-Hostname ec2-46-137-225-129.ap-southeast-1.compute.amazonaws.com
+Hostname ec2-54-251-15-160.ap-southeast-1.compute.amazonaws.com
 User arch
 IdentityFile ~/.ssh/viranch.pem
 
