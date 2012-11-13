@@ -1,6 +1,6 @@
-set sw=4
-set ts=4
 set expandtab
+set shiftwidth=4
+set softtabstop=4
 set autoindent
 
 syntax on
@@ -17,10 +17,10 @@ if has("autocmd")
      \| exe "normal! g'\"" | endif
 
     " ruby tab width
-    au BufRead,BufNewFile *.rb set sw=2
-    au BufRead,BufNewFile *.rb set ts=2
-    au BufRead,BufNewFile *.pp set sw=2
-    au BufRead,BufNewFile *.pp set ts=2
+    au BufRead,BufNewFile *.rb set shiftwidth=2
+    au BufRead,BufNewFile *.rb set softtabstop=2
+    au BufRead,BufNewFile *.pp set shiftwidth=2
+    au BufRead,BufNewFile *.pp set softtabstop=2
 endif
 
 " MacVim stuff
