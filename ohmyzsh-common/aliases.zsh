@@ -29,13 +29,14 @@ alias sv='SUDO_EDITOR=vim sudoedit' #sudo vim
 alias pg='ps aux | grep'
 alias ss='ssh'
 ssd() { ssh viranch.m@$1.directi.com }
+alias cdd='cd ~/.dotfiles'
 alias vimrc='vim ~/.vimrc'
 alias zshrc='vim ~/.zshrc && . ~/.zshrc'
 alias gitconfig='vim ~/.gitconfig'
 alias sshconfig='vim ~/.ssh/config'
 alias s='. ~/.zshrc'
 
-function chpwd() { 
+function chpwd() {
   emulate -L zsh
   /bin/ls
 }
