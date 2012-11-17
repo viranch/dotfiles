@@ -12,6 +12,12 @@ au BufRead,BufNewFile *.rb set tabstop=2
 au BufRead,BufNewFile *.pp set shiftwidth=2
 au BufRead,BufNewFile *.pp set softtabstop=2
 au BufRead,BufNewFile *.pp set tabstop=2
+au BufRead,BufNewFile *.haml set shiftwidth=2
+au BufRead,BufNewFile *.haml set softtabstop=2
+au BufRead,BufNewFile *.haml set tabstop=2
+au BufRead,BufNewFile *.css set shiftwidth=2
+au BufRead,BufNewFile *.css set softtabstop=2
+au BufRead,BufNewFile *.css set tabstop=2
 
 " Smart highlighted search
 syntax on
