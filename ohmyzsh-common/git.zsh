@@ -49,20 +49,6 @@ function git_work() {
 }
 alias gw='git_work'
 
-function gwc() {
-    against="$2"
-    if [[ $against == "" ]]; then 
-        let against="1"
-    fi
-    this_commit_hash=`echo $1 | cut -c1-7`
-    against_commit_hash=`git log --oneline | grep $this_commit_hash -A $against | tail -n1 | cut -d" " -f1`
-    echo git diff $against_commit_hash..$this_commit_hash
-    git diff $against_commit_hash $1
-    echo -e "\033[32m"
-    git log $1 | head -n5
-    tput sgr0
-}
-
 function current_branch() {
   ref=$(git symbolic-ref HEAD 2> /dev/null) || return
   echo ${ref#refs/heads/}
@@ -122,11 +108,17 @@ compdef _git gca=git-commit
 alias gp='git push'
 compdef _git gp=git-push
 
-alias glg='git log --max-count=5'
+alias glg='git log --pretty=format:"%C(yellow)%h %Cblue%cd%Cred%d %Creset%s%Cred [%cn]" --decorate --numstat --date=relative'
 compdef _git glg=git-log
 
 alias gll='git log --all --pretty=format:"%h %cd %s (%an)"'
 compdef _git gll=git-log
+
+function gwc() {
+    this_commit_hash=`echo $1|cut -c1-7`
+    against_commit_hash=`git log --oneline | grep $this_commit_hash -A 1 | tail -n1 | cut -d" " -f1`
+    glg -p $against_commit_hash..$this_commit_hash
+}
 
 # Show no. of commits by each author
 alias ginf='git shortlog -sn'
