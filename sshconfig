@@ -1,17 +1,21 @@
 Host slantd
 Hostname slant.directi.com
 
-Host slants
-Hostname slant-staging
+Host slant
+Hostname slant
 User slant
 
 Host slante
 Hostname slant-es
 
+Host slants
+Hostname slant-staging
+User slant
+
 Host aws
-Hostname ec2-54-251-15-160.ap-southeast-1.compute.amazonaws.com
+Hostname ec2-54-241-90-190.us-west-1.compute.amazonaws.com
 User arch
-IdentityFile ~/.ssh/viranch.pem
+IdentityFile ~/.ssh/viranch_ca.pem
 
 Host vm
 Hostname 192.168.56.101
