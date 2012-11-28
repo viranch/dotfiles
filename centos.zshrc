@@ -10,7 +10,7 @@ function stop() { sudo /sbin/service $1 stop; }
 function restart() { sudo /sbin/service $1 restart; }
 alias corn='sudo kill -INT `ps aux|grep "^root.*unicorn master"|awk -F" " "{print \\$2}"` && rvmsudo unicorn -p 80 -D config.ru start'
 
-# Pacman aliases
+# Yum aliases
 alias y=yum
 compdef _yum y=yum
 alias Y='sudo yum -y'
@@ -27,7 +27,7 @@ compdef _which whose=which
 
 function pb() {
     cat > /tmp/pb.py << EOF
-import sys 
+import sys
 import urllib, urllib2
 
 paste = sys.stdin.read()
