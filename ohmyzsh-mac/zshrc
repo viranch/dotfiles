@@ -16,11 +16,8 @@ alias cyberoam='curl -s http://172.16.1.1/24online/servlet/CyberoamHTTPClient -d
 alias bb="curl -s http://192.168.1.1/webconfig/wan/wan.html -u admin:4129 | grep \"connect\|disconnect\" -iwo | head -n1 | sed 's/Disconnect/✔ Up/g' | sed 's/^.*Connect$/✘ Down/g'"
 alias vm='/Applications/VirtualBox.app/Contents/Resources/VirtualBoxVM.app/Contents/MacOS/VirtualBoxVM --comment Arch Box --startvm 114af148-ccf3-4b95-ab23-8a5583e4e9b3 --no-startvm-errormsgbox --fullscreen &'
 alias ssharch='ssh viranch@192.168.56.101'
-alias vv='vim -u $HOME/.vimrc_ruby'
 #x=$(cat /proc/cpuinfo|grep processor|wc -l)
 x=4
-
-export TERM=xterm-256color
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 source /sw/bin/init.sh
