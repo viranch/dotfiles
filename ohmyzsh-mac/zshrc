@@ -1,21 +1,12 @@
 # Path to your oh-my-zsh configuration.
 export ZSH=$HOME/.dotfiles/ohmyzsh-mac
 
-# add a function path
-#fpath=($ZSH/functions $fpath)
-
-# Load all of the config files in ~/oh-my-zsh that end in .zsh
-for config_file ($ZSH/../ohmyzsh-common/*.zsh $ZSH/*.zsh) source $config_file
-
-# Customize to your needs...
-#export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/bin/core_perl
-export EDITOR=vim
+# Let the magic begin
+source $ZSH/../ohmyzsh-common/zshrc
 
 # my aliases
-alias cyberoam='curl -s http://172.16.1.1/24online/servlet/CyberoamHTTPClient -d "mode=191&username=Mehta&password=1234" | grep "message.*&liver" -o | sed "s/message=//g" | sed "s/&liver//g" | sed "s/+/ /g"'
-alias bb="curl -s http://192.168.1.1/webconfig/wan/wan.html -u admin:4129 | grep \"connect\|disconnect\" -iwo | head -n1 | sed 's/Disconnect/✔ Up/g' | sed 's/^.*Connect$/✘ Down/g'"
 alias vm='/Applications/VirtualBox.app/Contents/Resources/VirtualBoxVM.app/Contents/MacOS/VirtualBoxVM --comment Arch Box --startvm 114af148-ccf3-4b95-ab23-8a5583e4e9b3 --no-startvm-errormsgbox --fullscreen &'
 x=$(sysctl -n hw.ncpu)
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-source /sw/bin/init.sh
+source /sw/bin/init.sh # fink
