@@ -17,7 +17,7 @@ Hostname ec2-54-241-90-190.us-west-1.compute.amazonaws.com
 User arch
 IdentityFile ~/.ssh/viranch_ca.pem
 
-Host vm
+Host arch
 Hostname 192.168.56.101
 User viranch
 
