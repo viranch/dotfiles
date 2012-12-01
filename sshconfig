@@ -1,13 +1,3 @@
-Host slantd
-Hostname slant.directi.com
-
-Host slant
-Hostname slant
-User slant
-
-Host slante
-Hostname slant-es
-
 Host slants
 Hostname slant-staging
 User slant
