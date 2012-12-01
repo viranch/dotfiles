@@ -9,4 +9,3 @@ alias vm='/Applications/VirtualBox.app/Contents/Resources/VirtualBoxVM.app/Conte
 x=$(sysctl -n hw.ncpu)
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-source /sw/bin/init.sh # fink
