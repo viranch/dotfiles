@@ -8,4 +8,4 @@ source $ZSH/../ohmyzsh-common/zshrc
 alias vm='/Applications/VirtualBox.app/Contents/Resources/VirtualBoxVM.app/Contents/MacOS/VirtualBoxVM --comment Arch Box --startvm 114af148-ccf3-4b95-ab23-8a5583e4e9b3 --no-startvm-errormsgbox --fullscreen &'
 x=$(sysctl -n hw.ncpu)
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+PATH=$HOME/.rvm/bin:/usr/local/bin:/usr/local/sbin:$PATH # Add RVM to PATH for scripting
