@@ -28,7 +28,7 @@ alias kll='kill -KILL'
 alias sv='SUDO_EDITOR=vim sudoedit' #sudo vim
 alias pg='ps aux | grep'
 alias ss='ssh'
-ssd() { ssh viranch.m@$1.directi.com }
+ssd() { user=$1; shift; ssh viranch.m@$user.directi.com $@ }
 alias cdd='cd ~/.dotfiles'
 alias vimrc='vim ~/.vimrc'
 alias zshrc='vim ~/.zshrc && . ~/.zshrc'
