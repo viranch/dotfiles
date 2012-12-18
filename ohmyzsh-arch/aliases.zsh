@@ -10,9 +10,10 @@ alias mntcd='sudo mount -o loop,ro -t iso9660'
 alias shutdown='sudo shutdown -hP now'
 alias mencoder='mencoder -quiet -oac copy -ovc copy'
 alias fdisk='sudo fdisk -l'
-alias start='sudo rc.d start'
-alias stop='sudo rc.d stop'
-alias restart='sudo rc.d restart'
+sys() { sudo systemctl $1 $2.service }
+start() { sys start $1 }
+stop() { sys stop $1 }
+restart() { sys restart $1 }
 alias monitor='xranr --output VGA1'
 alias onmon='xrandr --output VGA1 --auto --right-of LVDS1'
 alias offmon='xrandr --output VGA1 --off'
