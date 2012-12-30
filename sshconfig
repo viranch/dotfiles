@@ -3,7 +3,7 @@ Hostname slant-staging
 User slant
 
 Host aws
-Hostname ec2-54-241-126-177.us-west-1.compute.amazonaws.com
+Hostname ec2.lazybit.in
 User arch
 IdentityFile ~/.ssh/viranch_ca.pem
 
