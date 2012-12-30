@@ -22,7 +22,7 @@ alias kt='killall -INT transmission-daemon'
 alias ns='netstat -ntlp'
 alias h='start httpd'
 alias kh='stop httpd'
-alias pa='sudo git --git-dir=/etc/puppet/.git pull && sudo puppet apply /etc/puppet/manifests/site.pp'
+alias pa='cd /etc/puppet && sudo git pull && sudo puppet apply /etc/puppet/manifests/site.pp'
 
 # KDE aliases
 alias killkde="kill -TERM `\ps aux|grep startkde$|awk '{print $2}'`"
