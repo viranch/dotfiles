@@ -20,8 +20,8 @@ alias offmon='xrandr --output VGA1 --off'
 alias td='transmission-daemon'
 alias kt='killall -INT transmission-daemon'
 alias ns='netstat -ntlp'
-alias h='start httpd'
-alias kh='stop httpd'
+alias h='sudo rc.d start httpd'
+alias kh='sudo rc.d stop httpd'
 alias pa='cd /etc/puppet && sudo git pull && sudo puppet apply /etc/puppet/manifests/site.pp'
 
 # KDE aliases
