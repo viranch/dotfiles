@@ -4,8 +4,7 @@ compinit -i
 
 bindkey -e
 bindkey '\ew' kill-region
-bindkey -s '\el' "ls\n"
-bindkey -s '\e.' "..\n"
+bindkey -s '\el' "l\n"
 bindkey '^r' history-incremental-search-backward
 bindkey "^[[5~" up-line-or-history
 bindkey "^[[6~" down-line-or-history
@@ -13,6 +12,9 @@ bindkey "^[[6~" down-line-or-history
 # make search up and down work, so partially type and hit up/down to find relevant stuff
 bindkey '^[[A' up-line-or-search
 bindkey '^[[B' down-line-or-search
+## make Ctrl+p/n work for up/down history search as above
+bindkey '^P' up-line-or-search
+bindkey '^N' down-line-or-search
 
 bindkey "^[[H" beginning-of-line
 bindkey "^[[1~" beginning-of-line
@@ -22,8 +24,13 @@ bindkey ' ' magic-space    # also do history expansion on space
 
 bindkey '^[[Z' reverse-menu-complete
 
+# clear stuff on left of cursor
+bindkey "^U" backward-kill-line
+
 # Key fixes (Del/Ctrl+left/Ctrl+right)
 bindkey "^[[3~" delete-char
+
+## these no more work (on lenovo)
 bindkey "5D" backward-word
 bindkey "5C" forward-word
 
