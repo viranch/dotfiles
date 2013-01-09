@@ -39,4 +39,4 @@ set guifont=Monaco:h14
 "hi Normal guifg=White
 
 " Remove trailing whitespaces
-autocmd BufWritePre * :%s/\s\+$//e
+"autocmd BufWritePre * :%s/\s\+$//e
