@@ -20,15 +20,19 @@ alias utube='youtube-dl -ct'
 alias d='DISPLAY=:0'
 alias v='vim'
 alias sp="curl -s -F 'sprunge=<-' http://sprunge.us/"
+alias sv='SUDO_EDITOR=vim sudoedit' #sudo vim
+alias pg='ps aux | grep'
+alias dig='dig +short'
+# kill stuff
 alias kint='killall -INT'
 alias int='sudo kill -INT'
 alias cont='sudo kill -CONT'
 alias term='sudo kill -TERM'
 alias kll='sudo kill -KILL'
-alias sv='SUDO_EDITOR=vim sudoedit' #sudo vim
-alias pg='ps aux | grep'
+# ssh
 alias ss='ssh'
 ssd() { user=$1; shift; ssh viranch.m@$user.directi.com $@ }
+# edit rc's
 alias cdd='cd ~/.dotfiles'
 alias vimrc='vim ~/.vimrc'
 alias zshrc='vim ~/.zshrc && . ~/.zshrc'
