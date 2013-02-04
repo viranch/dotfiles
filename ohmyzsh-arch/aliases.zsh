@@ -14,6 +14,8 @@ sys() { sudo systemctl $1 $2.service }
 start() { sys start $1 }
 stop() { sys stop $1 }
 restart() { sys restart $1 }
+status() { sys status $1 }
+senable() { sys enable $1 }
 alias monitor='xranr --output VGA1'
 alias onmon='xrandr --output VGA1 --auto --right-of LVDS1'
 alias offmon='xrandr --output VGA1 --off'
