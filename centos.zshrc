@@ -25,6 +25,12 @@ whose() { rqo `which $1` }
 compdef _which whose=which
 #alias up='P -Syu'
 
+# puppet related stuff
+puppet_process="/usr/bin/ruby /usr/bin/puppet apply "
+alias ps-puppet='ps aux | grep "$puppet_process" | grep -v grep'
+puppet_user() { who | grep "$(ps-puppet|head -n1|awk '{print $7}') " | cut -d" " -f1; }
+alias puppet-apply='test -n "$(ps-puppet)" && echo && echo "WARNING: $(puppet_user) is already running puppet" && echo || (cd /etc/puppet/ && sudo git pull && cd - && time sudo /usr/bin/puppet apply /etc/puppet/manifests/production/site.pp --config /etc/puppet/usermode.conf --verbose)'
+
 function pb() {
     cat > /tmp/pb.py << EOF
 import sys
