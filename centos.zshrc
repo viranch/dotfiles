@@ -3,7 +3,7 @@ alias _='sudo'
 compdef _sudo _=sudo
 
 # grep '#m' fix
-grep() { /bin/grep $@ | sed 's/#m//g' }
+grep() { `/usr/bin/which grep` $@ | sed 's/#m//g' }
 
 # My useful aliases
 alias sysmon='echo "USER       PID %CPU %MEM  COMMAND" && "ps" aux | tail | cut -c1-25,65- | sort -n -k3'
