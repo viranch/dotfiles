@@ -35,7 +35,7 @@ puppet_user() { test -n "$(ps-puppet)" && who | grep "$(ps-puppet|head -n1|awk '
 alias puppet-apply='test -n "$(puppet_user)" && echo && echo "WARNING: $(puppet_user) is already running puppet" && echo || (cd /etc/puppet/ && sudo git pull && cd - && time sudo /usr/bin/puppet apply /etc/puppet/manifests/production/site.pp --config /etc/puppet/usermode.conf --verbose)'
 alias ntest='sudo service nagios configtest | grep -v "^Processing object config file "'
 alias nload='sudo service nagios reload'
-alias testcheck='su nagios -c'
+alias tc='su nagios -c'
 
 function pb() {
     cat > /tmp/pb.py << EOF
