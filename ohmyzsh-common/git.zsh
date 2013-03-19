@@ -73,7 +73,7 @@ alias gst='git status'
 compdef _git gst=git-status
 
 alias gl='git pull'
-compdef _git gll=git-pull
+compdef _git gl=git-pull
 
 alias gd='git diff'
 compdef _git gd=git-diff
@@ -109,7 +109,7 @@ compdef _git gp=git-push
 alias glg='git log --pretty=format:"%C(yellow)%h %Cblue%cd%Cred%d %Creset%s%Cred [%cn]" --decorate --numstat --date=relative'
 compdef _git glg=git-log
 
-alias gll='git log --all --pretty=format:"%h %cd %s (%an)"'
+alias gll='git log --pretty=format:"%h %cd %s (%an)"'
 compdef _git gll=git-log
 
 function gwc() {
