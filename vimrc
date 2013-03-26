@@ -18,6 +18,9 @@ au BufRead,BufNewFile *.haml set tabstop=2
 au BufRead,BufNewFile *.css set shiftwidth=2
 au BufRead,BufNewFile *.css set softtabstop=2
 au BufRead,BufNewFile *.css set tabstop=2
+au BufRead,BufNewFile *.yaml set shiftwidth=2
+au BufRead,BufNewFile *.yaml set softtabstop=2
+au BufRead,BufNewFile *.yaml set tabstop=2
 
 " Smart highlighted search
 syntax on
