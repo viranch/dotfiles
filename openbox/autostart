@@ -23,6 +23,7 @@ xcompmgr &
 
 # load primary apps
 feh --bg-scale ~/Downloads/do-your-work.jpg &
+nm-applet &
 kmix &
 klipper &
 tint2 &
