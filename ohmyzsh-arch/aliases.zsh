@@ -51,7 +51,7 @@ alias pqs='pq -s'
 alias pql='pq -l'
 alias pqo='pq -o'
 alias pqi='pq -i'
-alias remove='P -Rs'
+alias pr='P -Rs'
 whose () { pqo -q $(which $1) }
 plist() { pacman -Qei|awk ' BEGIN {FS=":"}/^Name/{printf("\033[1;36m%s\033[1;37m", $2)}/^Description/{print $2}' }
 compdef _which whose=which
