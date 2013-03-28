@@ -314,13 +314,31 @@
       </action>
     </keybind>
     <!-- Keybindings for running applications -->
-    <keybind key="W-e">
+    <keybind key="W-c">
       <action name="Execute">
         <startupnotify>
           <enabled>true</enabled>
-          <name>Konqueror</name>
+          <name>Chromium</name>
         </startupnotify>
-        <command>kfmclient openProfile filemanagement</command>
+        <command>chromium</command>
+      </action>
+    </keybind>
+    <keybind key="W-f">
+      <action name="Execute">
+        <startupnotify>
+          <enabled>true</enabled>
+          <name>Dolphin</name>
+        </startupnotify>
+        <command>dolphin</command>
+      </action>
+    </keybind>
+    <keybind key="W-m">
+      <action name="Execute">
+        <startupnotify>
+          <enabled>true</enabled>
+          <name>KMail</name>
+        </startupnotify>
+        <command>kmail</command>
       </action>
     </keybind>
   </keyboard>
