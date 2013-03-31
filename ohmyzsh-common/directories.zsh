@@ -3,10 +3,10 @@ setopt auto_name_dirs
 setopt auto_pushd
 setopt pushd_ignore_dups
 
-alias ..='cd ..'
-alias ...='cd ../..'
-alias ....='cd ../../..'
-alias .....='cd ../../../..'
+alias -g ..='cd ..'
+alias -g ...='cd ../..'
+alias -g ....='cd ../../..'
+alias -g .....='cd ../../../..'
 alias -- -='cd -'
 
 alias 1='cd -'
