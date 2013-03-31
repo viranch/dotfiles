@@ -14,6 +14,7 @@ alias x=extract
 # Global aliases
 alias -g C='| wc -l'
 alias -g G='| grep'
+alias -g GC='| grep -c'
 alias -g H='| head'
 alias -g HL='| head -n20'
 alias -g L='| less'
