@@ -11,6 +11,17 @@ alias afind='ack-grep -il'
 
 alias x=extract
 
+# Global aliases
+alias -g C='| wc -l'
+alias -g G='| grep'
+alias -g H='| head'
+alias -g HL='| head -n20'
+alias -g L='| less'
+alias -g S='| sort'
+alias -g T='| tail'
+alias -g TL='| tail -n20'
+alias -g TF='| tail -f'
+
 # My useful aliases
 alias wget='wget --read-timeout=10'
 alias swget='swget --read-timeout=10'
