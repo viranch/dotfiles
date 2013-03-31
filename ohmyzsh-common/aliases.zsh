@@ -43,6 +43,7 @@ alias stf='sudo tail -f'
 alias g=grep
 alias gg='grep -inr'
 alias ff='find -name'
+alias cf='cat << EOF'
 # kill stuff
 alias kint='sudo killall -INT'
 alias int='sudo kill -INT'
