@@ -25,6 +25,9 @@ alias ns='netstat -ntlp'
 alias h='sudo rc.d start httpd'
 alias kh='sudo rc.d stop httpd'
 alias pa='cd /etc/puppet && sudo git pull && sudo puppet apply /etc/puppet/manifests/site.pp'
+alias obas='vim ~/.config/openbox/autostart'
+alias obrc='vim ~/.config/openbox/rc.xml'
+alias obmenu='vim ~/.config/openbox/menu.xml'
 alias or='openbox --reconfigure'
 
 # KDE aliases
