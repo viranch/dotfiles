@@ -18,19 +18,27 @@ alias axel='axel -a'
 alias wv='sudo wvdial'
 alias utube='youtube-dl -ct'
 alias d='DISPLAY=:0'
-alias v='vim'
+alias v=vim
 alias sp="curl -s -F 'sprunge=<-' http://sprunge.us/"
 alias sv='SUDO_EDITOR=vim sudoedit' #sudo vim
 alias pg='ps aux | grep'
 alias dig='dig +short'
+alias l=less
+alias t=tail
+alias tf='tail -f'
+alias st='sudo tail'
+alias stf='sudo tail -f'
+alias g=grep
+alias gg='grep -inr'
+alias ff='find -name'
 # kill stuff
-alias kint='killall -INT'
+alias kint='sudo killall -INT'
 alias int='sudo kill -INT'
 alias cont='sudo kill -CONT'
 alias term='sudo kill -TERM'
 alias kll='sudo kill -KILL'
 # ssh
-alias ss='ssh'
+alias ss=ssh
 ssd() { user=$1; shift; ssh viranch.m@$user.directi.com $@ }
 # edit rc's
 alias cdd='cd ~/.dotfiles'
