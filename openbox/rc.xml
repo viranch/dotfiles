@@ -341,6 +341,11 @@
         <command>kmail</command>
       </action>
     </keybind>
+    <keybind key="XF86ScreenSaver">
+      <action name="Execute">
+        <command>slock</command>
+      </action>
+    </keybind>
   </keyboard>
   <mouse>
     <dragThreshold>1</dragThreshold>
