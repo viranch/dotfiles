@@ -35,7 +35,6 @@ alias sp="curl -s -F 'sprunge=<-' http://sprunge.us/"
 alias sv='SUDO_EDITOR=vim sudoedit' #sudo vim
 alias pg='ps aux | grep'
 alias dig='dig +short'
-alias l=less
 alias t=tail
 alias tf='tail -f'
 alias st='sudo tail'
