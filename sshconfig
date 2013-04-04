@@ -11,5 +11,10 @@ Host arch
 Hostname 192.168.56.101
 User viranch
 
+Host git.directi.com
+ControlMaster auto
+ControlPath ~/.ssh/%h
+ControlPersist yes
+
 Host *
 User viranch.m
