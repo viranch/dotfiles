@@ -39,8 +39,8 @@ alias t=tail
 alias tf='tail -f'
 alias st='sudo tail'
 alias stf='sudo tail -f'
-alias g=grep
-alias gg='grep -inr'
+alias gg=grep
+alias ginr='grep -inr'
 alias ff='find -name'
 alias cf='cat << EOF'
 # kill stuff
