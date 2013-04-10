@@ -27,6 +27,7 @@ feh --bg-scale ~/Downloads/do-your-work.jpg &
 nm-applet &
 kmix &
 klipper &
+batti &
 tint2 &
 
 # secondary apps
