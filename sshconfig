@@ -1,9 +1,5 @@
 GSSAPIAuthentication no
 
-Host slants
-    Hostname slant-staging
-    User slant
-
 Host aws
     Hostname ec2.lazybit.in
     User arch
@@ -15,3 +11,4 @@ Host arch
 
 Host *
     User viranch.m
+    Ciphers arcfour
