@@ -1,15 +1,17 @@
+GSSAPIAuthentication no
+
 Host slants
-Hostname slant-staging
-User slant
+    Hostname slant-staging
+    User slant
 
 Host aws
-Hostname ec2.lazybit.in
-User arch
-IdentityFile ~/.ssh/viranch_ca.pem
+    Hostname ec2.lazybit.in
+    User arch
+    IdentityFile ~/.ssh/viranch_ca.pem
 
 Host arch
-Hostname 192.168.56.101
-User viranch
+    Hostname 192.168.56.101
+    User viranch
 
 Host *
-User viranch.m
+    User viranch.m
