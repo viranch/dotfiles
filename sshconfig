@@ -12,3 +12,4 @@ Host arch
 Host *
     User viranch.m
     Ciphers arcfour
+    StrictHostKeyChecking no
