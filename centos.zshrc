@@ -7,6 +7,7 @@ grep() { `/usr/bin/which grep` $@ | sed 's/#m//g' }
 
 # Global aliases
 alias -g VM='/var/log/messages'
+alias -g VP='/var/log/puppet/puppet.log'
 
 # My useful aliases
 alias sysmon='echo "USER       PID %CPU %MEM  COMMAND" && "ps" aux | tail | cut -c1-25,65- | sort -n -k3'
@@ -19,17 +20,18 @@ alias corn='sudo kill -INT `ps aux|grep "^root.*unicorn master"|awk -F" " "{prin
 # Yum aliases
 alias y=yum
 compdef _yum y=yum
-alias Y='sudo yum -y'
-alias yi='Y install'
+alias Y='sudo yum'
+alias yi='Y -y install'
 alias ys='y search'
 yqs() { yum list installed "*$1*" }
 alias rql='rpm -ql'
 alias yif='y info'
-alias yr='Y remove'
+alias yr='Y -y remove'
 alias rqo='rpm -qf'
 whose() { rqo `which $1` }
 compdef _which whose=which
 #alias up='P -Syu'
+alias ri='sudo rpm -ivh'
 
 # nagios puppet related stuff
 puppet_process="/usr/bin/ruby /usr/bin/puppet apply "
