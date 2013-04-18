@@ -3,10 +3,10 @@ setopt auto_name_dirs
 setopt auto_pushd
 setopt pushd_ignore_dups
 
-alias -g ..='cd ..'
-alias -g ...='cd ../..'
-alias -g ....='cd ../../..'
-alias -g .....='cd ../../../..'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
 alias -- -='cd -'
 
 alias 1='cd -'
@@ -29,3 +29,16 @@ function mcd() {
   mkdir -p "$1" && cd "$1"; 
 }
 compdef _mkdir mcd=mkdir
+
+function findup() {
+    here=$PWD
+    while test "$(basename $PWD)" != "$1"; do
+        cd ..
+        test "$PWD" = "/" && break
+    done
+    there=$PWD
+    cd $here
+    cd $there
+    unset here there
+    echo $PWD
+}
