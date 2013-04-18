@@ -36,12 +36,12 @@ alias sv='SUDO_EDITOR=vim sudoedit' #sudo vim
 alias pg='ps aux | grep'
 alias dig='dig +short'
 alias t=tail
-alias tf='tail -f'
+alias tf='sudo tail -f'
 alias st='sudo tail'
 alias stf='sudo tail -f'
-alias gg=grep
-alias ginr='grep -inr'
-alias ff='find -name'
+alias gg='sudo grep'
+alias gr='gg -inr'
+ff() { sudo find $2 -name $1 }
 alias cf='cat << EOF'
 # kill stuff
 alias kint='sudo killall -INT'
