@@ -1,4 +1,6 @@
 GSSAPIAuthentication no
+# fix the annoying 'key not found' warnings
+IdentityFile ~/.ssh/id_rsa
 
 Host aws
     Hostname ec2.lazybit.in
@@ -8,9 +10,3 @@ Host aws
 Host arch
     Hostname 192.168.56.101
     User viranch
-
-Host *
-    User viranch.m
-    Ciphers arcfour
-    StrictHostKeyChecking no
-    ForwardAgent yes
