@@ -13,3 +13,4 @@ Host *
     User viranch.m
     Ciphers arcfour
     StrictHostKeyChecking no
+    ForwardAgent yes
