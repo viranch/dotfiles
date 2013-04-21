@@ -42,3 +42,4 @@ function findup() {
     unset here there
     echo $PWD
 }
+alias fup=findup
