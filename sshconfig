@@ -9,7 +9,7 @@ Host arch
     Hostname 192.168.56.101
     User viranch
 
-Host *
+Host *.directi.com,*.colo
     User viranch.m
     Ciphers arcfour
     StrictHostKeyChecking no

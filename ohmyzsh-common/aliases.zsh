@@ -51,7 +51,8 @@ alias term='sudo kill -TERM'
 alias kll='sudo kill -KILL'
 # ssh
 alias ss=ssh
-ssd() { user=$1; shift; ssh viranch.m@$user.directi.com $@ }
+ssd() { user=$1; shift; ssh $user.directi.com $@ }
+ssi() { user=$1; shift; ssd $user.internal $@ }
 # edit rc's
 alias cdd='cd ~/.dotfiles'
 alias vimrc='vim ~/.vimrc'
