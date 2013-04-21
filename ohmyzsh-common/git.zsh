@@ -106,10 +106,10 @@ compdef _git gca=git-commit
 alias gp='git push'
 compdef _git gp=git-push
 
-alias glg='git log --pretty=format:"%C(yellow)%h %Cblue%cd%Cred%d %Creset%s%Cred [%cn]" --decorate --numstat --date=relative'
+alias glg='git log --pretty=format:"%C(yellow)%h %C(green)%cd %C(reset)%s %C(red)[%cn]" --numstat --date=relative --color=auto'
 compdef _git glg=git-log
 
-alias gll='git log --pretty=format:"%h %cd %s (%an)"'
+alias gll='git log --pretty=format:"%C(yellow)%h %C(green)%cd %C(reset)%s %C(red)(%cn)" --color=auto'
 compdef _git gll=git-log
 
 function gwc() {
