@@ -45,6 +45,7 @@ hosts=(
   localhost
 )
 #zstyle ':completion:*:hosts' hosts $hosts
+compdef _ssh ss=ssh
 
 # Use caching so that commands like apt and dpkg complete are useable
 zstyle ':completion::complete:*' use-cache 1
