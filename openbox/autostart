@@ -33,3 +33,11 @@ tint2 &
 # secondary apps
 krunner &
 yakuake &
+
+# user apps
+rssreader &
+dropbox &
+kmail &
+chromium &
+konversation &
+ktp-contactlist &
