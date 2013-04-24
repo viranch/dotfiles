@@ -43,3 +43,9 @@ set guifont=Monaco:h14
 
 " Remove trailing whitespaces
 "autocmd BufWritePre * :%s/\s\+$//e
+
+" remap annoying capitals
+:command WQ wq
+:command Wq wq
+:command W w
+:command Q q
