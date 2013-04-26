@@ -69,3 +69,6 @@ alias text='python2 $SCRIPTS/ontextme.py 9374394249'
 alias pb='python2 $SCRIPTS/pb.py'
 alias ysess-ld='python2 $SCRIPTS/ysess.py -i ~/.ysess/ysess.ini'
 alias ysess-sv='python2 $SCRIPTS/ysess.py --force-overwrite -o ~/.ysess/ysess.ini'
+
+# Howto's
+alias howtomount='echo /usr/bin/mount.ntfs /dev/whatever /run/media/viranch/viranch-storejet -o rw,nodev,nosuid,uid=1000,gid=100,dmask=0077,fmask=0177,uhelper=udisks2'
