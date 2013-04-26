@@ -1,15 +1,9 @@
-# Show history
+# shipped with oh-my-zsh
 alias history='fc -l 1'
-
-# List direcory contents
-alias lsa='ls -lah'
 alias l='ls -lh'
-alias ll='ls -la'
-alias sl=ls # often screw this up
-
-alias afind='ack-grep -il'
-
+alias ll='ls -lha'
 alias x=extract
+alias afind='ack-grep -il'
 
 # Global aliases
 alias -g C='| wc -l'
@@ -29,7 +23,6 @@ alias swget='swget --read-timeout=10'
 alias axel='axel -a'
 alias wv='sudo wvdial'
 alias utube='youtube-dl -ct'
-alias d='DISPLAY=:0'
 alias v=vim
 alias sp="curl -s -F 'sprunge=<-' http://sprunge.us/"
 alias sv='SUDO_EDITOR=vim sudoedit' #sudo vim
@@ -60,6 +53,9 @@ alias zshrc='vim ~/.zshrc && . ~/.zshrc'
 alias gitconfig='vim ~/.gitconfig'
 alias sshconfig='vim ~/.ssh/config'
 alias s='. ~/.zshrc'
+# fun
+alias fucking=sudo
+compdef _sudo fucking=sudo
 
 function chpwd() {
   emulate -L zsh
