@@ -55,7 +55,6 @@ alias sshconfig='vim ~/.ssh/config'
 alias s='. ~/.zshrc'
 # fun
 alias fucking=sudo
-compdef _sudo fucking=sudo
 
 function chpwd() {
   emulate -L zsh
