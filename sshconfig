@@ -1,5 +1,4 @@
 GSSAPIAuthentication no
-IdentityFile ~/.ssh/id_rsa
 
 Host aws
     Hostname ec2.lazybit.in
@@ -13,8 +12,6 @@ Host arch
 Host *.directi.com *.colo
     User viranch.m
     IdentityFile ~/.ssh/id_rsa-work
-    # temporary, until keys are synced everywhere
-    IdentityFile ~/.ssh/id_rsa
     Ciphers arcfour
     StrictHostKeyChecking no
     ForwardAgent yes
