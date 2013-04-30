@@ -1,4 +1,6 @@
 alias qm='qmake -spec macx-g++'
+alias o='open'
+alias or='open -R'
 
 # script aliases
 alias p=python
@@ -8,4 +10,3 @@ alias usage='sh $SCRIPTS/broadband_usage.sh'
 alias skins-dl='p $SCRIPTS/skins-dl.py'
 alias text='p $SCRIPTS/ontextme.py 9374394249'
 alias pb='p $SCRIPTS/pb.py'
-alias ko='p $SCRIPTS/qt-open.py'
