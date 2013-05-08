@@ -1,5 +1,4 @@
 GSSAPIAuthentication no
-IdentityFile ~/.ssh/id_rsa
 
 Host aws
     Hostname ec2.lazybit.in
