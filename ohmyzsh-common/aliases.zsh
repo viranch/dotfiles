@@ -59,6 +59,7 @@ alias fucking=sudo
 function chpwd() {
   emulate -L zsh
   /bin/ls
+  test -n "$TMUX" && /usr/bin/tmux rename-window `basename $PWD`
 }
 
 # Dev aliases
