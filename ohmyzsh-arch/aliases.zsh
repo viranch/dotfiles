@@ -1,7 +1,3 @@
-# Super user
-alias _='sudo'
-compdef _sudo _=sudo
-
 # My useful aliases
 alias sysmon='echo "USER       PID %CPU %MEM  COMMAND" && "ps" aux | tail | cut -c1-25,65- | sort -n -k3'
 alias mnt=pmount
@@ -10,21 +6,25 @@ alias mntcd='sudo mount -o loop,ro -t iso9660'
 alias shutdown='sudo shutdown -hP now'
 alias mencoder='mencoder -quiet -oac copy -ovc copy'
 alias fdisk='sudo fdisk -l'
+# systemctl
 sys() { sudo systemctl $1 $2.service }
 start() { sys start $1 }
 stop() { sys stop $1 }
 restart() { sys restart $1 }
 status() { sys status $1 }
 senable() { sys enable $1 }
+# monitors
 alias monitor='xranr --output VGA1'
 alias onmon='xrandr --output VGA1 --auto --right-of LVDS1'
 alias offmon='xrandr --output VGA1 --off'
+# aws
 alias td='transmission-daemon'
 alias kt='killall -INT transmission-daemon'
 alias ns='netstat -ntlp'
 alias h='sudo rc.d start httpd'
 alias kh='sudo rc.d stop httpd'
 alias pa='cd /etc/puppet && sudo git pull && sudo puppet apply /etc/puppet/manifests/site.pp'
+# openbox
 alias obas='vim ~/.config/openbox/autostart'
 alias obrc='vim ~/.config/openbox/rc.xml'
 alias obmenu='vim ~/.config/openbox/menu.xml'
@@ -39,6 +39,7 @@ alias ko='kde-open'
 alias kde='restart kdm'
 alias e='kde-open .'
 alias plasmoidpkg='zip -r widget.plasmoid metadata.desktop contents && plasmapkg -u widget.plasmoid && rm widget.plasmoid'
+alias D='DISPLAY=:0'
 
 # Pacman aliases
 alias p=pacman
