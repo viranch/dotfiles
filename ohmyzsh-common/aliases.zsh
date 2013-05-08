@@ -59,8 +59,9 @@ alias fucking=sudo
 function chpwd() {
   emulate -L zsh
   /bin/ls
-  test -n "$TMUX" && /usr/bin/tmux rename-window `basename $PWD`
 }
+
+precmd() { test -n "$TMUX" && tmux rename-window `basename $PWD` }
 
 # Dev aliases
 alias h='vim `echo $_|sed "s/\.cpp/.h/g"`'
