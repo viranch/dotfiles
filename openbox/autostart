@@ -36,7 +36,7 @@ yakuake &
 
 # user apps
 rssreader &
-dropbox &
+/opt/dropbox/dropbox &
 kmail &
 chromium &
 konversation &
