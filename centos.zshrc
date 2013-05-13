@@ -12,9 +12,11 @@ alias -g VP='/var/log/puppet/puppet.log'
 # My useful aliases
 alias sysmon='echo "USER       PID %CPU %MEM  COMMAND" && "ps" aux | tail | cut -c1-25,65- | sort -n -k3'
 function serv() { sudo /sbin/service $1 $2; }
-function start() { sudo /sbin/service $1 start; }
-function stop() { sudo /sbin/service $1 stop; }
-function restart() { sudo /sbin/service $1 restart; }
+function start() { serv $1 start; }
+function stop() { serv $1 stop; }
+function restart() { serv $1 restart; }
+function status() { serv $1 status; }
+function reload() { serv $1 reload; }
 alias corn='sudo kill -INT `ps aux|grep "^root.*unicorn master"|awk -F" " "{print \\$2}"` && rvmsudo unicorn -p 80 -D config.ru start'
 alias dd='tmux detach'
 
