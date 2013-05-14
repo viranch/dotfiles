@@ -62,14 +62,12 @@ compdef _which whose=which
 
 # script aliases
 SCRIPTS="$HOME/playground/scripts"
-alias imdb='python2 $SCRIPTS/imdb.py'
-alias aurman='sh $SCRIPTS/aurman.sh'
-alias trunkman='sh $SCRIPTS/trunkman.sh'
-alias usage='sh $SCRIPTS/broadband_usage.sh'
-alias text='python2 $SCRIPTS/ontextme.py 9374394249'
-alias pb='python2 $SCRIPTS/pb.py'
-alias ysess-ld='python2 $SCRIPTS/ysess.py -i ~/.ysess/ysess.ini'
-alias ysess-sv='python2 $SCRIPTS/ysess.py --force-overwrite -o ~/.ysess/ysess.ini'
+alias imdb='python2 `find $SCRIPTS -name imdb.py`'
+alias aurman='sh `find $SCRIPTS -name aurman.sh`'
+alias trunkman='sh `find $SCRIPTS -name trunkman.sh`'
+alias pb='python2 `find $SCRIPTS -name pb.py`'
+alias ysess-ld='python2 `find $SCRIPTS -name ysess.py` -i ~/.ysess/ysess.ini'
+alias ysess-sv='python2 `find $SCRIPTS -name ysess.py` --force-overwrite -o ~/.ysess/ysess.ini'
 
 # Howto's
 alias howtomount='echo /usr/bin/mount.ntfs /dev/whatever /run/media/viranch/viranch-storejet -o rw,nodev,nosuid,uid=1000,gid=100,dmask=0077,fmask=0177,uhelper=udisks2'
