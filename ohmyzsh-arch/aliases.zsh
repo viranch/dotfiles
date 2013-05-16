@@ -61,13 +61,9 @@ plist() { pacman -Qei|awk ' BEGIN {FS=":"}/^Name/{printf("\033[1;36m%s\033[1;37m
 compdef _which whose=which
 
 # script aliases
-SCRIPTS="$HOME/playground/scripts"
-alias imdb='python2 `find $SCRIPTS -name imdb.py`'
-alias aurman='sh `find $SCRIPTS -name aurman.sh`'
-alias trunkman='sh `find $SCRIPTS -name trunkman.sh`'
-alias pb='python2 `find $SCRIPTS -name pb.py`'
-alias ysess-ld='python2 `find $SCRIPTS -name ysess.py` -i ~/.ysess/ysess.ini'
-alias ysess-sv='python2 `find $SCRIPTS -name ysess.py` --force-overwrite -o ~/.ysess/ysess.ini'
+alias python=python2 # to make imdb and pb aliases work
+alias aurman='`_fname aurman.sh`'
+alias trunkman='`_fname trunkman.sh`'
 
 # Howto's
 alias howtomount='echo /usr/bin/mount.ntfs /dev/whatever /run/media/viranch/viranch-storejet -o rw,nodev,nosuid,uid=1000,gid=100,dmask=0077,fmask=0177,uhelper=udisks2'

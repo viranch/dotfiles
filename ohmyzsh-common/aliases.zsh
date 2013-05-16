@@ -69,3 +69,10 @@ alias c='vim `echo $_|sed "s/\.h/.cpp/g"`'
 alias lc='l *.cpp|awk "{ print \$9 }"|sed "s/\.cpp//g"'
 alias m='make -j$((x+1))'
 alias mi='sudo make install'
+
+# script aliases
+SCRIPTS="$HOME/playground/scripts"
+_fname() { find $SCRIPTS -name $1 }
+alias imdb='python `_fname imdb.py`'
+alias tv='`_fname tv.sh`'
+alias pb='python `_fname pb.py`'
