@@ -9,6 +9,10 @@ Host arch
     Hostname 192.168.56.101
     User viranch
 
+Host pi
+    Hostname alarmpi
+    User pi
+
 Host *.directi.com *.colo
     User viranch.m
     IdentityFile ~/.ssh/id_rsa-work
