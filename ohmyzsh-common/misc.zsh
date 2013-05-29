@@ -14,3 +14,6 @@ export LC_CTYPE=en_US.UTF-8
 
 ## unset timeout
 unset TMOUT
+
+# editor
+export EDITOR=vim
