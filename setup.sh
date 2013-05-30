@@ -10,7 +10,7 @@ mkdir -p ~/.ssh && ln -s $cwd/sshconfig ~/.ssh/config
 ln -s $cwd/vimrc ~/.vimrc
 mkdir -p ~/.vim/plugin && ln -s $cwd/vimplugins/dwm.vim ~/.vim/plugin/dwm.vim
 
-ln -s $cws/tmux.conf ~/.tmux.conf
+ln -s $cwd/tmux.conf ~/.tmux.conf
 
 platform=`uname`
 if [[ "$platform" == "Linux" ]]; then
