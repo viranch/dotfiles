@@ -6,6 +6,7 @@ alias mntcd='sudo mount -o loop,ro -t iso9660'
 alias shutdown='sudo shutdown -hP now'
 alias mencoder='mencoder -quiet -oac copy -ovc copy'
 alias fdisk='sudo fdisk -l'
+alias sv='SUDO_EDITOR=vim sudoedit' #sudo vim
 # systemctl
 sys() { sudo systemctl $1 $2.service }
 start() { sys start $1 }
