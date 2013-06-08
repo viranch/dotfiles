@@ -1,3 +1,4 @@
+alias wget='swget -v'
 alias qm='qmake -spec macx-g++'
 alias o='open'
 alias or='open -R'
