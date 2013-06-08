@@ -45,18 +45,6 @@ alias ntest='sudo service nagios configtest | grep -v "^Processing object config
 alias nload='sudo service nagios reload'
 alias tc='su nagios -c'
 
-function pb() {
-    cat > /tmp/pb.py << EOF
-import sys
-import urllib, urllib2
-
-paste = sys.stdin.read()
-
-print urllib2.urlopen("http://pb.internal.directi.com/", urllib.urlencode({"name":"Viranch Mehta", "lang":"text", "code":paste, "submit":"submit"})).url
-EOF
-    python /tmp/pb.py
-    rm -f /tmp/pb.py
-}
 # ls colors
 autoload colors; colors;
 
