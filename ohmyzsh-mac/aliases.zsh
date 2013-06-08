@@ -3,6 +3,7 @@ alias qm='qmake -spec macx-g++'
 alias o='open'
 alias or='open -R'
 alias sv='sudo vim'
+alias pb='(open `cpb`)'
 
 # home brew
 alias b='brew'

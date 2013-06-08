@@ -33,6 +33,8 @@ alias st='sudo tail'
 alias stf='sudo tail -f'
 alias gg='sudo grep'
 alias gr='gg -inr'
+alias cpb='curl -si http://pb/ --data-urlencode "name=Viranch Mehta" -d lang=text --data-urlencode code@- -d submit=submit | grep "Location: " | cut -d":" -f2- | sed "s/\\r//g"'
+alias pb=cpb
 ff() { sudo find $2 -name $1 }
 alias cf='cat << EOF'
 # kill stuff
@@ -74,4 +76,3 @@ SCRIPTS="$HOME/playground/scripts"
 _fname() { find $SCRIPTS -name $1 }
 alias imdb='python `_fname imdb.py`'
 alias tv='`_fname tv.sh`'
-alias pb='python `_fname pb.py`'
