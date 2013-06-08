@@ -18,7 +18,7 @@ alias -g TL='| tail -n20'
 alias -g TF='| tail -f'
 
 # My useful aliases
-alias wget='wget --read-timeout=10'
+alias wget='swget -v --read-timeout=10'
 alias swget='swget --read-timeout=10'
 alias axel='axel -a'
 alias wv='sudo wvdial'
