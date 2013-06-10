@@ -696,6 +696,24 @@
   <!-- show the manage desktops section in the client-list-(combined-)menu -->
 </menu>
   <applications>
+      <application name="Navigator">
+          <decor>no</decor>
+      </application>
+      <application name="kmail">
+          <desktop>1</desktop>
+      </application>
+      <application name="quasselclient">
+          <desktop>2</desktop>
+      </application>
+      <application name="ktp-contactlist">
+          <desktop>2</desktop>
+      </application>
+      <application name="ksysguard">
+          <desktop>all</desktop>
+      </application>
+      <application name="ktp-text-ui">
+          <desktop>2</desktop>
+      </application>
     <!--
   # this is an example with comments through out. use these to make your
   # own rules, but without the comments of course.
