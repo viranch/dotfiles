@@ -23,7 +23,7 @@ export QT_PLUGIN_PATH=$HOME/.kde4/lib/kde4/plugins/:/usr/lib/kde4/plugins/
 xcompmgr &
 
 # load primary apps
-feh --bg-scale ~/Downloads/Wallpapers/archb.png &
+feh --bg-scale ~/Downloads/wp &
 nm-applet &
 kmix &
 klipper &
