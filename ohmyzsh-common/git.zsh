@@ -78,6 +78,12 @@ compdef _git gl=git-pull
 alias gd='git diff'
 compdef _git gd=git-diff
 
+alias gds='git diff --stat'
+compdef _git gds=git-diff
+
+alias gdn='git diff --numstat'
+compdef _git gdn=git-diff
+
 # Commit all unstaged files
 alias gc='git commit -am'
 compdef _git gc=git-commit
