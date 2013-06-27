@@ -45,6 +45,7 @@ alias ntest='sudo service nagios configtest | grep -v "^Processing object config
 alias nload='sudo service nagios reload'
 alias tc='su nagios -c'
 
+unalias pb
 function pb() {
     cat > /tmp/pb.py << EOF
 import sys
