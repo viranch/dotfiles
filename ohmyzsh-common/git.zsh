@@ -130,6 +130,7 @@ compdef _git ginf=git-shortlog
 
 alias gss='git status -s'
 compdef _git gss=git-status
+alias gs='gss' # annoying frequent mistype
 
 alias grh='git reset --hard'
 compdef _git grh=git-reset
