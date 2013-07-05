@@ -26,6 +26,7 @@ alias wv='sudo wvdial'
 alias utube='youtube-dl -ct'
 alias v=vim
 alias sp="curl -s -F 'sprunge=<-' http://sprunge.us/"
+alias sv='SUDO_EDITOR=vim sudoedit' #sudo vim
 alias pg='ps aux | grep'
 alias dig='dig +short'
 alias t=tail
