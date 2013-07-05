@@ -75,13 +75,13 @@ compdef _git gst=git-status
 alias gl='git pull'
 compdef _git gl=git-pull
 
-alias gd='git diff'
+alias gd='git diff --color=auto'
 compdef _git gd=git-diff
 
-alias gds='git diff --stat'
+alias gds='gd --stat'
 compdef _git gds=git-diff
 
-alias gdn='git diff --numstat'
+alias gdn='gd --numstat'
 compdef _git gdn=git-diff
 
 # Commit all unstaged files
