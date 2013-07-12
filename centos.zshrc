@@ -5,6 +5,10 @@ compdef _sudo _=sudo
 # grep '#m' fix
 #grep() { `/usr/bin/which grep` $@ | sed 's/#m//g' }
 
+# Ruby/RVM stuff
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
 # Global aliases
 alias -g VM='/var/log/messages'
 alias -g VP='/var/log/puppet/puppet.log'
