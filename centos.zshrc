@@ -3,7 +3,7 @@ alias _='sudo'
 compdef _sudo _=sudo
 
 # grep '#m' fix
-grep() { `/usr/bin/which grep` $@ | sed 's/#m//g' }
+#grep() { `/usr/bin/which grep` $@ | sed 's/#m//g' }
 
 # Global aliases
 alias -g VM='/var/log/messages'
