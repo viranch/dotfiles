@@ -57,7 +57,7 @@ import urllib, urllib2
 
 paste = sys.stdin.read()
 
-print urllib2.urlopen("http://pb.internal.directi.com/", urllib.urlencode({"name":"Viranch Mehta", "lang":"text", "code":paste, "submit":"submit"})).url
+print urllib2.urlopen("http://pb.internal.directi.com/", urllib.urlencode({"name":"Viranch Mehta", "lang":"text", "code":paste, "submit":"submit"})).url.replace('view', 'view/raw')
 EOF
     python /tmp/pb.py
     rm -f /tmp/pb.py
