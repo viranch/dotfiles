@@ -17,6 +17,7 @@ alias -g U='| uniq -c'
 alias -g T='| tail'
 alias -g TL='| tail -n20'
 alias -g TF='| tail -f'
+alias -h HH='--help | less'
 
 # My useful aliases
 alias wget='wget --read-timeout=10'
