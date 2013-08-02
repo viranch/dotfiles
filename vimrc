@@ -49,3 +49,5 @@ set guifont=Monaco:h14
 :command Wq wq
 :command W w
 :command Q q
+:command Set set
+:command E e
