@@ -6,6 +6,8 @@ alias mntcd='sudo mount -o loop,ro -t iso9660'
 alias shutdown='sudo shutdown -hP now'
 alias mencoder='mencoder -quiet -oac copy -ovc copy'
 alias fdisk='sudo fdisk -l'
+alias ns='sudo netstat -ntp'
+alias nsl='sudo netstat -ntlp'
 alias pb='(xdg-open `cpb`)'
 # systemctl
 sys() { sudo systemctl $1 $2.service }

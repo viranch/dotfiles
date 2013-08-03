@@ -36,8 +36,6 @@ alias st='sudo tail'
 alias sl='sudo less'
 alias gg='sudo grep'
 alias gr='gg -inr'
-alias ns='sudo netstat -ntp'
-alias nsl='sudo netstat -ntlp'
 alias cpb='curl -si http://pb/ --data-urlencode "name=Viranch Mehta" -d lang=text --data-urlencode code@- -d submit=submit | grep "Location: " | cut -d":" -f2- | sed "s/\\r//g" | sed "s/view/view\/raw/g"'
 alias pb=cpb
 ff() { sudo find $2 -name $1 }
