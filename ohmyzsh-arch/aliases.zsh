@@ -23,7 +23,6 @@ alias offmon='xrandr --output VGA1 --off'
 # aws
 alias td='transmission-daemon'
 alias kt='killall -INT transmission-daemon'
-alias ns='sudo netstat -ntlp'
 alias pa='cd /etc/puppet && sudo git pull && sudo puppet apply /etc/puppet/manifests/site.pp'
 # openbox
 alias obas='vim ~/.config/openbox/autostart'
