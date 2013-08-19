@@ -23,6 +23,8 @@ function status() { serv $1 status; }
 function reload() { serv $1 reload; }
 alias corn='sudo kill -INT `ps aux|grep "^root.*unicorn master"|awk -F" " "{print \\$2}"` && rvmsudo unicorn -p 80 -D config.ru start'
 alias dd='tmux detach'
+alias ns='sudo netstat -ntp'
+alias nsl='sudo netstat -ntlp'
 
 # Yum aliases
 alias y=yum
