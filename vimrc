@@ -31,6 +31,7 @@ set smartcase
 
 set laststatus=2
 set nu
+set so=14
 
 " Put cursor at line where file was closed
 au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
