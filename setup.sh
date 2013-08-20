@@ -1,6 +1,6 @@
 #!/bin/bash
 
-rm -f ~/.gitconfig ~/.ssh/config ~/.vimrc ~/.vim/plugin/dwm.vim ~/.tmux.conf
+rm -f ~/.gitconfig ~/.ssh/config ~/.vimrc ~/.vim ~/.tmux.conf
 cwd="$(cd "$(dirname "$0")" && pwd)"
 
 ln -s $cwd/gitconfig ~/.gitconfig
@@ -8,8 +8,7 @@ ln -s $cwd/gitconfig ~/.gitconfig
 mkdir -p ~/.ssh && ln -s $cwd/sshconfig ~/.ssh/config
 
 ln -s $cwd/vimrc ~/.vimrc
-mkdir -p ~/.vim/plugin && ln -s $cwd/vimplugins/dwm.vim ~/.vim/plugin/dwm.vim
-
+ln -s $cwd/dotvim ~/.vim
 ln -s $cwd/tmux.conf ~/.tmux.conf
 
 platform=`uname`
