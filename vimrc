@@ -4,23 +4,9 @@ set shiftwidth=4
 set softtabstop=4
 set tabstop=4
 set autoindent
-
-" Ruby specific indentation
-au BufRead,BufNewFile *.rb set shiftwidth=2
-au BufRead,BufNewFile *.rb set softtabstop=2
-au BufRead,BufNewFile *.rb set tabstop=2
-au BufRead,BufNewFile *.pp set shiftwidth=2
-au BufRead,BufNewFile *.pp set softtabstop=2
-au BufRead,BufNewFile *.pp set tabstop=2
-au BufRead,BufNewFile *.haml set shiftwidth=2
-au BufRead,BufNewFile *.haml set softtabstop=2
-au BufRead,BufNewFile *.haml set tabstop=2
-au BufRead,BufNewFile *.css set shiftwidth=2
-au BufRead,BufNewFile *.css set softtabstop=2
-au BufRead,BufNewFile *.css set tabstop=2
-au BufRead,BufNewFile *.yaml set shiftwidth=2
-au BufRead,BufNewFile *.yaml set softtabstop=2
-au BufRead,BufNewFile *.yaml set tabstop=2
+filetype plugin indent on
+set cindent
+au BufRead,BufNewFile *.pp set filetype=pp
 
 " Smart highlighted search
 syntax on
