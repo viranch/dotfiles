@@ -78,6 +78,9 @@ compdef _git gl=git-pull
 alias gd='git diff --color=auto'
 compdef _git gd=git-diff
 
+alias gdc='gd --cached'
+compdef _git _gdc=git-diff
+
 alias gds='gd --stat'
 compdef _git gds=git-diff
 
