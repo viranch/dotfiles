@@ -22,7 +22,7 @@ alias -g HH='--help | less'
 # My useful aliases
 alias wget='wget --read-timeout=10'
 alias swget='swget --read-timeout=10'
-alias axel='axel -a'
+alias axel='axel -a -n8'
 alias wv='sudo wvdial'
 alias utube='youtube-dl -ct'
 alias v=vim
