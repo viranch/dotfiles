@@ -13,7 +13,8 @@ ln -s $cwd/tmux.conf ~/.tmux.conf
 
 platform=`uname`
 if [[ "$platform" == "Linux" ]]; then
-    rm -f ~/.zshrc && ln -s $cwd/ohmyzsh-arch/zshrc ~/.zshrc
+    src="arch"
 elif [[ "$platform" == "Darwin" ]]; then
-    rm -f ~/.zshrc && ln -s $cwd/ohmyzsh-mac/zshrc ~/.zshrc
+    src="mac"
 fi
+rm -f ~/.zshrc && ln -s $cwd/ohmyzsh-$src/zshrc ~/.zshrc
