@@ -5,6 +5,10 @@ Host aws
     User arch
     IdentityFile ~/.ssh/viranch_ca.pem
 
+Host do
+    Hostname lazybit.in
+    User viranch
+
 Host arch
     Hostname 192.168.56.101
     User viranch
