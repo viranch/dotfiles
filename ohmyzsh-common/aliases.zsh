@@ -45,6 +45,7 @@ ipp() {
         echo $dev: `ifconfig $dev | grep "inet[^6]"`
     done
 }
+alias cal='cal -3'
 # kill stuff
 alias kint='sudo killall -INT'
 alias int='sudo kill -INT'
