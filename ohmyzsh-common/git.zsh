@@ -115,11 +115,17 @@ compdef _git gca=git-commit
 alias gp='git push'
 compdef _git gp=git-push
 
-alias glg='git log --pretty=format:"%C(yellow)%h %C(green)%cd %C(reset)%s %C(red)[%cn]" --numstat --date=relative --color=auto'
+alias gll='git log --pretty=format:"%C(yellow)%h %C(green)%cd %C(reset)%s %C(red)[%cn]" --color=auto'
+compdef _git gll=git-log
+
+alias glg='gll --numstat --date=relative'
 compdef _git glg=git-log
 
-alias gll='git log --pretty=format:"%C(yellow)%h %C(green)%cd %C(reset)%s %C(red)(%cn)" --color=auto'
-compdef _git gll=git-log
+alias glgp='glg -p'
+compdef _git glgp=git-log
+
+alias gllp='gll -p'
+compdef _git gllp=git-log
 
 function gwc() {
     this_commit_hash=`echo $1|cut -c1-7`
