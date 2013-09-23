@@ -46,6 +46,7 @@ ipp() {
     done
 }
 alias cal='cal -3'
+alias e='echo' # :)
 # kill stuff
 alias kint='sudo killall -INT'
 alias int='sudo kill -INT'
