@@ -342,6 +342,15 @@
         <command>kmail</command>
       </action>
     </keybind>
+    <keybind key="W-r">
+      <action name="Execute">
+        <startupnotify>
+          <enabled>true</enabled>
+          <name>Akonadi</name>
+        </startupnotify>
+        <command>akonadictl restart</command>
+      </action>
+    </keybind>
     <keybind key="XF86ScreenSaver">
       <action name="Execute">
         <command>slock</command>
