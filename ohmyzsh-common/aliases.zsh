@@ -47,6 +47,7 @@ ipp() {
 }
 alias cal='cal -3'
 alias e='echo' # :)
+alias sudo='sudo ' # awesome trick to use aliases with sudo
 # kill stuff
 alias kint='sudo killall -INT'
 alias int='sudo kill -INT'
