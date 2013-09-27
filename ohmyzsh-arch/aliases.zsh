@@ -20,6 +20,8 @@ senable() { sys enable $1 }
 alias monitor='xranr --output VGA1'
 alias onmon='xrandr --output VGA1 --auto --right-of LVDS1'
 alias offmon='xrandr --output VGA1 --off'
+alias onmons='xrandr --output DP1 --auto && xrandr --output LVDS1 --off && xrandr --output VGA1 --auto --right-of DP1'
+alias offmons='xrandr --output DP1 --off && xrandr --output LVDS1 --auto && xrandr --output VGA1 --off'
 # aws
 alias td='transmission-daemon'
 alias kt='killall -INT transmission-daemon'
