@@ -40,11 +40,6 @@ alias cpb='curl -si http://pb/ --data-urlencode "name=Viranch Mehta" -d lang=tex
 alias pb=cpb
 ff() { sudo find $2 -name $1 }
 alias cf='cat << EOF'
-ipp() {
-    netstat -i | tail -n+3 | awk '{print $1}' | while read dev; do
-        echo $dev: `ifconfig $dev | grep "inet[^6]"`
-    done
-}
 alias cal='cal -3'
 alias e='echo' # :)
 alias sudo='sudo ' # awesome trick to use aliases with sudo
