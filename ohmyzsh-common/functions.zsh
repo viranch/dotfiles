@@ -42,3 +42,17 @@ ipp() {
         echo $dev: `ifconfig $dev | grep "inet[^6]"`
     done
 }
+
+function share() {
+    temp="/tmp/myshare-$RANDOM"
+    mkdir -p $temp
+    for f in "$@"; do
+        ln -s "$(realpath $f)" "$temp/$(basename $f)"
+    done
+    cd $temp
+    ip=$(ifconfig `netstat -i | tail -n+3 | awk '{print $1}' | head -n1` | grep "inet[^6]" | awk '{ print $2 }')
+    echo "Starting server at http://$ip:8000/ ..."
+    python2 -m SimpleHTTPServer
+    cd -
+    rm -rf $temp
+}
