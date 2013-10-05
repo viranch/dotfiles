@@ -1,6 +1,6 @@
 # If not running interactively, do not do anything
 [[ $- != *i* ]] && return
-[[ $TERM != screen* ]] && test -z "$TMUX" && (tmux attach || tmux new-session) && exit
+[[ $TERM != screen* ]] && test -x /usr/bin/tmux && test -z "$TMUX" && (tmux attach || tmux new-session) && exit
 
 # Path to your oh-my-zsh configuration.
 export ZSH=$HOME/.dotfiles/ohmyzsh-arch
