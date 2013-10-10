@@ -18,6 +18,7 @@ alias -g T='| tail'
 alias -g TL='| tail -n20'
 alias -g TF='| tail -f'
 alias -g HH='--help | less'
+alias -g WW='| while read p; do'
 
 # My useful aliases
 alias wget='wget --read-timeout=10'
