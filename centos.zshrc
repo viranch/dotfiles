@@ -8,6 +8,9 @@ compdef _sudo _=sudo
 # Ruby/RVM stuff
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+#thin
+stop-thin() { kill -INT `cat tmp/pids/thin.pid` }
+thin-log() { tail -n0 -f log/thin.log }
 
 # Global aliases
 alias -g VM='/var/log/messages'
