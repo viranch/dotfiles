@@ -1,8 +1,9 @@
 # Path to your oh-my-zsh configuration.
-export ZSH=$HOME/.dotfiles/ohmyzsh-mac
+export DOTFILES=$HOME/.dotfiles
 
 # Let the magic begin
-source $ZSH/../ohmyzsh-common/zshrc
+source $DOTFILES/ohmyzsh-common/zshrc
+for config_file ($DOTFILES/ohmyzsh-mac/*.zsh) source $config_file
 
 # my aliases
 alias vm='/Applications/VirtualBox.app/Contents/Resources/VirtualBoxVM.app/Contents/MacOS/vmstarter ~/VirtualBox\ VMs/Arch\ Box/Arch\ Box.vbox'

@@ -1,5 +1,5 @@
 # Load all of the config files in ~/oh-my-zsh that end in .zsh
-for config_file ($ZSH/../ohmyzsh-common/*.zsh $ZSH/*.zsh) source $config_file
+for config_file ($DOTFILES/ohmyzsh-common/*.zsh) source $config_file
 
 # Customize to your needs...
 #export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/bin/core_perl

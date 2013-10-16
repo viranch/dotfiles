@@ -3,10 +3,11 @@
 [[ $TERM != screen* ]] && test -x /usr/bin/tmux && test -z "$TMUX" && (tmux attach || tmux new-session) && exit
 
 # Path to your oh-my-zsh configuration.
-export ZSH=$HOME/.dotfiles/ohmyzsh-arch
+export DOTFILES=$HOME/.dotfiles
 
 # Let the magic begin
-source $ZSH/../ohmyzsh-common/zshrc
+source $DOTFILES/ohmyzsh-common/zshrc
+for config_file ($DOTFILES/ohmyzsh-arch/*.zsh) source $config_file
 
 # my aliases
 alias clip='xclip -selection c'
