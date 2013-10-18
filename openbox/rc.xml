@@ -351,6 +351,15 @@
         <command>akonadictl restart</command>
       </action>
     </keybind>
+    <keybind key="C-m">
+      <action name="Execute">
+        <startupnotify>
+          <enabled>true</enabled>
+          <name>System Monitor</name>
+        </startupnotify>
+        <command>ksysguard</command>
+      </action>
+    </keybind>
     <keybind key="XF86ScreenSaver">
       <action name="Execute">
         <command>slock</command>
