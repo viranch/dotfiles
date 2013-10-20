@@ -23,7 +23,8 @@ alias -g WW='| while read p; do'
 # My useful aliases
 alias wget='wget --read-timeout=10'
 alias swget='swget --read-timeout=10'
-alias axel='axel -a -n8'
+alias aa='axel' # very tidious to type a-x-e-l
+alias a='axel -a -n8'
 alias wv='sudo wvdial'
 alias utube='youtube-dl -ct'
 alias v=vim
