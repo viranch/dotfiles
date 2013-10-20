@@ -65,3 +65,9 @@ zstyle ':completion:*:*:*:users' ignored-patterns \
 zstyle '*' single-ignored show
 
 compdef _sudo fucking=sudo
+
+# kill stuff
+compdef _kill int=kill
+compdef _kill cont=kill
+compdef _kill term=kill
+compdef _kill kll=kill
