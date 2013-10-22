@@ -11,6 +11,8 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 #thin
 stop-thin() { kill -INT `cat tmp/pids/thin.pid` }
 thin-log() { tail -n0 -f log/thin.log }
+#slant reload app
+ops() { sudo su - slant -c "cd ~/ops/ops-$1 && git pull" && reload httpd }
 
 # Global aliases
 alias -g VM='/var/log/messages'
