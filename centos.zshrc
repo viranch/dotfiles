@@ -14,7 +14,7 @@ thin-log() { tail -n0 -f log/thin.log }
 #slant reload app
 function ops() {
     for app in "$@"; do
-        sudo su - slant -c "cd ~/ops/ops-$app || cd ~/ops/$app && git pull"
+        sudo su - ops -c "cd ~/ops/$app && git pull"
     done
     reload httpd
 }
