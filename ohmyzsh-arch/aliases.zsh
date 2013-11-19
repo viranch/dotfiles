@@ -14,6 +14,7 @@ sys() { sudo systemctl $1 $2.service }
 start() { sys start $1 }
 stop() { sys stop $1 }
 restart() { sys restart $1 }
+reload() { sys reload $1 }
 status() { sys status $1 }
 senable() { sys enable $1 }
 # monitors
