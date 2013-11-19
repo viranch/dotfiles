@@ -73,7 +73,7 @@ function chpwd() {
   /bin/ls
 }
 
-precmd() { test -n "$TMUX" && tmux rename-window `basename $PWD` }
+precmd() { test -n "$TMUX" && tmux rename-window "`basename $PWD | cut -c -20`" }
 
 # Dev aliases
 alias h='vim `echo $_|sed "s/\.cpp/.h/g"`'
