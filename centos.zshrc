@@ -39,6 +39,7 @@ alias corn='sudo kill -INT `ps aux|grep "^root.*unicorn master"|awk -F" " "{prin
 alias dd='tmux detach'
 alias ns='sudo netstat -ntp'
 alias nsl='sudo netstat -ntlp'
+alias sync='~/.sync.sh'
 
 # puppet
 alias pp='time sudo puppetd -t'
