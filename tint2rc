@@ -6,8 +6,8 @@
 # ID 1
 rounded = 7
 border_width = 2
-background_color = #000000 60
-border_color = #FFFFFF 7
+background_color = #000000 78
+border_color = #FFFFFF 6
 
 # ID 2
 rounded = 5
@@ -18,7 +18,7 @@ border_color = #FFFFFF 40
 # ID 3
 rounded = 5
 border_width = 0
-background_color = #FFFFFF 7
+background_color = #FFFFFF 6
 border_color = #FFFFFF 60
 
 # Panel
@@ -84,7 +84,7 @@ time1_format = %I:%M
 time1_font = Ubuntu 9
 time2_format = %a, %b %e
 time2_font = Ubuntu 8
-clock_font_color = #FFFFFF 65
+clock_font_color = #FFFFFF 64
 clock_padding = 1 0
 clock_background_id = 0
 clock_rclick_command = orage
@@ -111,7 +111,7 @@ battery_low_cmd = notify-send "battery low"
 battery_hide = 98
 bat1_font = Ubuntu 9
 bat2_font = Ubuntu 8
-battery_font_color = #FFFFFF 65
+battery_font_color = #FFFFFF 64
 battery_padding = 1 0
 battery_background_id = 0
 
