@@ -52,7 +52,7 @@ function share() {
     cd $temp
     ip=$(ifconfig `netstat -i | tail -n+3 | awk '{print $1}' | head -n1` | grep "inet[^6]" | awk '{ print $2 }')
     echo "Starting server at http://$ip:8000/ ..."
-    python2 -m SimpleHTTPServer
+    python2 -m SimpleHTTPServer 2> /dev/null
     cd -
     rm -rf $temp
 }
