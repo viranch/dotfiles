@@ -12,4 +12,4 @@
 [url "gitosis@git.directi.com:"]
     insteadOf = gd:
 [push]
-	default = matching
+	default = current
