@@ -56,3 +56,13 @@ function share() {
     cd -
     rm -rf $temp
 }
+
+function kill-ssh() {
+    process=$(ps aux | grep ssh | grep "$1" | grep -v grep | head -n1)
+    echo -n "Kill" $process "? (Y/n) "
+    read opt
+    if [[ "$(echo $opt | tr "[A-Z]" "[a-z]")" == "n" ]]; then
+    else
+        sudo kill -INT `echo $process | awk '{print $2}'`
+    fi
+}
