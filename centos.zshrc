@@ -61,6 +61,7 @@ compdef _which whose=which
 #alias up='P -Syu'
 alias ri='sudo rpm -ivh'
 
+# paste stuff around
 unalias pb
 function pb() {
     cat > /tmp/pb.py << EOF
@@ -74,6 +75,9 @@ EOF
     python /tmp/pb.py
     rm -f /tmp/pb.py
 }
+alias lpb='nc -l 10000'
+ppb() { nc $1 10000 | pb }
+compdef _ssh ppb=ssh
 # ls colors
 autoload colors; colors;
 
