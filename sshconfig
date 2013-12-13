@@ -1,19 +1,18 @@
 GSSAPIAuthentication no
 
-Host aws
-    Hostname ec2.lazybit.in
-    User arch
-    IdentityFile ~/.ssh/viranch_ca.pem
-
 Host arch
     Hostname 192.168.56.101
     User viranch
 
 Host pi
-    Hostname alarmpi
     User pi
 
-Host *.directi.com *.colo
+Host ppi
+    User pi
+    Hostname viranch.dnsd.me
+    Port 54321
+
+Host *.directi.com *.colo xbox
     User viranch.m
     IdentityFile ~/.ssh/id_rsa-work
     Ciphers arcfour
