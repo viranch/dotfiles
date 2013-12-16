@@ -58,6 +58,8 @@ alias kll='sudo kill -KILL'
 alias ss=ssh
 ssd() { user=$1; shift; ssh $user.directi.com $@ }
 ssi() { user=$1; shift; ssd $user.internal $@ }
+ssfree() { ssh $1 'free -m' }
+ssdf() { ssh $1 'df -h' }
 # edit rc's
 alias cdd='cd ~/.dotfiles'
 alias vimrc='vim ~/.vimrc'

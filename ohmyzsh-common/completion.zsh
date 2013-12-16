@@ -71,3 +71,7 @@ compdef _kill int=kill
 compdef _kill cont=kill
 compdef _kill term=kill
 compdef _kill kll=kill
+
+# ssh stuff
+compdef _ssh ssfree=ssh
+compdef _ssh ssdf=ssh
