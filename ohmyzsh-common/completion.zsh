@@ -75,3 +75,4 @@ compdef _kill kll=kill
 # ssh stuff
 compdef _ssh ssfree=ssh
 compdef _ssh ssdf=ssh
+compdef _ssh kill-ssh=ssh
