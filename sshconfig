@@ -6,6 +6,7 @@ Host arch
 
 Host pi
     User pi
+    Hostname alarmpi
 
 Host ppi
     User pi
