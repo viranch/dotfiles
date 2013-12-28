@@ -6,7 +6,6 @@ set tabstop=4
 set autoindent
 filetype plugin indent on
 set cindent
-au BufRead,BufNewFile *.pp set filetype=pp
 
 " Smart highlighted search
 syntax on
