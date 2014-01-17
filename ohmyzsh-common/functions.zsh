@@ -69,10 +69,18 @@ function kill-ssh() {
     fi
 }
 
-# generate links for files from a directory shared over http
+# generate links for files from a directory shared over apache
 function robots() {
     local base_url=$1
     test -z "$(echo $base_url | grep '^http')" && base_url="http://$1"
     test -z "$(echo $base_url | grep '/$')" && base_url="$base_url/"
     curl -s $base_url | grep '^<tr><td ' | grep -v 'alt="\[DIR\]"' | sed 's/^.*href="/'"$(echo $base_url | sed 's/\//\\\//g')"'/g' | sed 's/">.*$//g'
+}
+
+# generate links for files shared over python's SimpleHTTPServer
+function pyrobots() {
+    local base_url=$1
+    test -z "$(echo $base_url | grep '^http')" && base_url="http://$1"
+    test -z "$(echo $base_url | grep '/$')" && base_url="$base_url/"
+    curl -s $base_url | grep '^<li>' | sed 's/^.*href="/'"$(echo $base_url | sed 's/\//\\\//g')"'/g' | sed 's/">.*$//g' | grep -v '/$'
 }
