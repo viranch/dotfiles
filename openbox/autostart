@@ -35,7 +35,10 @@ krunner &
 yakuake &
 
 # user apps
+ksysguard &
 mytv &
 /opt/dropbox/dropbox &
 chromium &
+firefox &
 quasselclient &
+choqok &
