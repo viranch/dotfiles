@@ -24,11 +24,11 @@ xcompmgr &
 
 # load primary apps
 feh --bg-fill ~/Downloads/wp &
+tint2 &
 nm-applet &
 kmix &
 klipper &
 batti &
-tint2 &
 
 # secondary apps
 krunner &
