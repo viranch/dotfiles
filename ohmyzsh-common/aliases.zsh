@@ -56,6 +56,7 @@ alias term='sudo kill -TERM'
 alias kll='sudo kill -KILL'
 # ssh
 alias ss=ssh
+alias ssw='ssh -i ~/.ssh/id_rsa-work' # ssh using work identity
 ssd() { user=$1; shift; ssh $user.directi.com $@ }
 ssi() { user=$1; shift; ssd $user.internal $@ }
 ssfree() { ssh $1 'free -m' }

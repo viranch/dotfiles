@@ -23,7 +23,9 @@ export QT_PLUGIN_PATH=$HOME/.kde4/lib/kde4/plugins/:/usr/lib/kde4/plugins/
 xcompmgr &
 
 # load primary apps
-feh --bg-fill ~/Downloads/wp &
+#feh --bg-fill ~/Downloads/wp &
+#random wallpaper from ~/Downloads/wps
+while true; do feh --bg-scale `find ~/Downloads/wps/ -type f | shuf -n1`; sleep 15m; done &
 tint2 &
 nm-applet &
 kmix &
