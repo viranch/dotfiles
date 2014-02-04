@@ -742,6 +742,13 @@
     <application name="ktp-text-ui">
       <desktop>2</desktop>
     </application>
+    <application name="ldncbajhimfkpnilofhdaogjdmjldchj__src_talkto_shell_index.html" role="pop-up">
+      <desktop>1</desktop>
+      <decor>no</decor>
+    </application>
+    <application name="gmail.com" role="pop-up">
+      <decor>no</decor>
+    </application>
     <!--
   # this is an example with comments through out. use these to make your
   # own rules, but without the comments of course.
