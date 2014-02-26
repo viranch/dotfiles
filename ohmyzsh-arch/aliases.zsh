@@ -67,6 +67,7 @@ alias aur='pq -m'
 whose () { pqo -q $(which $1) }
 plist() { pacman -Qei|awk ' BEGIN {FS=":"}/^Name/{printf("\033[1;36m%s\033[1;37m", $2)}/^Description/{print $2}' }
 compdef _which whose=which
+alias ya=yaourt
 
 # script aliases
 alias python=python2 # to make imdb and pb aliases work
