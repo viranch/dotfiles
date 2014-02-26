@@ -18,6 +18,7 @@
 
 xinput disable `xinput list | grep TouchPad | grep -o "id=[0-9]\+" | cut -d'=' -f2` &
 export QT_PLUGIN_PATH=$HOME/.kde4/lib/kde4/plugins/:/usr/lib/kde4/plugins/
+export XDG_CURRENT_DESKTOP=KDE
 
 # initialize display
 compton -b &
