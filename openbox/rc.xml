@@ -339,7 +339,7 @@
           <enabled>true</enabled>
           <name>Gmail</name>
         </startupnotify>
-        <command>chromium --app="chrome-extension://ldncbajhimfkpnilofhdaogjdmjldchj/src/talkto/shell/index.html#__platform=CHROME-EXTENSION"</command>
+        <command>chromium --app="chrome-extension://ldncbajhimfkpnilofhdaogjdmjldchj/talkto/apps/shell/index.html#__platform=CHROME-EXTENSION"</command>
       </action>
     </keybind>
     <keybind key="W-h">
@@ -742,7 +742,7 @@
     <application name="ktp-text-ui">
       <desktop>2</desktop>
     </application>
-    <application name="ldncbajhimfkpnilofhdaogjdmjldchj__src_talkto_shell_index.html" role="pop-up">
+    <application name="ldncbajhimfkpnilofhdaogjdmjldchj__talkto_apps_shell_index.html" role="pop-up">
       <desktop>1</desktop>
       <decor>no</decor>
     </application>
