@@ -371,7 +371,7 @@
     </keybind>
     <keybind key="XF86ScreenSaver">
       <action name="Execute">
-        <command>slock</command>
+        <command>/usr/lib/kde4/libexec/kscreenlocker_greet --immediateLock</command>
       </action>
     </keybind>
   </keyboard>
