@@ -374,6 +374,11 @@
         <command>/usr/lib/kde4/libexec/kscreenlocker_greet --immediateLock</command>
       </action>
     </keybind>
+    <keybind key="Print">
+      <action name="Execute">
+          <command>ksnapshot</command>
+      </action>
+    </keybind>
   </keyboard>
   <mouse>
     <dragThreshold>1</dragThreshold>
