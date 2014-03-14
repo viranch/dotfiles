@@ -30,7 +30,8 @@ tint2 &
 kmix &
 klipper &
 nm-applet &
-batti &
+#batti &
+batterymon &
 
 # secondary apps
 krunner &

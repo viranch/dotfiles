@@ -742,7 +742,7 @@
       <desktop>2</desktop>
     </application>
     <application name="ksysguard">
-      <desktop>all</desktop>
+      <desktop>3</desktop>
     </application>
     <application name="ktp-text-ui">
       <desktop>2</desktop>
