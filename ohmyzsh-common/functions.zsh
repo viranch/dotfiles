@@ -78,3 +78,10 @@ function pyrobots() {
     test -z "$(echo $base_url | grep '/$')" && base_url="$base_url/"
     curl -s $base_url | grep '^<li>' | sed 's/^.*href="/'"$(echo $base_url | sed 's/\//\\\//g')"'/g' | sed 's/">.*$//g' | grep -v '/$'
 }
+
+# remove nth line from a file
+function rmn() {
+    local temp="/tmp/temp.$RANDOM"
+    sed "${2}d" $1 > $temp
+    mv $temp $1
+}
