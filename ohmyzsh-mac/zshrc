@@ -9,4 +9,5 @@ for config_file ($DOTFILES/ohmyzsh-mac/*.zsh) source $config_file
 alias vm='/Applications/VirtualBox.app/Contents/Resources/VirtualBoxVM.app/Contents/MacOS/vmstarter ~/VirtualBox\ VMs/Arch\ Box/Arch\ Box.vbox'
 x=$(sysctl -n hw.ncpu)
 
-PATH=$PATH:/usr/local/bin:/usr/local/sbin # Add /usr/local to PATH
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+PATH=$HOME/.rvm/bin:/usr/local/bin:/usr/local/sbin:$PATH # Add /usr/local to PATH
