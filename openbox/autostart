@@ -24,7 +24,6 @@ compton -b &
 # load primary apps
 #feh --bg-fill ~/Downloads/wp &
 #random wallpaper from ~/Downloads/wps
-while true; do feh --bg-scale "$(find -L ~/Downloads/wps/ -type f | shuf -n1)"; sleep 15m; done &
 tint2 &
 /usr/lib/kde4/libexec/polkit-kde-authentication-agent-1 &
 kmix &
