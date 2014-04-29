@@ -45,6 +45,7 @@ ff() { sudo find $2 -name $1 }
 alias cf='cat << EOF'
 alias cal='cal -3'
 alias e='echo' # :)
+alias cdr='cd ~/Work/repos'
 #alias sudo='sudo ' # awesome trick to use aliases with sudo # doesn't fucking work with nocorrect
 alias du='du -sh'
 alias df='df -h'
