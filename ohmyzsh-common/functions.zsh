@@ -68,7 +68,7 @@ function robots() {
     local base_url=$1
     test -z "$(echo $base_url | grep '^http')" && base_url="http://$1"
     test -z "$(echo $base_url | grep '/$')" && base_url="$base_url/"
-    curl -s $base_url | grep '^<tr><td ' | grep -v 'alt="\[DIR\]"' | sed 's/^.*href="/'"$(echo $base_url | sed 's/\//\\\//g')"'/g' | sed 's/">.*$//g'
+    curl -s $base_url | grep '^<tr><td ' | grep -v 'alt="\[\(PARENT\)\?DIR\]"' | sed 's/^.*href="/'"$(echo $base_url | sed 's/\//\\\//g')"'/g' | sed 's/">.*$//g'
 }
 
 # generate links for files shared over python's SimpleHTTPServer
