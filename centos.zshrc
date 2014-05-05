@@ -64,14 +64,18 @@ alias ri='sudo rpm -ivh'
 # paste stuff around
 unalias pb
 function pb() {
-    python << EOF
+    cat << EOF > /tmp/pb.py
 import sys
 import urllib, urllib2
 
-paste = sys.stdin.read()
+paste = sys.stdin.read().strip()
 
 print urllib2.urlopen("http://pb.internal.directi.com/", urllib.urlencode({"name":"Viranch Mehta", "lang":"text", "code":paste, "submit":"submit"})).url.replace('view', 'view/raw')
 EOF
+    python /tmp/pb.py
+}
+function ccpb() {
+    (echo "\$ $@" && $@) | pb
 }
 alias lpb='nc -l 10000'
 ppb() { nc $1 10000 | pb }
