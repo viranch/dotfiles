@@ -80,6 +80,7 @@ function ccpb() {
 alias lpb='nc -l 10000'
 ppb() { nc $1 10000 | pb }
 compdef _ssh ppb=ssh
+
 # ls colors
 autoload colors; colors;
 
