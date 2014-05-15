@@ -85,3 +85,10 @@ function rmn() {
     sed "${2}d" $1 > $temp
     mv $temp $1
 }
+
+# pretty print IPs
+ipp() {
+    netstat -i | tail -n+3 | awk '{print $1}' | while read dev; do
+        echo $dev: `ifconfig $dev | grep "inet[^6]"`
+    done
+}
