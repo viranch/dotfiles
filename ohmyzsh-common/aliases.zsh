@@ -50,6 +50,7 @@ alias cdr='cd ~/Work/repos'
 alias du='du -sh'
 alias df='df -h'
 alias tm='tmux attach || tmux'
+confcat() { grep -v "^\s*#" $1 | grep -v "^$" }
 # kill stuff
 alias kint='sudo killall -INT'
 alias int='sudo kill -INT'
