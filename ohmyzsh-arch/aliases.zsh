@@ -19,6 +19,7 @@ alias restart='sys restart'
 alias reload='sys reload'
 alias status='sys status'
 alias senable='sys enable'
+alias sdisable='sys disable'
 alias sys-reload='sys daemon-reload'
 # monitors
 alias monitor='xranr --output VGA1'
