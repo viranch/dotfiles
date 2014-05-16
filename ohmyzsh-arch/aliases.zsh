@@ -12,13 +12,14 @@ alias ns='sudo netstat -ntp'
 alias nsl='sudo netstat -ntlp'
 alias pb='(xdg-open `cpb`)'
 # systemctl
-sys() { sudo systemctl $1 $2.service }
-start() { sys start $1 }
-stop() { sys stop $1 }
-restart() { sys restart $1 }
-reload() { sys reload $1 }
-status() { sys status $1 }
-senable() { sys enable $1 }
+alias sys='sudo systemctl'
+alias start='sys start'
+alias stop='sys stop'
+alias restart='sys restart'
+alias reload='sys reload'
+alias status='sys status'
+alias senable='sys enable'
+alias sys-reload='sys daemon-reload'
 # monitors
 alias monitor='xranr --output VGA1'
 alias onmon='xrandr --output VGA1 --auto --right-of LVDS1'
