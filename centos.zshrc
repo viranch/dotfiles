@@ -40,6 +40,7 @@ alias dd='tmux detach'
 alias ns='sudo netstat -ntp'
 alias nsl='sudo netstat -ntlp'
 alias sync='~/.sync.sh'
+alias whereami='sudo facter -p colo'
 
 # puppet
 alias pp='time sudo puppetd -t'
