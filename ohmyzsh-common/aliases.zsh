@@ -88,6 +88,7 @@ alias c='vim `echo $_|sed "s/\.h/.cpp/g"`'
 alias lc='l *.cpp|awk "{ print \$9 }"|sed "s/\.cpp//g"'
 alias m='make -j$((x+1))'
 alias mi='sudo make install'
+alias pmg='python manage.py'
 
 # script aliases
 SCRIPTS="$HOME/playground/scripts"
