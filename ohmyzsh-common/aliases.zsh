@@ -49,6 +49,7 @@ alias cdr='cd ~/Work/repos'
 #alias sudo='sudo ' # awesome trick to use aliases with sudo # doesn't fucking work with nocorrect
 alias du='du -sh'
 alias df='df -h'
+alias dfdev='df | grep --color=never "^\(Filesystem\|/dev/\)"'
 alias tm='tmux attach || tmux'
 confcat() { grep -v "^\s*#" $1 | grep -v "^$" }
 # kill stuff
