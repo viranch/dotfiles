@@ -360,6 +360,24 @@
         <command>chromium --app=http://facebook.com</command>
       </action>
     </keybind>
+    <keybind key="W-r">
+      <action name="Execute">
+        <startupnotify>
+          <enabled>true</enabled>
+          <name>Dirt</name>
+        </startupnotify>
+        <command>chromium --app=http://dirt/projects/ops-platform/taskboard</command>
+      </action>
+    </keybind>
+    <keybind key="W-l">
+      <action name="Execute">
+        <startupnotify>
+          <enabled>true</enabled>
+          <name>Trello</name>
+        </startupnotify>
+        <command>chromium --app=https://trello.com/b/Pd0jnj0I/do-me-please</command>
+      </action>
+    </keybind>
     <keybind key="C-m">
       <action name="Execute">
         <startupnotify>
