@@ -394,7 +394,7 @@
     </keybind>
     <keybind key="Print">
       <action name="Execute">
-          <command>ksnapshot</command>
+        <command>ksnapshot</command>
       </action>
     </keybind>
   </keyboard>
