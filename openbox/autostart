@@ -41,5 +41,6 @@ ksysguard &
 mytv &
 /opt/dropbox/dropbox &
 chromium &
-quasselclient &
+#quasselclient &
+konversation &
 choqok &
