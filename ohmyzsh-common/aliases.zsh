@@ -42,13 +42,14 @@ alias gr='gg -inr'
 alias mcat='sudo tail -n +1' # multicat
 alias cpb='curl -si http://pb/ --data-urlencode "name=Viranch Mehta" -d lang=text --data-urlencode code@- -d submit=submit | grep "Location: " | cut -d":" -f2- | sed "s/\\r//g" | sed "s/view/view\/raw/g"'
 alias pb=cpb
+ccpb() { (echo "\$ $@" && $@) | pb }
 ff() { sudo find $2 -name $1 }
 alias cf='cat << EOF'
 alias cal='cal -3'
 alias e='echo' # :)
 alias cdr='cd ~/Work/repos'
 #alias sudo='sudo ' # awesome trick to use aliases with sudo # doesn't fucking work with nocorrect
-alias du='du -sh'
+du() { /usr/bin/du -sh $@ | sort -rhk 1 }
 alias df='df -h'
 alias dfdev='df | grep --color=never "^\(Filesystem\|/dev/\)"'
 alias tm='tmux attach || tmux'
