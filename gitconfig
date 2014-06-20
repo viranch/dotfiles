@@ -9,7 +9,5 @@
     insteadOf = gh:
 [url "git@github.com:"]
     pushInsteadOf = gh:
-[url "gitosis@git.aus-tx.colo:"]
-    insteadOf = gd:
 [push]
 	default = current
