@@ -58,7 +58,8 @@ alias rql='rpm -ql'
 alias yif='y info'
 alias yr='Y -y remove'
 alias rqo='rpm -qf'
-whose() { rqo `which $1` }
+unalias which
+whose() { rqo `which -p $1` }
 compdef _which whose=which
 #alias up='P -Syu'
 alias ri='sudo rpm -ivh'
