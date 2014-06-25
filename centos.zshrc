@@ -46,6 +46,7 @@ alias whereami='fc colo'
 # puppet
 alias pp='time sudo puppetd -t'
 alias pnoop='time sudo puppetd -t --noop'
+alias check_yamls="ruby -e \"require 'yaml';  Dir['**/*.yaml'].select {|f| begin; YAML.load_file(f); rescue; puts f; raise; end }\""
 
 # Yum aliases
 alias y=yum
