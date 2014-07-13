@@ -53,7 +53,7 @@ du() { /usr/bin/du -sh $@ | sort -rhk 1 }
 alias df='df -h'
 alias dfdev='df | grep --color=never "^\(Filesystem\|/dev/\)"'
 alias tm='tmux attach || tmux'
-confcat() { grep -v "^\s*#" $1 | grep -v "^$" }
+alias confcat='grep -v -e "^$" -e "^\s*#"'
 # kill stuff
 alias kint='sudo killall -INT'
 alias int='sudo kill -INT'
