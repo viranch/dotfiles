@@ -156,3 +156,6 @@ function gdlink() {
     test -x /usr/bin/xclip && echo $link | xclip
     echo $link
 }
+
+alias gconf='git config -e'
+compdef _git gconf='git-config'
