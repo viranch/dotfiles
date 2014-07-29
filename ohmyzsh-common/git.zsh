@@ -157,5 +157,15 @@ function gdlink() {
     echo $link
 }
 
+# Same as 'gdlink', but specific to gitlab web interface
+function gllink() {
+    local chash=$1
+    test -z "$chash" && chash=`git log --pretty=format:"%h" | head -n1`
+    local link="$(git remote -v | head -n1 | awk '{print $2}' | sed 's/:/\//g' | sed 's/.*@/https:\/\//g')/commit/$chash"
+    test -x /usr/bin/xsel && echo $link | xsel
+    test -x /usr/bin/xclip && echo $link | xclip
+    echo $link
+}
+
 alias gconf='git config -e'
 compdef _git gconf='git-config'
