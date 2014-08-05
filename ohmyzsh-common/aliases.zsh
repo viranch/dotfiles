@@ -67,7 +67,6 @@ ssd() { user=$1; shift; ssh $user.directi.com $@ }
 ssi() { user=$1; shift; ssd $user.internal $@ }
 ssfree() { ssh $1 'free -m' }
 ssdf() { ssh $1 'df -h' }
-alias sa='eval `ssh-agent -s`; ssh-add'
 # edit rc's
 alias cdd='cd ~/.dotfiles'
 alias vimrc='vim ~/.vimrc'

@@ -36,6 +36,8 @@ alias obas='vim ~/.config/openbox/autostart'
 alias obrc='vim ~/.config/openbox/rc.xml'
 alias obmenu='vim ~/.config/openbox/menu.xml'
 alias or='openbox --reconfigure'
+# ssh
+alias sa='ssh-add ~/.ssh/id_rsa-work'
 
 # KDE aliases
 alias killkde="kill -TERM `\ps aux|grep startkde$|awk '{print $2}'`"
