@@ -5,7 +5,7 @@ alias or='open -R'
 alias sv='sudo vim'
 alias ns='sudo netstat -nap tcp'
 alias pb='(open `cpb`)'
-alias ipp='ifconfig en0 | grep "inet "'
+alias ipp='ifconfig en0 | grep "inet " | awk "{print \$2}"'
 
 # home brew
 alias b='brew'
