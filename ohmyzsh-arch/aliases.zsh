@@ -11,6 +11,7 @@ alias fdisk='sudo fdisk -l'
 alias ns='sudo netstat -ntp'
 alias nsl='sudo netstat -ntlp'
 alias pb='(xdg-open `cpb`)'
+alias lk='/usr/lib/kde4/libexec/kscreenlocker_greet --immediateLock'
 # systemctl
 alias sys='sudo systemctl'
 alias start='sys start'
