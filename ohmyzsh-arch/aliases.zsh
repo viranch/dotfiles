@@ -26,6 +26,8 @@ alias sys-reload='sys daemon-reload'
 alias monitor='xranr --output VGA1'
 alias onmon='xrandr --output VGA1 --auto && xrandr --output LVDS1 --off && test -f ~/.fehbg && . ~/.fehbg'
 alias offmon='xrandr --output LVDS1 --auto && xrandr --output VGA1 --off && test -f ~/.fehbg && . ~/.fehbg'
+alias onmon1='xrandr --output VGA1 --auto --right-of LVDS1 && test -f ~/.fehbg && . ~/.fehbg'
+alias offmon1='xrandr --output VGA1 --off'
 alias onmons='xrandr --output DP1 --auto && xrandr --output LVDS1 --off && xrandr --output VGA1 --auto --right-of DP1 && test -f ~/.fehbg && . ~/.fehbg'
 alias offmons='xrandr --output DP1 --off && xrandr --output LVDS1 --auto && xrandr --output VGA1 --off'
 # aws
