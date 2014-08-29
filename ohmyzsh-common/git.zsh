@@ -69,6 +69,9 @@ compdef _git gcl=git-clone
 alias gco='git checkout'
 compdef _git gco=git-checkout
 
+alias gb='git checkout -b'
+compdef _git gb=git-checkout
+
 alias gst='git status'
 compdef _git gst=git-status
 
