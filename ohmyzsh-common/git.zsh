@@ -147,38 +147,5 @@ alias gs='gss' # annoying frequent mistype
 alias grh='git reset --hard'
 compdef _git grh=git-reset
 
-# Generate link for commitdiff to standard git web interface
-function gdlink() {
-    local chash=$1
-    test -z "$chash" && chash=`git log --pretty=format:"%h" | head -n1`
-    local gremote="$(git remote -v | head -n1)"
-    local remote=`echo $gremote | grep -o "@.*:" | sed 's/[@:]//g'`
-    local repo=`echo $gremote | grep -o ":.*\.git" | sed 's/://g'`
-    local link="http://$remote/?p=$repo;a=commitdiff;h=$chash"
-    test -x /usr/bin/xsel && echo $link | xsel
-    test -x /usr/bin/xclip && echo $link | xclip
-    echo $link
-}
-
-# Same as 'gdlink', but specific to gitlab web interface
-function gllink() {
-    local chash=$1
-    test -z "$chash" && chash=`git log --pretty=format:"%h" | head -n1`
-    local link="$(git remote -v | head -n1 | awk '{print $2}' | sed 's/:/\//g' | sed 's/.*@/https:\/\//g' | sed 's/\.git$//g')/commit/$chash"
-    test -x /usr/bin/xsel && echo $link | xsel
-    test -x /usr/bin/xclip && echo $link | xclip
-    echo $link
-}
-
-function mr() {
-    local token="ypg3dxF8Ag6vdx8pNNQW"
-    local link="$(git remote -v | head -n1 | awk '{print $2}')"
-    local project="$(echo $link | cut -d':' -f2 | sed 's/\.git$//g')"
-    local base="https://$(echo $link | cut -d':' -f1 | cut -d'@' -f2)"
-    local project_id="$(curl -sk -H "PRIVATE-TOKEN: $token" $base/api/v3/projects | ruby -e "require 'json'; puts (JSON.parse(STDIN.read).find{|p| p['path_with_namespace'] == '$project'})['id']")"
-    local req="$base/$project/merge_requests/new?utf8=%E2%9C%93&merge_request%5Bsource_project_id%5D=$project_id&merge_request%5Bsource_branch%5D=`current_branch`&merge_request%5Btarget_project_id%5D=$project_id&merge_request%5Btarget_branch%5D=master"
-    test -x /usr/bin/xdg-open && xdg-open $req || echo $req
-}
-
 alias gconf='git config -e'
 compdef _git gconf='git-config'
