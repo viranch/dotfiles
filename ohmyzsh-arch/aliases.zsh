@@ -33,7 +33,7 @@ alias offmons='xrandr --output DP1 --off && xrandr --output LVDS1 --auto && xran
 # aws
 alias td='transmission-daemon'
 alias kt='killall -INT transmission-daemon'
-alias pa='cd /etc/puppet && sudo git pull && sudo puppet apply /etc/puppet/manifests/site.pp; cd -'
+alias pa='cd /etc/puppet && sudo git pull && cd - && sudo puppet apply /etc/puppet/manifests'
 # openbox
 alias obas='vim ~/.config/openbox/autostart'
 alias obrc='vim ~/.config/openbox/rc.xml'
