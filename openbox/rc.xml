@@ -763,9 +763,6 @@
     <application name="dkjhepfknkpdepccldicjjilejgoacel__pingpong_apps_shell_index.html" role="pop-up">
       <desktop>1</desktop>
     </application>
-    <application name="gmail.com" role="pop-up">
-      <decor>no</decor>
-    </application>
     <!--
   # this is an example with comments through out. use these to make your
   # own rules, but without the comments of course.
