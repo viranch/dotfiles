@@ -748,9 +748,6 @@
     <application name="Navigator">
       <decor>no</decor>
     </application>
-    <application name="kmail">
-      <desktop>1</desktop>
-    </application>
     <application name="quasselclient">
       <desktop>2</desktop>
     </application>
