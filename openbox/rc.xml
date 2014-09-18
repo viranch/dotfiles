@@ -371,7 +371,7 @@
       <action name="Execute">
         <startupnotify>
           <enabled>true</enabled>
-          <name>Trello</name>
+          <name>Logout</name>
         </startupnotify>
         <command>oblogout</command>
       </action>
