@@ -37,20 +37,6 @@ function extract() {
   fi
 }
 
-function share() {
-    temp="/tmp/myshare-$RANDOM"
-    mkdir -p $temp
-    for f in "$@"; do
-        ln -s "$(realpath $f)" "$temp/$(basename $f)"
-    done
-    cd $temp
-    ip=$(ifconfig `netstat -i | tail -n+3 | awk '{print $1}' | head -n1` | grep "inet[^6]" | awk '{ print $2 }')
-    echo "Starting server at http://$ip:8000/ ..."
-    python2 -m SimpleHTTPServer 2> /dev/null
-    cd -
-    rm -rf $temp
-}
-
 function kill-ssh() {
     process=$(ps aux | grep ssh | grep "$1" | grep -v grep | head -n1)
     if [[ -n "$process" ]]; then
@@ -84,11 +70,4 @@ function rmn() {
     local temp="/tmp/temp.$RANDOM"
     sed "${2}d" $1 > $temp
     mv $temp $1
-}
-
-# pretty print IPs
-ipp() {
-    netstat -i | tail -n+3 | awk '{print $1}' | while read dev; do
-        echo $dev: `ifconfig $dev | grep "inet[^6]"`
-    done
 }
