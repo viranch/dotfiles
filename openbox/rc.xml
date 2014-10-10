@@ -376,15 +376,6 @@
         <command>vpn</command>
       </action>
     </keybind>
-    <keybind key="C-m">
-      <action name="Execute">
-        <startupnotify>
-          <enabled>true</enabled>
-          <name>System Monitor</name>
-        </startupnotify>
-        <command>ksysguard</command>
-      </action>
-    </keybind>
     <keybind key="XF86ScreenSaver">
       <action name="Execute">
         <command>/usr/lib/kde4/libexec/kscreenlocker_greet --immediateLock</command>
