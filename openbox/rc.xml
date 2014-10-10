@@ -763,7 +763,7 @@
     <application name="dkjhepfknkpdepccldicjjilejgoacel__pingpong_apps_shell_index.html" role="pop-up">
       <desktop>1</desktop>
     </application>
-    <application name="dolphin" type="normal">
+    <application name="dolphin" role="Dolphin#1">
       <maximized>yes</maximized>
     </application>
     <!--
