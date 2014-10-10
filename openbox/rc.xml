@@ -376,6 +376,15 @@
         <command>oblogout</command>
       </action>
     </keybind>
+    <keybind key="W-v">
+      <action name="Execute">
+        <startupnotify>
+          <enabled>true</enabled>
+          <name>VPN</name>
+        </startupnotify>
+        <command>vpn</command>
+      </action>
+    </keybind>
     <keybind key="C-m">
       <action name="Execute">
         <startupnotify>
