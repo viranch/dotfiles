@@ -335,7 +335,7 @@
       <action name="Execute">
         <startupnotify>
           <enabled>true</enabled>
-          <name>Go.to</name>
+          <name>Flock</name>
         </startupnotify>
         <command>chromium --app="chrome-extension://dkjhepfknkpdepccldicjjilejgoacel/pingpong/apps/shell/index.html#__platform=CHROME-EXTENSION"</command>
       </action>
