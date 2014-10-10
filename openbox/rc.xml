@@ -331,7 +331,7 @@
         <command>chromium --app=http://gmail.com</command>
       </action>
     </keybind>
-    <keybind key="W-t">
+    <keybind key="W-f">
       <action name="Execute">
         <startupnotify>
           <enabled>true</enabled>
@@ -347,15 +347,6 @@
           <name>File Manager</name>
         </startupnotify>
         <command>dolphin</command>
-      </action>
-    </keybind>
-    <keybind key="W-f">
-      <action name="Execute">
-        <startupnotify>
-          <enabled>true</enabled>
-          <name>Facebook</name>
-        </startupnotify>
-        <command>chromium --app=http://facebook.com</command>
       </action>
     </keybind>
     <keybind key="W-r">
