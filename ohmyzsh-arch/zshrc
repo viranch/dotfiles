@@ -1,9 +1,11 @@
 # Path to your oh-my-zsh configuration.
 export DOTFILES=$HOME/.dotfiles
+export COMMON_DOTFILES=$DOTFILES/ohmyzsh-common
+export PLATFORM_DOTFILES=$DOTFILES/ohmyzsh-arch
 
 # Let the magic begin
-source $DOTFILES/ohmyzsh-common/zshrc
-for config_file ($DOTFILES/ohmyzsh-arch/*.zsh) source $config_file
+source $COMMON_DOTFILES/zshrc
+#above will also source $PLATFORM_DOTFILES ;)
 
 # my aliases
 alias clip='xclip -selection c'
