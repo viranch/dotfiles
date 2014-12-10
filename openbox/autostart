@@ -45,3 +45,4 @@ chromium &
 #quasselclient &
 konversation &
 choqok &
+ksystraycmd --startonshow --keeprunning vpn &
