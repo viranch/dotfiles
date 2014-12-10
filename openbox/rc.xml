@@ -340,6 +340,15 @@
         <command>chromium --app="chrome-extension://dkjhepfknkpdepccldicjjilejgoacel/pingpong/apps/shell/index.html#__platform=CHROME-EXTENSION"</command>
       </action>
     </keybind>
+    <keybind key="W-s">
+      <action name="Execute">
+        <startupnotify>
+          <enabled>true</enabled>
+          <name>Slack</name>
+        </startupnotify>
+        <command>chromium --app="https://infra-ops.slack.com/messages"</command>
+      </action>
+    </keybind>
     <keybind key="W-e">
       <action name="Execute">
         <startupnotify>
