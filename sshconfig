@@ -19,3 +19,5 @@ Host *.directi.com *.colo xbox dev
     Ciphers arcfour
     StrictHostKeyChecking no
     ForwardAgent yes
+    ControlMaster auto
+    ControlPath ~/.ssh/cm_socket/%r@%h
