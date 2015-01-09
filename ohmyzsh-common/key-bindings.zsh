@@ -27,8 +27,6 @@ bindkey "^U" backward-kill-line
 
 # Key fixes (Del/Ctrl+left/Ctrl+right)
 bindkey "^[[3~" delete-char
-
-## these no more work (on lenovo)
 bindkey "5D" backward-word
 bindkey "5C" forward-word
 
