@@ -22,6 +22,12 @@ function ops-pull-restart() {
         sudo su - ops -c "cd ~/ops/$app && git pull && mkdir -p ~/ops/$app/tmp && touch ~/ops/$app/tmp/restart.txt"
     done
 }
+function ipp() {
+    netstat -i | tail -n+3 | awk '{print $1}' | grep -v "^lo$" | while read dev; do
+        ip=`ifconfig $dev | grep "inet[^6]" | awk '{print $2}' | cut -d':' -f2`
+        test -n "$ip" && echo "$dev: $ip"
+    done
+}
 
 # Global aliases
 alias -g VM='/var/log/messages'
