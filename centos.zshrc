@@ -80,9 +80,9 @@ import urllib, urllib2
 
 paste = sys.stdin.read().strip()
 
-print urllib2.urlopen("http://pb.internal.directi.com/", urllib.urlencode({"name":"Viranch Mehta", "lang":"text", "code":paste, "submit":"submit"})).url.replace('view', 'view/raw')
+print urllib2.urlopen("http://slant-infra.internal.directi.com:8088/api/create", urllib.urlencode({"name":"Viranch Mehta", "lang":"text", "text":paste})).read()
 EOF
-    python /tmp/pb.py
+    python /tmp/pb.py | sed 's/view/view\/raw/g'
 }
 function ccpb() {
     (echo "\$ $@" && $@) | pb
