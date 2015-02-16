@@ -125,3 +125,15 @@ ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[green]%}> "
 export PATH=$PATH:$HOME/.rvm/bin:/usr/sbin:/sbin # Add RVM to PATH for scripting
 export PATH=$PATH:/usr/lib64/nagios/plugins:/usr/lib64/nagios/plugins/custom # Add nagios plugins path to PATH
 unset SSH_ASKPASS
+
+function share() {
+    temp="/tmp/myshare-$RANDOM"
+    mkdir -p $temp
+    for f in "$@"; do
+        ln -s "$(readlink -e $f)" "$temp/$(basename $f)"
+    done
+    cd $temp
+    python -m SimpleHTTPServer
+    cd -
+    rm -rf $temp
+}
