@@ -37,7 +37,7 @@ alias tf='sudo tail -f'
 alias st='sudo tail'
 alias sl='sudo less'
 alias lr='sudo less -r'
-alias gg='sudo grep'
+alias gg='sudo grep --color=auto'
 alias gr='gg -inr'
 alias mcat='sudo tail -n +1' # multicat
 alias cpb='curl -si http://pb/ --data-urlencode "name=Viranch Mehta" -d lang=text --data-urlencode code@- -d submit=submit | grep "Location: " | cut -d":" -f2- | sed "s/\\r//g" | sed "s/view/view\/raw/g"'
