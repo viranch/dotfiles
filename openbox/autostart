@@ -44,5 +44,4 @@ ksysguard &
 chromium &
 #quasselclient &
 konversation &
-choqok &
-ksystraycmd --startonshow --keeprunning vpn &
+#ksystraycmd --startonshow --keeprunning vpn &
