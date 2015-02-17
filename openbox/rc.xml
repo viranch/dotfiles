@@ -394,9 +394,20 @@
         <command>xterm -rv -maximized -e 'while true; do sudo atop 3; done'</command>
       </action>
     </keybind>
+    <keybind key="A-F2">
+      <action name="Execute">
+        <command>gmrun</command>
+      </action>
+    </keybind>
+    <keybind key="A-F3">
+      <action name="Execute">
+        <command>krunner</command>
+      </action>
+    </keybind>
     <keybind key="XF86ScreenSaver">
       <action name="Execute">
-        <command>/usr/lib/kde4/libexec/kscreenlocker_greet --immediateLock</command>
+          <!-- command>/usr/lib/kde4/libexec/kscreenlocker_greet --><!--immediateLock</command -->
+          <command>/bin/bash -c '(slock &amp;); xset dpms force off'</command>
       </action>
     </keybind>
     <keybind key="Print">
