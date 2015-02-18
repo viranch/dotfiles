@@ -50,6 +50,7 @@ alias e='echo' # :)
 alias cdr='cd ~/Work/repos'
 #alias sudo='sudo ' # awesome trick to use aliases with sudo # doesn't fucking work with nocorrect
 du() { /usr/bin/du -sh $@ | sort -rhk 1 }
+alias nd='sudo ncdu -x'
 alias df='df -h'
 alias dfdev='df | grep --color=never "^\(Filesystem\|/dev/\)"'
 alias tm='tmux attach || tmux'
