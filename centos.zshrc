@@ -8,20 +8,9 @@ compdef _sudo _=sudo
 # Ruby/RVM stuff
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-#thin
-stop-thin() { kill -INT `cat tmp/pids/thin.pid` }
-thin-log() { tail -n0 -f log/thin.log }
-#slant reload app
-function ops-restart() {
-    for app in "$@"; do
-        sudo su - ops -c "mkdir -p ~/ops/$app/tmp && touch ~/ops/$app/tmp/restart.txt"
-    done
-}
-function ops-pull-restart() {
-    for app in "$@"; do
-        sudo su - ops -c "cd ~/ops/$app && git pull && mkdir -p ~/ops/$app/tmp && touch ~/ops/$app/tmp/restart.txt"
-    done
-}
+#bundle
+alias bi='bundle install'
+
 function ipp() {
     netstat -i | tail -n+3 | awk '{print $1}' | grep -v "^lo$" | while read dev; do
         ip=`ifconfig $dev | grep "inet[^6]" | awk '{print $2}' | cut -d':' -f2`
