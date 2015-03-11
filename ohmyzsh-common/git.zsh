@@ -149,3 +149,5 @@ compdef _git grh=git-reset
 
 alias gconf='git config -e'
 compdef _git gconf='git-config'
+
+alias gcd='cd "$(git rev-parse --show-toplevel)"'
