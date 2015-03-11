@@ -75,7 +75,7 @@ alias vimrc='vim ~/.vimrc'
 alias zshrc='vim ~/.zshrc && . ~/.zshrc'
 alias gitconfig='vim ~/.gitconfig'
 alias sshconfig='vim ~/.ssh/config'
-alias s='. ~/.zshrc'
+alias sz='. ~/.zshrc'
 # fun
 alias fucking=sudo
 
