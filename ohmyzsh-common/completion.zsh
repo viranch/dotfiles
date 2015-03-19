@@ -64,6 +64,9 @@ zstyle ':completion:*:*:*:users' ignored-patterns \
 # ... unless we really want to.
 zstyle '*' single-ignored show
 
+# re-build $PATH yo
+zstyle ":completion:*:commands" rehash 1
+
 expand-or-complete-with-dots() {
     echo -n "\e[31m...\e[0m"
     zle expand-or-complete
