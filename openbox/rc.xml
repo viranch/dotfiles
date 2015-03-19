@@ -358,15 +358,6 @@
         <command>dolphin</command>
       </action>
     </keybind>
-    <keybind key="W-r">
-      <action name="Execute">
-        <startupnotify>
-          <enabled>true</enabled>
-          <name>Dirt</name>
-        </startupnotify>
-        <command>chromium --app=http://dirt/projects/ops-platform/taskboard</command>
-      </action>
-    </keybind>
     <keybind key="W-l">
       <action name="Execute">
         <startupnotify>
