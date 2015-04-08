@@ -76,6 +76,7 @@ alias zshrc='vim ~/.zshrc && . ~/.zshrc'
 alias gitconfig='vim ~/.gitconfig'
 alias sshconfig='vim ~/.ssh/config'
 alias sz='. ~/.zshrc'
+dk() { host=$1; shift; docker -H $host:4321 $@; }
 # fun
 alias fucking=sudo
 
