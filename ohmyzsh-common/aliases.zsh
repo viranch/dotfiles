@@ -25,7 +25,7 @@ alias -g WG='| swget -ci -'
 alias wget='wget --read-timeout=10'
 alias swget='swget --read-timeout=10'
 alias aa='axel' # very tidious to type a-x-e-l
-alias a='axel -a -n8'
+alias ax='axel -a -n8'
 alias wv='sudo wvdial'
 alias utube='youtube-dl -ct'
 alias v=vim
