@@ -22,14 +22,21 @@ function ipp() {
 alias -g VM='/var/log/messages'
 alias -g VP='/var/log/puppet/puppet.log'
 
+# init service aliases
+alias service='sudo service'
+function start() { service $1 start; }
+function stop() { service $1 stop; }
+function restart() { service $1 restart; }
+function status() { service $1 status; }
+function reload() { service $1 reload; }
+compdef _service start=service
+compdef _service stop=service
+compdef _service restart=service
+compdef _service status=service
+compdef _service reload=service
+
 # My useful aliases
 alias sysmon='echo "USER       PID %CPU %MEM  COMMAND" && "ps" aux | tail | cut -c1-25,65- | sort -n -k3'
-function serv() { sudo /sbin/service $1 $2; }
-function start() { serv $1 start; }
-function stop() { serv $1 stop; }
-function restart() { serv $1 restart; }
-function status() { serv $1 status; }
-function reload() { serv $1 reload; }
 alias corn='sudo kill -INT `ps aux|grep "^root.*unicorn master"|awk -F" " "{print \\$2}"` && rvmsudo unicorn -p 80 -D config.ru start'
 alias dd='tmux detach'
 alias ns='sudo netstat -ntp'
