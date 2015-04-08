@@ -28,7 +28,7 @@ tint2 &
 /usr/lib/kde4/libexec/polkit-kde-authentication-agent-1 &
 kmix &
 klipper &
-nm-applet &
+#nm-applet &
 #wicd-gtk &
 #batti &
 batterymon &
