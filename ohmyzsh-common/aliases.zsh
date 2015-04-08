@@ -5,6 +5,10 @@ alias ll='ls -lha'
 alias x=extract
 alias afind='ack-grep -il'
 
+# one liners
+cutd() { cut -d $1 -f $2 }
+awkp() { awk "{print \$$1}" }
+
 # Global aliases
 alias -g C='| wc -l'
 alias -g G='| grep'
@@ -20,6 +24,9 @@ alias -g TF='| tail -f'
 alias -g HH='--help | less'
 alias -g WW='| while read p; do'
 alias -g WG='| swget -ci -'
+alias -g Cd='| cutd'
+alias -g Cc='| cut -c'
+alias -g A='| awkp'
 
 # My useful aliases
 alias wget='wget --read-timeout=10'
