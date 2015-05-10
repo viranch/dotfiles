@@ -385,6 +385,15 @@
         <command>xterm -rv -maximized -e 'while true; do sudo atop 3; done'</command>
       </action>
     </keybind>
+    <keybind key="W-x">
+      <action name="Execute">
+        <startupnotify>
+          <enabled>true</enabled>
+          <name>SpeedCrunch</name>
+        </startupnotify>
+        <command>speedcrunch</command>
+      </action>
+    </keybind>
     <keybind key="A-F2">
       <action name="Execute">
         <command>gmrun</command>
