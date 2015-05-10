@@ -42,6 +42,6 @@ ksysguard &
 /usr/local/bin/mytv &
 /opt/dropbox/dropbox &
 chromium &
-#quasselclient &
-konversation &
+quasselclient &
+#konversation &
 #ksystraycmd --startonshow --keeprunning vpn &
