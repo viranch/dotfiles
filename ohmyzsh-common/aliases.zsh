@@ -88,7 +88,6 @@ alias fucking=sudo
 
 # docker
 dk() { host=$1; shift; docker -H $host:4321 $@; }
-alias compose='docker-compose'
 
 function chpwd() {
   emulate -L zsh
