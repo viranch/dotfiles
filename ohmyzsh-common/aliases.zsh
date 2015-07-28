@@ -87,7 +87,7 @@ alias sz='. ~/.zshrc'
 alias fucking=sudo
 
 # docker
-dk() { host=$1; shift; docker -H $host:4321 $@; }
+dk() { host=$1; shift; docker -H $host:4444 $@ }
 
 function chpwd() {
   emulate -L zsh
