@@ -76,6 +76,7 @@ zle -N expand-or-complete-with-dots
 bindkey "^I" expand-or-complete-with-dots
 
 compdef _sudo fucking=sudo
+compdef _vim sv=sudoedit
 
 # kill stuff
 compdef _kill int=kill
