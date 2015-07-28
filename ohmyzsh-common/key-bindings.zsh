@@ -30,6 +30,9 @@ bindkey "^[[3~" delete-char
 bindkey "5D" backward-word
 bindkey "5C" forward-word
 
+# Fix Ctrl+Del
+bindkey -M emacs '^[[3;5~' kill-word
+
 # consider emacs keybindings:
 
 #bindkey -e  ## emacs key bindings
