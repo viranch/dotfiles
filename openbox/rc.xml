@@ -349,6 +349,15 @@
         <command>chromium --app="https://infra-ops.slack.com/messages"</command>
       </action>
     </keybind>
+    <keybind key="W-t">
+      <action name="Execute">
+        <startupnotify>
+          <enabled>true</enabled>
+          <name>Trello</name>
+        </startupnotify>
+        <command>chromium --app="https://trello.com/b/iTNx7vvF/slant"</command>
+      </action>
+    </keybind>
     <keybind key="W-e">
       <action name="Execute">
         <startupnotify>
