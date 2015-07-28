@@ -40,7 +40,7 @@ yakuake &
 
 # user apps
 ksysguard &
-/usr/local/bin/mytv &
+XDG_CURRENT_DESKTOP="" /usr/local/bin/mytv &
 /opt/dropbox/dropbox &
 chromium &
 quasselclient &
