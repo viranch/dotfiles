@@ -46,6 +46,8 @@ alias nsl='sudo netstat -ntlp'
 alias sync='~/.sync.sh'
 fc() { test -z "$1" && sudo facter || sudo facter -p "$1" }
 alias whereami='fc colo'
+alias su='sudo '
+alias ii='sudo su icinga'
 
 # puppet
 alias pp='time sudo puppetd -t'
