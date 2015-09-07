@@ -92,7 +92,7 @@ dk() { host=$1; shift; docker -H $host:4444 $@ }
 function chpwd() {
   emulate -L zsh
   /bin/ls
-  find -maxdepth 1 -name .\*.zsh | while read f; do source $f; done
+  find . -maxdepth 1 -name .\*.zsh | while read f; do source $f; done
 }
 
 precmd() { test -n "$TMUX" && tmux rename-window -t $TMUX_PANE "`basename $PWD | cut -c -20`" }
