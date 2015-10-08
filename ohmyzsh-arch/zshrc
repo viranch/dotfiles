@@ -11,5 +11,3 @@ source $COMMON_DOTFILES/zshrc
 alias clip='xclip -selection c'
 alias ksr='source $HOME/kde/bashrc; cs'
 x=$(cat /proc/cpuinfo|grep -c processor)
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
