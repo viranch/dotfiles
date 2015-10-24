@@ -43,6 +43,6 @@ ksysguard &
 XDG_CURRENT_DESKTOP="" /usr/local/bin/mytv &
 /opt/dropbox/dropbox &
 chromium &
-quasselclient &
+XDG_CURRENT_DESKTOP="" quasselclient &
 #konversation &
 #ksystraycmd --startonshow --keeprunning vpn &
