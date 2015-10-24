@@ -1,4 +1,6 @@
 GSSAPIAuthentication no
+ControlMaster auto
+ControlPath ~/.ssh/cm_socket/%r@%h
 
 Host arch
     Hostname 192.168.56.101
@@ -16,8 +18,5 @@ Host ppi
 Host *.directi.com *.colo xbox dev
     User viranch.m
     IdentityFile ~/.ssh/id_rsa-work
-    Ciphers arcfour
     StrictHostKeyChecking no
     ForwardAgent yes
-    ControlMaster auto
-    ControlPath ~/.ssh/cm_socket/%r@%h
