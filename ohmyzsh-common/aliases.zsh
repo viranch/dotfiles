@@ -28,6 +28,11 @@ alias -g Cd='| cutd'
 alias -g Cc='| cut -c'
 alias -g A='| awkp'
 
+# Make folks talk
+alias cp='cp -v'
+alias mv='mv -v'
+alias rm='rm -v'
+
 # My useful aliases
 alias wget='wget --read-timeout=10'
 alias swget='swget --read-timeout=10'

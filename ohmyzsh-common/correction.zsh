@@ -1,5 +1,7 @@
 setopt correct_all
 
 alias man='nocorrect man'
-alias mv='nocorrect mv'
+alias cp='nocorrect cp -v'
+alias mv='nocorrect mv -v'
 alias mkdir='nocorrect mkdir'
+alias docker='nocorrect docker'
