@@ -141,7 +141,7 @@ compdef _git gconf=git-config
 alias gcd='cd "$(git rev-parse --show-toplevel)"'
 
 function git_reset_head() {
-    git reset HEAD~$1
+    git reset HEAD$1
 }
-alias grt=git_reset_head
-compdef _git grt=git-reset
+alias grs=git_reset_head
+compdef _git grs=git-reset
