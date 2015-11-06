@@ -72,9 +72,6 @@ compdef _git gco=git-checkout
 alias gb='git checkout -b'
 compdef _git gb=git-checkout
 
-alias gst='git status'
-compdef _git gst=git-status
-
 alias gl='git pull'
 compdef _git gl=git-pull
 
@@ -110,11 +107,6 @@ gcmp() { git commit -m "$1" && git push }
 # Pull -> Commit staged -> Push
 glcmp() { git pull && git commit -m "$1" && git push }
 
-# Commit all unstaged files but write
-# commit message in vim
-alias gca='git commit -a'
-compdef _git gca=git-commit
-
 alias gp='git push'
 compdef _git gp=git-push
 
@@ -140,19 +132,16 @@ function gwc() {
 alias ginf='git shortlog -sn'
 compdef _git ginf=git-shortlog
 
-alias gss='git status -s'
-compdef _git gss=git-status
-alias gs='gss' # annoying frequent mistype
-
-alias grh='git reset --hard'
-compdef _git grh=git-reset
+alias gst='git status -s'
+compdef _git gst=git-status
 
 alias gconf='git config -e'
-compdef _git gconf='git-config'
+compdef _git gconf=git-config
 
 alias gcd='cd "$(git rev-parse --show-toplevel)"'
 
 function git_reset_head() {
     git reset HEAD~$1
 }
-alias grs=git_reset_head
+alias grt=git_reset_head
+compdef _git grt=git-reset

@@ -4,7 +4,6 @@ alias o='open'
 alias or='open -R'
 alias sv='sudo vim'
 alias ns='sudo netstat -nap tcp'
-alias pb='(open `cpb`)'
 alias ipp='ifconfig en0 | grep "inet " | awk "{print \$2}"'
 
 # home brew
@@ -13,6 +12,3 @@ alias bs='brew search'
 alias bi='brew install'
 alias bif='brew info'
 alias bl='brew list'
-
-# script aliases
-alias skins-dl='python `_fname skins-dl.py`'

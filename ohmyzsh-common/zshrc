@@ -3,11 +3,6 @@ for config_file ($DOTFILES/ohmyzsh-common/*.zsh) source $config_file
 for config_file ($PLATFORM_DOTFILES/*.zsh) source $config_file
 
 # Customize to your needs...
-#export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/bin/core_perl
 export EDITOR=vim
-
-# my aliases
-alias cyberoam='curl -s http://172.16.1.1/24online/servlet/CyberoamHTTPClient -d "mode=191&username=Mehta&password=1234" | grep "message.*&liver" -o | sed "s/message=//g" | sed "s/&liver//g" | sed "s/+/ /g"'
-alias bb="curl -s http://192.168.1.1/webconfig/wan/wan.html -u admin:4129 | grep \"connect\|disconnect\" -iwo | head -n1 | sed 's/Disconnect/✔ Up/g' | sed 's/Connect$/✘ Down/g'"
 
 command -v fasd 2>&1 >/dev/null && eval "$(fasd --init auto)" # fasd
