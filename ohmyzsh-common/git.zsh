@@ -45,7 +45,7 @@ git_prompt_status() {
 
 # Git aliases
 function git_work() {
-  git config user.email "viranch.m@directi.com"
+  git config user.email "viranch@linkedin.com"
 }
 alias gw='git_work'
 
