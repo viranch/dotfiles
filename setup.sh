@@ -6,6 +6,7 @@ cwd="$(cd "$(dirname "$0")" && pwd)"
 ln -s $cwd/gitconfig ~/.gitconfig
 
 mkdir -p ~/.ssh && ln -s $cwd/sshconfig ~/.ssh/config
+mkdir -p ~/.ssh/cm_socket
 
 ln -s $cwd/vimrc ~/.vimrc
 ln -s $cwd/dotvim ~/.vim
