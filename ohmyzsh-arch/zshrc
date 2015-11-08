@@ -8,6 +8,4 @@ source $COMMON_DOTFILES/zshrc
 #above will also source $PLATFORM_DOTFILES ;)
 
 # my aliases
-alias clip='xclip -selection c'
-alias ksr='source $HOME/kde/bashrc; cs'
 x=$(cat /proc/cpuinfo|grep -c processor)

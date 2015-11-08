@@ -8,7 +8,6 @@ source $COMMON_DOTFILES/zshrc
 #above will also source $PLATFORM_DOTFILES ;)
 
 # my aliases
-alias vm='/Applications/VirtualBox.app/Contents/Resources/VirtualBoxVM.app/Contents/MacOS/vmstarter ~/VirtualBox\ VMs/Arch\ Box/Arch\ Box.vbox'
 x=$(sysctl -n hw.ncpu)
 
 PATH=/usr/local/bin:/usr/local/sbin:$PATH # Add /usr/local to PATH
