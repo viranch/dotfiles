@@ -3,8 +3,9 @@ alias dc=docker
 alias db='docker build -t'
 alias dp='docker pull'
 alias dim='docker images'
+alias drmi='docker rmi'
 
-alias drm='docker run --rm -it'
+alias drn='docker run --rm -it'
 
 alias dps='docker ps'
 alias dpsa='docker ps -a'
