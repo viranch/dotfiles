@@ -109,6 +109,7 @@ glcmp() { git pull && git commit -m "$1" && git push }
 
 alias gp='git push'
 compdef _git gp=git-push
+alias g\[=gp # common mistake to type '[' in place of 'p'
 
 alias gll='git log --pretty=format:"%C(yellow)%h %C(green)%cd %C(reset)%s %C(red)[%cn]" --color=auto'
 compdef _git gll=git-log
