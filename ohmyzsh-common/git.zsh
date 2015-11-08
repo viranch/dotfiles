@@ -133,8 +133,8 @@ function gwc() {
 alias ginf='git shortlog -sn'
 compdef _git ginf=git-shortlog
 
-alias gst='git status -s'
-compdef _git gst=git-status
+alias gss='git status -s'
+compdef _git gss=git-status
 
 alias gconf='git config -e'
 compdef _git gconf=git-config
