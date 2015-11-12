@@ -65,7 +65,7 @@ alias rql='rpm -ql'
 alias yif='y info'
 alias yr='Y -y remove'
 alias rqo='rpm -qf'
-unalias which
+alias which && unalias which # unalias only if aliased
 whose() { rqo `which -p $1` }
 compdef _which whose=which
 #alias up='P -Syu'
