@@ -75,16 +75,13 @@ expand-or-complete-with-dots() {
 zle -N expand-or-complete-with-dots
 bindkey "^I" expand-or-complete-with-dots
 
-compdef _sudo fucking=sudo
 compdef _vim sv=sudoedit
 
 # kill stuff
-compdef _kill int=kill
-compdef _kill cont=kill
-compdef _kill term=kill
-compdef _kill kll=kill
+compdef _kill kint=kill
+compdef _kill kcont=kill
+compdef _kill kterm=kill
+compdef _kill k9=kill
 
 # ssh stuff
-compdef _ssh ssfree=ssh
-compdef _ssh ssdf=ssh
 compdef _ssh kill-ssh=ssh
