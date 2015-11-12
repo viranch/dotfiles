@@ -65,31 +65,14 @@ alias rql='rpm -ql'
 alias yif='y info'
 alias yr='Y -y remove'
 alias rqo='rpm -qf'
-alias which && unalias which # unalias only if aliased
+alias which >/dev/null && unalias which # unalias only if aliased
 whose() { rqo `which -p $1` }
 compdef _which whose=which
-#alias up='P -Syu'
 alias ri='sudo rpm -ivh'
 
 # paste stuff around
-unalias pb
-function pb() {
-    cat << EOF > /tmp/pb.py
-import sys
-import urllib, urllib2
-
-paste = sys.stdin.read().strip()
-
-print urllib2.urlopen("http://slant-infra.internal.directi.com:8088/api/create", urllib.urlencode({"name":"Viranch Mehta", "lang":"text", "text":paste})).read()
-EOF
-    python /tmp/pb.py | sed 's/view/view\/raw/g'
-}
-function ccpb() {
-    (echo "\$ $@" && $@) | pb
-}
-alias lpb='nc -l 10000'
-ppb() { nc $1 10000 | pb }
-compdef _ssh ppb=ssh
+alias rpb='nc -l 10000'
+wpb() { nc $1 10000 }
 
 # ls colors
 autoload colors; colors;
@@ -122,8 +105,6 @@ ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[green]%} %{$fg[yellow]%}✗%{$fg[green]%}> %{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[green]%}> "
 
-export PATH=$PATH:$HOME/.rvm/bin:/usr/sbin:/sbin # Add RVM to PATH for scripting
-export PATH=$PATH:/usr/lib64/nagios/plugins:/usr/lib64/nagios/plugins/custom # Add nagios plugins path to PATH
 unset SSH_ASKPASS
 
 function share() {
