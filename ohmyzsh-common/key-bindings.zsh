@@ -31,6 +31,10 @@ bindkey "^U" backward-kill-line
 bindkey "^[[3~" delete-char
 bindkey "5D" backward-word
 bindkey "5C" forward-word
+bindkey "3D" backward-word # iTerm + tmux fix
+bindkey "3C" forward-word # iTerm + tmux fix
+bindkey "[D" backward-word # iTerm fix
+bindkey "[C" forward-word # iTerm fix
 
 # Fix Ctrl+Del
 bindkey -M emacs '^[[3;5~' kill-word
