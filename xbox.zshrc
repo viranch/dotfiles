@@ -5,6 +5,7 @@
 
 for i (~/.dotfiles/ohmyzsh-common/*.zsh) source $i
 source ~/.dotfiles/centos.zshrc
+test -e ~/.dotfiles/work.zshrc && source ~/.dotfiles/work.zshrc
 
 function fixssh() {
   if [ -n "$TMUX" ] # set only if within running tmux
@@ -36,7 +37,7 @@ function ssh() {
     tmux setenv $session_variable_name "$*"
 
     # set window title
-    tmux rename-window "ssh:`echo $1 | sed 's/.directi.com$//g'`"
+    tmux rename-window "ssh:$1"
 
     # run ssh
     /usr/bin/ssh -o ServerAliveInterval=60 $*
@@ -56,12 +57,8 @@ function git() {
     /usr/bin/git $*
 }
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-alias sudo=''
 unset SSH_ASKPASS
 tmv() { tmux movew -s $1 -t $2 }
 
 # custom installed binaries
 PATH=$PATH:$HOME/bin
-
-dk() { host=$1; shift; docker -H $host:4444 $@; }
