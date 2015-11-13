@@ -79,4 +79,14 @@ function apt-search {
     deb apt-cache search $@
 }
 
+function apt-get {
+    app=$1
+    docker build -t $app - << EOF
+FROM debian:wheezy
+RUN apt-get update && apt-get install -y --no-install-recommends $app && rm -rf /var/lib/apt/lists/*
+ENTRYPOINT ["/usr/bin/$app"]
+EOF
+    echo "docker run --rm -it $app"
+}
+
 vm_info >/dev/null && [[ "$($DOCKER_MACHINE status $VM)" == "Running" ]] && setup_env
