@@ -67,15 +67,10 @@ function setup_env() {
 # running test commands (eg: searching for packages)
 function deb() {
     image=$(docker images | grep "^deb\s\+")
-    if [[ -z "$image" ]]; then
-        mkdir -p /tmp/deb
-        cat << EOF > /tmp/deb/Dockerfile
+    test -z "$image" && docker build -t deb - << EOF
 FROM debian:wheezy
 RUN apt-get update
 EOF
-        docker build -t deb /tmp/deb
-        rm -rf /tmp/deb
-    fi
     docker run --rm -it deb $@
 }
 
