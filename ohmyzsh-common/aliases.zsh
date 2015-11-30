@@ -55,6 +55,7 @@ ff() { sudo find ${2:-.} -name $1 }
 alias cf='cat << EOF'
 alias cal='cal -3'
 alias e='echo' # :)
+alias pwf='readlink -f'
 #alias sudo='sudo ' # awesome trick to use aliases with sudo # doesn't fucking work with nocorrect
 du() { /usr/bin/du -sh $@ | sort -rhk 1 }
 alias nd='sudo ncdu -x'
