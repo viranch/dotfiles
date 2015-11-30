@@ -75,7 +75,7 @@ alias vimrc='vim ~/.vimrc'
 alias zshrc='vim ~/.zshrc && . ~/.zshrc'
 alias gitconfig='vim ~/.gitconfig'
 alias sshconfig='vim ~/.ssh/config'
-alias sz='. ~/.zshrc'
+alias ee='exec zsh'
 # docker
 alias dc=docker
 alias db='docker build -t'
