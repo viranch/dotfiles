@@ -38,7 +38,7 @@ alias wget='wget --read-timeout=10'
 alias swget='swget --read-timeout=10'
 alias aa='axel' # very tidious to type a-x-e-l
 alias ax='axel -a -n8'
-alias utube='youtube-dl -ct'
+alias utube='youtube-dl -c'
 alias v=vim
 alias sp="curl -s -F 'sprunge=<-' http://sprunge.us/"
 alias sv='SUDO_EDITOR=vim sudoedit' #sudo vim
