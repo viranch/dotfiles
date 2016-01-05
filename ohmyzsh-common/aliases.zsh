@@ -12,20 +12,14 @@ awkp() { awk "{print \$$1}" }
 # Global aliases
 alias -g C='| wc -l'
 alias -g G='| grep'
-alias -g GC='| grep -c'
 alias -g H='| head'
-alias -g HL='| head -n20'
 alias -g L='| less'
 alias -g S='| sort'
 alias -g U='| uniq -c'
-alias -g T='| tail'
-alias -g TL='| tail -n20'
-alias -g TF='| tail -f'
 alias -g HH='--help | less'
 alias -g WW='| while read p; do'
 alias -g WG='| swget -ci -'
 alias -g Cd='| cutd'
-alias -g Cc='| cut -c'
 alias -g A='| awkp'
 
 # Make folks talk
