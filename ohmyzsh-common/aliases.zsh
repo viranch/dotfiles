@@ -21,6 +21,7 @@ alias -g WW='| while read p; do'
 alias -g WG='| swget -ci -'
 alias -g Cd='| cutd'
 alias -g A='| awkp'
+alias -g XX='-print0 | xargs -0'
 
 # Make folks talk
 alias cp='cp -v'
