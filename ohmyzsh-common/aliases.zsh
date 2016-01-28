@@ -39,7 +39,7 @@ alias v=vim
 alias sp="curl -s -F 'sprunge=<-' http://sprunge.us/"
 alias sv='SUDO_EDITOR=vim sudoedit' #sudo vim
 #alias pg='ps aux | grep'
-pg() { pattern=$1; shift; ps aux | grep $* "$pattern" | grep -vw "grep" | grep --color=auto $* "$pattern" }
+pg() { ps aux | grep $* | grep -vw "grep" | grep --color=auto $* }
 alias dig='dig +short'
 alias tf='sudo tail -f'
 alias sl='sudo less'
