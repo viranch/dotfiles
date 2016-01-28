@@ -18,9 +18,12 @@ bindkey "^[[H" beginning-of-line
 bindkey "^[[1~" beginning-of-line
 bindkey "^[[F"  end-of-line
 bindkey "^[[4~" end-of-line
-bindkey ' ' expand-alias    # do global alias expansion on space
-bindkey '^ ' magic-space    # control-space to bypass expansion
-bindkey -M isearch ' ' magic-space  # also do history expansion on space
+
+# Space hacks
+#bindkey ' ' expand-alias    # do global alias expansion on space
+#bindkey '^ ' magic-space    # control-space to bypass expansion
+#bindkey -M isearch ' ' magic-space  # also do history expansion on space
+bindkey ' ' magic-space      # also do history expansion on space
 
 bindkey '^[[Z' reverse-menu-complete
 
