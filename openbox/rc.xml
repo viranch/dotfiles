@@ -346,16 +346,16 @@
           <enabled>true</enabled>
           <name>Slack</name>
         </startupnotify>
-        <command>chromium --app="https://infra-ops.slack.com/messages"</command>
+        <command>chromium --app="https://linkedin-randd.slack.com/messages"</command>
       </action>
     </keybind>
-    <keybind key="W-t">
+    <keybind key="W-c">
       <action name="Execute">
         <startupnotify>
           <enabled>true</enabled>
-          <name>Trello</name>
+          <name>Calendar</name>
         </startupnotify>
-        <command>chromium --app="https://trello.com/b/iTNx7vvF/slant"</command>
+        <command>chromium --app="https://calendar.google.com/"</command>
       </action>
     </keybind>
     <keybind key="W-e">
@@ -405,7 +405,7 @@
     </keybind>
     <keybind key="A-F2">
       <action name="Execute">
-        <command>gmrun</command>
+        <command>krunner</command>
       </action>
     </keybind>
     <keybind key="A-F3">

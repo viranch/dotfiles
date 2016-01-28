@@ -16,7 +16,7 @@
 #
 #xfce-mcs-manager &
 
-xinput disable `xinput list | grep TouchPad | grep -o "id=[0-9]\+" | cut -d'=' -f2` &
+#xinput disable `xinput list | grep TouchPad | grep -o "id=[0-9]\+" | cut -d'=' -f2` &
 
 # initialize display
 compton -b &
@@ -28,21 +28,21 @@ tint2 &
 /usr/lib/kde4/libexec/polkit-kde-authentication-agent-1 &
 kmix &
 klipper &
-ksystraycmd kde-nm-connection-editor &
+#ksystraycmd kde-nm-connection-editor &
 #nm-applet &
 #wicd-gtk &
 #batti &
-batterymon &
+#batterymon &
 
 # secondary apps
-krunner &
+#krunner &
 yakuake &
 
 # user apps
-ksysguard &
-XDG_CURRENT_DESKTOP="" /usr/local/bin/mytv &
-/opt/dropbox/dropbox &
-chromium &
-XDG_CURRENT_DESKTOP="" quasselclient &
+#ksysguard &
+#XDG_CURRENT_DESKTOP="" /usr/local/bin/mytv &
+#/opt/dropbox/dropbox &
+#chromium &
+#XDG_CURRENT_DESKTOP="" quasselclient &
 #konversation &
 #ksystraycmd --startonshow --keeprunning vpn &
