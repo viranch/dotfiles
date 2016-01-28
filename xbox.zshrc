@@ -37,7 +37,7 @@ function ssh() {
     tmux setenv $session_variable_name "$*"
 
     # set window title
-    tmux rename-window "ssh:$1"
+    tmux rename-window "ssh:`echo $1 | sed 's/\.linkedin\.com$//g'`"
 
     # run ssh
     /usr/bin/ssh -o ServerAliveInterval=60 $*
