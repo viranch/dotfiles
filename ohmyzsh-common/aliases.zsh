@@ -63,6 +63,7 @@ alias chead='curl -D- -so /dev/null'
 alias curlv='curl -svo /dev/null'
 # kill stuff
 alias kint='sudo kill -INT'
+alias cunt='sudo kill -INT'
 alias kcont='sudo kill -CONT'
 alias kterm='sudo kill -TERM'
 alias k9='sudo kill -KILL'
