@@ -9,10 +9,10 @@ setopt always_to_end
 
 WORDCHARS=''
 
-autoload -U compinit
-compinit -i
+#autoload -U compinit
+#compinit -i
 
-zmodload -i zsh/complist
+#zmodload -i zsh/complist
 
 ## case-insensitive (all),partial-word and then substring completion
 if [ "x$CASE_SENSITIVE" = "xtrue" ]; then
@@ -74,14 +74,3 @@ expand-or-complete-with-dots() {
 }
 zle -N expand-or-complete-with-dots
 bindkey "^I" expand-or-complete-with-dots
-
-compdef _vim sv=sudoedit
-
-# kill stuff
-compdef _kill kint=kill
-compdef _kill kcont=kill
-compdef _kill kterm=kill
-compdef _kill k9=kill
-
-# ssh stuff
-compdef _ssh kill-ssh=ssh

@@ -48,6 +48,7 @@ function kill-ssh() {
         fi
     fi
 }
+compdef _ssh kill-ssh=ssh
 
 # generate links for files from a directory shared over apache
 function robots() {

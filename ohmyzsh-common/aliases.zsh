@@ -1,3 +1,8 @@
+# completion init
+autoload -U compinit
+compinit -i
+zmodload -i zsh/complist
+
 # shipped with oh-my-zsh
 alias history='fc -l 1'
 alias l='ls -lh'
@@ -38,6 +43,7 @@ alias rsync='rsync --append -zh --progress'
 alias v=vim
 alias sp="curl -s -F 'sprunge=<-' http://sprunge.us/"
 alias sv='SUDO_EDITOR=vim sudoedit' #sudo vim
+compdef _vim sv=sudoedit
 #alias pg='ps aux | grep'
 pg() { ps aux | grep $* | grep -vw "grep" | grep --color=auto $* }
 vb() { vim `which $@` }
@@ -68,6 +74,11 @@ alias cunt='sudo kill -INT'
 alias kcont='sudo kill -CONT'
 alias kterm='sudo kill -TERM'
 alias k9='sudo kill -KILL'
+compdef _kill kint=kill
+compdef _kill cunt=kill
+compdef _kill kcont=kill
+compdef _kill kterm=kill
+compdef _kill k9=kill
 # ssh
 alias ss=ssh
 # edit rc's
