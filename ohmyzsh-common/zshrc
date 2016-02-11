@@ -6,4 +6,7 @@ for config_file ($PLATFORM_DOTFILES/*.zsh) source $config_file
 # Customize to your needs...
 export EDITOR=vim
 
+# Put ~/bin in PATH for dropping random binaries
+test -d $HOME/bin && export PATH=$PATH:$HOME/bin
+
 command -v fasd 2>&1 >/dev/null && eval "$(fasd --init auto)" # fasd
