@@ -40,6 +40,7 @@ alias sp="curl -s -F 'sprunge=<-' http://sprunge.us/"
 alias sv='SUDO_EDITOR=vim sudoedit' #sudo vim
 #alias pg='ps aux | grep'
 pg() { ps aux | grep $* | grep -vw "grep" | grep --color=auto $* }
+vb() { vim `which $@` }
 alias dig='dig +short'
 alias tf='sudo tail -f'
 alias sl='sudo less'
