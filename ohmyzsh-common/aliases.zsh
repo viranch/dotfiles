@@ -46,7 +46,7 @@ alias sv='SUDO_EDITOR=vim sudoedit' #sudo vim
 compdef _vim sv=sudoedit
 #alias pg='ps aux | grep'
 pg() { ps aux | grep $* | grep -vw "grep" | grep --color=auto $* }
-vb() { vim `which $@` }
+vb() { $EDITOR `which $@` }
 alias dig='dig +short'
 alias tf='sudo tail -f'
 alias sl='sudo less'
