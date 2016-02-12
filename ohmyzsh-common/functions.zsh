@@ -72,3 +72,22 @@ function rmn() {
     sed "${2}d" $1 > $temp
     mv $temp $1
 }
+
+outside_tmux() {
+    [[ $TERM != screen* ]] && test -z "$TMUX"
+}
+
+tmux-cssh() {
+    outside_tmux && cmd="tmux new-session -d" || cmd="tmux new-window"
+    target=`eval $cmd -P "ssh $1"`
+    shift
+    for i in "$@"; do
+        tmux split-window -t $target -h "ssh $i"
+        tmux select-layout -t $target tiled > /dev/null
+    done
+    [[ $target == *.0 ]] && pane=$target || pane=$target.0
+    tmux select-pane -t $pane
+    tmux set-window-option -t $target synchronize-panes on > /dev/null
+    outside_tmux && tmux attach-session -t $target
+}
+alias tss=tmux-cssh
