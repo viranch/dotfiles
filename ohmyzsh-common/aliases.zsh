@@ -85,7 +85,7 @@ alias ss=ssh
 # edit rc's
 alias cdd='cd ~/.dotfiles'
 alias vimrc='vim ~/.vimrc'
-alias zshrc='vim ~/.zshrc && . ~/.zshrc'
+alias zshrc='vim ~/.zshrc && exec /bin/zsh'
 alias gitconfig='vim ~/.gitconfig'
 alias sshconfig='vim ~/.ssh/config'
 alias ee='exec zsh'
