@@ -115,7 +115,7 @@ function chpwd() {
   find . -maxdepth 1 -name .\*.zsh | while read f; do source $f; done
 }
 
-precmd() { test -n "$TMUX" && tmux rename-window -t $TMUX_PANE "`basename $PWD | cut -c -20`" }
+precmd() { test -n "$TMUX_PANE" && tmux rename-window -t $TMUX_PANE "`basename $PWD | cut -c -20`" }
 
 # Dev aliases
 alias m='make -j$((x+1))'
