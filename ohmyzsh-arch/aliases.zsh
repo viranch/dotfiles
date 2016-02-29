@@ -6,6 +6,7 @@ alias fdisk='sudo fdisk -l'
 alias ns='sudo netstat -ntp'
 alias nsl='sudo netstat -ntlp'
 alias lk='/usr/lib/kde4/libexec/kscreenlocker_greet --immediateLock'
+alias -g DF="| sed 's/^-\\([^-]\\)/\\x1b[31;1m-\\1/;s/^+\\([^+]\\)/\\x1b[32;1m+\\1/;s/^@/\\x1b[36;1m@/;s/$/\\x1b[0m/' | less -r"
 # systemctl
 alias sys='sudo systemctl'
 alias start='sys start'
