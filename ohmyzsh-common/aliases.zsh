@@ -70,6 +70,7 @@ alias dfa='/usr/bin/df -h'
 alias ctc='grep -v -e "^$" -e "^\s*#"'
 alias chead='curl -D- -so /dev/null'
 alias curlv='curl -svo /dev/null'
+alias py=python
 # kill stuff
 alias kint='sudo kill -INT'
 alias cunt='sudo kill -INT'
