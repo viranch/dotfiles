@@ -27,7 +27,7 @@ alias -g WG='| swget -ci -'
 alias -g Cd='| cutd'
 alias -g A='| awkp'
 alias -g XX='-print0 | xargs -0'
-alias -g DF="| sed 's/^-\\([^-]\\)/\\x1b[31;1m-\\1/;s/^+\\([^+]\\)/\\x1b[32;1m+\\1/;s/^@/\\x1b[36;1m@/;s/$/\\x1b[0m/' | less -r"
+alias -g DF="| sed 's/^-\\([^-]*\\)/\\x1b[31;1m-\\1/;s/^+\\([^+]*\\)/\\x1b[32;1m+\\1/;s/^@/\\x1b[36;1m@/;s/$/\\x1b[0m/' | less -r"
 
 # Make folks talk
 alias cp='cp -v'
