@@ -91,3 +91,10 @@ tmux-cssh() {
     outside_tmux && tmux attach-session -t $target
 }
 alias tss=tmux-cssh
+
+find_file() {
+    filename=$1
+    shift
+    test -n "$filename" && find $@ -name $filename || find $@
+}
+alias ff=find_file

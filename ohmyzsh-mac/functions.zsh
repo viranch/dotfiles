@@ -11,3 +11,6 @@ function share() {
     cd -
     rm -rf $temp
 }
+
+unalias ff
+ff() { find_file $@ . }
