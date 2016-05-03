@@ -63,30 +63,30 @@ function setup_env() {
     eval $($DOCKER_MACHINE env $VM --shell=zsh)
 }
 
-# test debian wheezy image with updated package list for
-# running test commands (eg: searching for packages)
-function deb() {
-    image=$(docker images | grep "^deb\s\+")
-    test -z "$image" && docker build -t deb - << EOF
-FROM debian:wheezy
-RUN apt-get update
-EOF
-    docker run --rm -it deb $@
-}
+# # test debian wheezy image with updated package list for
+# # running test commands (eg: searching for packages)
+# function deb() {
+#     image=$(docker images | grep "^deb\s\+")
+#     test -z "$image" && docker build -t deb - << EOF
+# FROM debian:wheezy
+# RUN apt-get update
+# EOF
+#     docker run --rm -it deb $@
+# }
+# 
+# # search for packages using the test debian container
+# function apt-search {
+#     deb apt-cache search $@
+# }
+# 
+# function apt-get {
+#     app=$1
+#     docker build -t $app - << EOF
+# FROM debian:wheezy
+# RUN apt-get update && apt-get install -y --no-install-recommends $app && rm -rf /var/lib/apt/lists/*
+# ENTRYPOINT ["/usr/bin/$app"]
+# EOF
+#     echo "docker run --rm -it $app"
+# }
 
-# search for packages using the test debian container
-function apt-search {
-    deb apt-cache search $@
-}
-
-function apt-get {
-    app=$1
-    docker build -t $app - << EOF
-FROM debian:wheezy
-RUN apt-get update && apt-get install -y --no-install-recommends $app && rm -rf /var/lib/apt/lists/*
-ENTRYPOINT ["/usr/bin/$app"]
-EOF
-    echo "docker run --rm -it $app"
-}
-
-vm_info >/dev/null && [[ "$($DOCKER_MACHINE status $VM)" == "Running" ]] && setup_env
+#vm_info >/dev/null && [[ "$($DOCKER_MACHINE status $VM)" == "Running" ]] && setup_env
