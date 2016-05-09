@@ -16,7 +16,7 @@ awkp() { awk "{print \$$1}" }
 
 # Global aliases
 alias -g C='| wc -l'
-alias -g G='| grep -e'
+alias -g G='| grep'
 alias -g H='| head'
 alias -g L='| less'
 alias -g S='| sort'
