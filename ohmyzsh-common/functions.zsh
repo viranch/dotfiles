@@ -98,3 +98,9 @@ find_file() {
     test -n "$filename" && find $@ -name $filename || find $@
 }
 alias ff=find_file
+
+my_sudo() {
+    [[ "$1" == "nocorrect" ]] && shift
+    command sudo $@
+}
+alias sudo='my_sudo '
