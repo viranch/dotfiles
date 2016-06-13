@@ -20,7 +20,7 @@ bindkey "^[[F"  end-of-line
 bindkey "^[[4~" end-of-line
 
 # Space hacks
-#bindkey ' ' expand-alias    # do global alias expansion on space
+bindkey '^ ' expand-alias    # do global alias expansion on space
 #bindkey '^ ' magic-space    # control-space to bypass expansion
 #bindkey -M isearch ' ' magic-space  # also do history expansion on space
 bindkey ' ' magic-space      # also do history expansion on space

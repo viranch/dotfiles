@@ -4,10 +4,8 @@
 
 function expand-alias()
 {
-    if [[ "$LBUFFER" =~ " \S+\$" ]]; then
-        zle _expand_alias
-        zle expand-word
-    fi
+    zle _expand_alias
+    zle expand-word
     zle magic-space
 }
 
