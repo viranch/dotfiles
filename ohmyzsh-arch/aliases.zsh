@@ -34,7 +34,7 @@ alias sa='ssh-add ~/.ssh/id_rsa-work'
 
 # KDE aliases
 alias ko='kde-open'
-alias e='kde-open .'
+#alias e='kde-open .'
 
 # Pacman aliases
 alias p=pacman
