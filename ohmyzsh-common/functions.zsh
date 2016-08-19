@@ -112,3 +112,7 @@ timer() {
         sleep 0.5
     done
 }
+
+curl.time() {
+    curl -so /dev/null -w 'Return Code = %{http_code}\nBytes recieved = %{size_download}\nDNS = %{time_namelookup}\nConnect= %{time_connect}\nPretransfer = %{time_pretransfer}\nStart transfer = %{time_starttransfer}\nTotal = %{time_total}\n' "$@"
+}
