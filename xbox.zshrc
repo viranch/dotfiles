@@ -27,6 +27,9 @@ function ssh() {
     # fix ssh agent envs
     fixssh
 
+    # put an event on the ssh agent
+    echo | nc `echo $SSH_CONNECTION | cut -d'=' -f2 | cut -d' ' -f1` 11000
+
     window_index=$(tmux display-message -p '#I')
 
     # arbitrary environment variable name to remember ssh args like server
@@ -61,4 +64,6 @@ unset SSH_ASKPASS
 tmv() { tmux movew -s $1 -t $2 }
 
 # custom installed binaries
-PATH=$PATH:$HOME/bin
+test -d /export/apps/python/2.7.11/bin && export PATH=/export/apps/python/2.7.11/bin:$PATH
+test -d /usr/local/go/bin && export PATH=$PATH:/usr/local/go/bin
+test -d $HOME/bin && export PATH=$PATH:$HOME/bin
