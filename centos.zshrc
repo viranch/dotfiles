@@ -1,17 +1,17 @@
-# Super user
-alias _='sudo'
-compdef _sudo _=sudo
-
-# grep '#m' fix
-#grep() { `/usr/bin/which grep` $@ | sed 's/#m//g' }
-
-# Ruby/RVM stuff
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-
-PATH=$PATH:$HOME/bin
-#bundle
-alias bi='bundle install'
+# # Super user
+# alias _='sudo'
+# compdef _sudo _=sudo
+#
+# # grep '#m' fix
+# #grep() { `/usr/bin/which grep` $@ | sed 's/#m//g' }
+#
+# # Ruby/RVM stuff
+# [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+# PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+#
+# PATH=$PATH:$HOME/bin
+# #bundle
+# alias bi='bundle install'
 
 function ipp() {
     netstat -i | tail -n+3 | awk '{print $1}' | grep -v "^lo$" | while read dev; do
@@ -44,7 +44,7 @@ alias dd='tmux detach'
 alias ns='sudo netstat -ntp'
 alias nsl='sudo netstat -ntlp'
 alias sync='~/.sync.sh'
-fc() { test -z "$1" && sudo facter || sudo facter -p "$1" }
+# fc() { test -z "$1" && sudo facter || sudo facter -p "$1" }
 alias whereami='fc colo'
 alias su='sudo '
 alias ii='sudo su icinga'
