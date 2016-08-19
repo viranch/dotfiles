@@ -11,3 +11,5 @@ source $COMMON_DOTFILES/zshrc
 x=$(sysctl -n hw.ncpu)
 
 PATH=/usr/local/bin:/usr/local/sbin:$PATH # Add /usr/local to PATH
+
+[[ `hostname` = "vimehta-mn1" ]] && test -z "$(netstat -atnp tcp | grep -i "listen" | grep "\.11000")" && (listen_yubikey &)
