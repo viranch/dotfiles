@@ -1,4 +1,3 @@
-alias wget='swget -v'
 alias qm='qmake -spec macx-g++'
 alias o='open'
 alias or='open -R'
@@ -13,3 +12,6 @@ alias bs='brew search'
 alias bi='brew install'
 alias bif='brew info'
 alias bl='brew list'
+
+# gnu coreutils
+alias date=gdate
