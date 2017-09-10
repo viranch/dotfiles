@@ -1,6 +1,6 @@
 [user]
     name = Viranch Mehta
-    email = viranch.mehta@gmail.com
+    email = email@viranch.me
 [url "git://anongit.kde.org/"]
     insteadOf = kde:
 [url "git@git.kde.org:"]
