@@ -78,15 +78,16 @@ outside_tmux() {
 }
 
 tmux-cssh() {
-    outside_tmux && cmd="tmux new-session -d" || cmd="tmux new-window"
-    target=`eval $cmd -P "ssh $1"`
+    outside_tmux && target=`tmux new-session -d -P` || target=`tmux new-window -P`
+    target=${target/.0/}
+    tmux send-keys -t $target "ssh $1; exit" Enter
     shift
     for i in "$@"; do
-        tmux split-window -t $target -h "ssh $i"
+        tmux split-window -t $target -h
+        tmux send-keys "ssh $i; exit" Enter
         tmux select-layout -t $target tiled > /dev/null
     done
-    [[ $target == *.0 ]] && pane=$target || pane=$target.0
-    tmux select-pane -t $pane
+    tmux select-pane -t $target
     tmux set-window-option -t $target synchronize-panes on > /dev/null
     outside_tmux && tmux attach-session -t $target
 }
