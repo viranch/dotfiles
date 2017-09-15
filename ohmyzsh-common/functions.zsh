@@ -78,12 +78,12 @@ outside_tmux() {
 }
 
 tmux-cssh() {
-    outside_tmux && target=`tmux new-session -d -P` || target=`tmux new-window -P`
+    outside_tmux && target=`tmux new-session -d -P` || target=`tmux new-window -P -c $HOME`
     target=${target/.0/}
     tmux send-keys -t $target "ssh $1; exit" Enter
     shift
     for i in "$@"; do
-        tmux split-window -t $target -h
+        tmux split-window -t $target -h -c $HOME
         tmux send-keys "ssh $i; exit" Enter
         tmux select-layout -t $target tiled > /dev/null
     done
