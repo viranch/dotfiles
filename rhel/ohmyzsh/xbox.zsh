@@ -1,12 +1,3 @@
-# If not running interactively, do not do anything
-[[ $- != *i* ]] && return
-[[ $TERM != screen* ]] && test -z "$TMUX" && (tmux attach || tmux new-session) && exit
-#[[ $TERM != screen* ]] && test -z "$TMUX" && (tmux new-session) && exit
-
-for i (~/.dotfiles/ohmyzsh-common/*.zsh) source $i
-source ~/.dotfiles/centos.zshrc
-test -e ~/.dotfiles/work.zshrc && source ~/.dotfiles/work.zshrc
-
 function fixssh() {
   if [ -n "$TMUX" ] # set only if within running tmux
   then
@@ -28,7 +19,7 @@ function ssh() {
     fixssh
 
     # put an event on the ssh agent
-    echo | nc `echo $SSH_CONNECTION | cut -d'=' -f2 | cut -d' ' -f1` 11000
+    #echo | nc `echo $SSH_CONNECTION | cut -d'=' -f2 | cut -d' ' -f1` 11000
 
     window_index=$(tmux display-message -p '#I')
 
@@ -57,13 +48,21 @@ function ssh() {
 
 function git() {
     fixssh
-    /usr/bin/git $*
+    /export/apps/xtools/bin/git $*
+}
+
+function svn() {
+    fixssh
+    /usr/bin/svn $*
 }
 
 unset SSH_ASKPASS
 tmv() { tmux movew -s $1 -t $2 }
 
+pbcopy() { nc `echo $SSH_CONNECTION | cut -d'=' -f2 | cut -d' ' -f1` 12000 }
+#pbcopy() { fixssh; output=`cat`; echo $output | nc `echo $SSH_CONNECTION | cut -d'=' -f2 | cut -d' ' -f1` 12000 }
+alias -g CC='| tee /tmp/paste; fixssh; sleep 1; cat /tmp/paste | pbcopy'
+
 # custom installed binaries
-test -d /export/apps/python/2.7.11/bin && export PATH=/export/apps/python/2.7.11/bin:$PATH
+test -d /export/apps/python/2.7/bin && export PATH=/export/apps/python/2.7/bin:$PATH
 test -d /usr/local/go/bin && export PATH=$PATH:/usr/local/go/bin
-test -d $HOME/bin && export PATH=$PATH:$HOME/bin
