@@ -1,0 +1,9 @@
+[user]
+    name = Viranch Mehta
+    email = vimehta@linkedin.com
+[url "git://github.com/"]
+    insteadOf = gh:
+[url "git@gitli.corp.linkedin.com:"]
+    insteadOf = gitli:
+[push]
+    default = current

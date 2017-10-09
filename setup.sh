@@ -10,7 +10,7 @@ elif [[ "$platform" == "Darwin" ]]; then
     src="mac"
 fi
 
-ln -s $cwd/gitconfig ~/.gitconfig
+ln -s `find $cwd/{$src,common}/gitconfig 2>/dev/null | head -1` ~/.gitconfig
 
 mkdir -p ~/.ssh && ln -s `find $cwd/{$src,common}/sshconfig 2>/dev/null | head -1` ~/.ssh/config
 mkdir -p ~/.ssh/cm_socket
