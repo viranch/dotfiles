@@ -5,7 +5,7 @@ cwd="$(cd "$(dirname "$0")" && pwd)"
 
 platform=`uname`
 if [[ "$platform" == "Linux" ]]; then
-    src="arch"
+    src=`cat /etc/*-release | grep "^ID=" | cut -d= -f2 | sed 's/"//g'`
 elif [[ "$platform" == "Darwin" ]]; then
     src="mac"
 fi
