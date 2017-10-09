@@ -115,9 +115,11 @@ function chpwd() {
   emulate -L zsh
   /bin/ls
   find . -maxdepth 1 -name .\*.zsh | while read f; do source $f; done
+  find . -maxdepth 1 -type d | while read d; do test -f $d/bin/activate && source $d/bin/activate && break; done || deactivate 2>/dev/null
 }
 
 precmd() { test -n "$TMUX_PANE" && tmux rename-window -t $TMUX_PANE "`basename $PWD | cut -c -20`" }
 
 # Dev aliases
-alias m='make -j$((x+1))'
+makej() { n=`cat /proc/cpuinfo |grep processor -c`; make -j$((n+1)) $@ }
+alias m=makej

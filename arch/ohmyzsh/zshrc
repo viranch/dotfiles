@@ -6,6 +6,3 @@ export PLATFORM_DOTFILES=$DOTFILES/arch/ohmyzsh
 # Let the magic begin
 source $COMMON_DOTFILES/zshrc
 #above will also source $PLATFORM_DOTFILES ;)
-
-# my aliases
-x=$(cat /proc/cpuinfo|grep -c processor)

@@ -90,6 +90,7 @@ tmux-cssh() {
     tmux select-pane -t $target
     tmux set-window-option -t $target synchronize-panes on > /dev/null
     outside_tmux && tmux attach-session -t $target
+    echo $target
 }
 alias tss=tmux-cssh
 
