@@ -11,5 +11,7 @@
     pushInsteadOf = gh:
 [url "git@bitbucket.org:viranch/"]
     insteadOf = bb:
+[url "git@gitli.corp.linkedin.com:"]
+    insteadOf = gitli:
 [push]
 	default = current
