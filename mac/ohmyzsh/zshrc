@@ -1,7 +1,7 @@
 # Path to your oh-my-zsh configuration.
 export DOTFILES=$HOME/.dotfiles
-export COMMON_DOTFILES=$DOTFILES/ohmyzsh-common
-export PLATFORM_DOTFILES=$DOTFILES/ohmyzsh-mac
+export COMMON_DOTFILES=$DOTFILES/common/ohmyzsh
+export PLATFORM_DOTFILES=$DOTFILES/mac/ohmyzsh
 
 # Let the magic begin
 source $COMMON_DOTFILES/zshrc

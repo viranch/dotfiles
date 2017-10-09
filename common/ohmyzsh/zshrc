@@ -1,6 +1,6 @@
 # Load all of the config files in ~/oh-my-zsh that end in .zsh
-fpath=($PLATFORM_DOTFILES/completion $DOTFILES/ohmyzsh-common/completion $fpath)
-for config_file ($DOTFILES/ohmyzsh-common/*.zsh) source $config_file
+fpath=($PLATFORM_DOTFILES/completion $COMMON_DOTFILES/completion $fpath)
+for config_file ($COMMON_DOTFILES/*.zsh) source $config_file
 for config_file ($PLATFORM_DOTFILES/*.zsh) source $config_file
 
 # Customize to your needs...

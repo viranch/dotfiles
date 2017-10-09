@@ -18,4 +18,4 @@ if [[ "$platform" == "Linux" ]]; then
 elif [[ "$platform" == "Darwin" ]]; then
     src="mac"
 fi
-rm -f ~/.zshrc && ln -s $cwd/ohmyzsh-$src/zshrc ~/.zshrc
+rm -f ~/.zshrc && ln -s $cwd/$src/ohmyzsh/zshrc ~/.zshrc
