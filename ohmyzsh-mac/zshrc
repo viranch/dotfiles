@@ -15,4 +15,7 @@ PATH=/usr/local/bin:/usr/local/sbin:$PATH # Add /usr/local to PATH
 PATH=$PATH:/usr/local/opt/go/libexec/bin # Go stuff
 export GOPATH=$HOME/code/go
 
+PATH=/export/apps/python/2.7/bin:$PATH # python stuff
+
 [[ `hostname` = "vimehta-mn1" ]] && test -z "$(netstat -atnp tcp | grep -i "listen" | grep "\.11000")" && (listen_yubikey &)
+[[ `hostname` = "vimehta-mn1" ]] && test -z "$(netstat -atnp tcp | grep -i "listen" | grep "\.12000")" && (listen_clipboard &)
