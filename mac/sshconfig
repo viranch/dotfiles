@@ -1,0 +1,28 @@
+Include ~/.dotfiles/common/sshconfig
+
+Host xbox vimehta-ld*
+    User vimehta
+    IdentityFile ~/.ssh/li_key2
+    StrictHostKeyChecking no
+    ForwardAgent yes
+    GSSAPIAuthentication no
+    LocalForward 9100 127.0.0.1:9100
+    LocalForward 9200 127.0.0.1:9200
+    LocalForward 5601 127.0.0.1:5601
+    LocalForward 19200 127.0.0.1:19200
+    LocalForward 29200 127.0.0.1:29200
+    LocalForward 9202 127.0.0.1:9202
+
+Host *bssh* eng-portal*
+    User vimehta
+    IdentityFile ~/.ssh/li_key2
+    StrictHostKeyChecking no
+    ForwardAgent yes
+    GSSAPIAuthentication no
+
+Host *prod *prod.linkedin.com *prod.linkedin.com. *stg *stg.linkedin.com *stg.linkedin.com. *app*.corp *app*.corp.linkedin.com *app*.corp.linkedin.com. gitli.corp.linkedin.com.
+    User vimehta
+    IdentityFile ~/.ssh/li_key2
+    GSSAPIAuthentication yes
+    GSSAPIDelegateCredentials yes
+    ProxyCommand bash -c "ssh `/usr/local/linkedin/bin/bastion %h` nc %h %p" 2> /dev/null

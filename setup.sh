@@ -12,7 +12,7 @@ fi
 
 ln -s $cwd/gitconfig ~/.gitconfig
 
-mkdir -p ~/.ssh && ln -s $cwd/sshconfig ~/.ssh/config
+mkdir -p ~/.ssh && ln -s `find $cwd/{$src,common}/sshconfig 2>/dev/null | head -1` ~/.ssh/config
 mkdir -p ~/.ssh/cm_socket
 
 ln -s $cwd/vimrc ~/.vimrc
