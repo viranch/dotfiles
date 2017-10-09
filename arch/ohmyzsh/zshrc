@@ -1,3 +1,7 @@
+# If not running interactively, do not do anything
+[[ $- != *i* ]] && return
+[[ $TERM != screen* ]] && test -z "$TMUX" && (tmux attach || tmux new-session) && exit
+
 # Path to your oh-my-zsh configuration.
 export DOTFILES=$HOME/.dotfiles
 export COMMON_DOTFILES=$DOTFILES/common/ohmyzsh
