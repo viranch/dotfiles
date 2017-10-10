@@ -1,1 +1,2 @@
-Include ~/.dotfiles/common/sshconfig
+ControlMaster auto
+ControlPath ~/.ssh/cm_socket/%r@%h:%p
