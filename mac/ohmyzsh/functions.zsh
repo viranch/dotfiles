@@ -12,21 +12,6 @@ function share() {
     rm -rf $temp
 }
 
-function do_yubikey() {
-    osascript -e 'tell application "yubiswitch" to KeyOn'
-    [[ ! -f /tmp/yubi ]] && (echo 0 > /tmp/yubi)
-    n=`cat /tmp/yubi`
-    echo $n+1 | bc > /tmp/yubi
-    sleep 15
-    n=`cat /tmp/yubi`
-    [[ $n == "1" ]] && osascript -e 'tell application "yubiswitch" to KeyOff'
-    echo $n-1 | bc > /tmp/yubi
-}
-
-function listen_yubikey() {
-    while true; do nc -l 11000; (do_yubikey &); done
-}
-
 function listen_clipboard() {
     while true; do nc -l 12000 | pbcopy; pbpaste > /tmp/paste; done
 }
