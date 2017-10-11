@@ -46,7 +46,7 @@ alias sp="curl -s -F 'sprunge=<-' http://sprunge.us/"
 alias sv='SUDO_EDITOR=vim sudoedit' #sudo vim
 compdef _vim sv=sudoedit
 #alias pg='ps aux | grep'
-pg() { ps aux | grep $* | grep -vw "grep" | grep --color=auto $* }
+pg() { ps aux | grep --color=always $* | grep -vw "grep" }
 vb() { $EDITOR `which $@` }
 compdef _which vb=which
 alias dig='dig +short'
