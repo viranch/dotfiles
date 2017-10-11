@@ -15,3 +15,5 @@ alias bl='brew list'
 
 # gnu coreutils
 alias date=gdate
+alias md5sum=gmd5sum
+alias sed=gsed
