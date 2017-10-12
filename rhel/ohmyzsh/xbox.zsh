@@ -46,16 +46,6 @@ function ssh() {
   precmd
 }
 
-function git() {
-    fixssh
-    /export/apps/xtools/bin/git $*
-}
-
-function svn() {
-    fixssh
-    /usr/bin/svn $*
-}
-
 unset SSH_ASKPASS
 tmv() { tmux movew -s $1 -t $2 }
 
@@ -63,6 +53,4 @@ pbcopy() { nc `echo $SSH_CONNECTION | cut -d'=' -f2 | cut -d' ' -f1` 12000 }
 #pbcopy() { fixssh; output=`cat`; echo $output | nc `echo $SSH_CONNECTION | cut -d'=' -f2 | cut -d' ' -f1` 12000 }
 alias -g CC='| tee /tmp/paste; fixssh; sleep 1; cat /tmp/paste | pbcopy'
 
-# custom installed binaries
-test -d /export/apps/python/2.7/bin && export PATH=/export/apps/python/2.7/bin:$PATH
 test -d /usr/local/go/bin && export PATH=$PATH:/usr/local/go/bin
