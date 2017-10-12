@@ -5,6 +5,7 @@ for config_file ($PLATFORM_DOTFILES/*.zsh) source $config_file
 
 # Customize to your needs...
 export EDITOR=vim
+test -n "$TMUX" && export TERM="screen-256color"
 
 # Put ~/bin in PATH for dropping random binaries
 test -d $HOME/bin && export PATH=$PATH:$HOME/bin
