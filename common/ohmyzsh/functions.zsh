@@ -118,3 +118,10 @@ timer() {
 curl.time() {
     curl -so /dev/null -w 'Return Code = %{http_code}\nBytes recieved = %{size_download}\nDNS = %{time_namelookup}\nConnect= %{time_connect}\nPretransfer = %{time_pretransfer}\nStart transfer = %{time_starttransfer}\nTotal = %{time_total}\n' "$@"
 }
+
+rec() {
+    asciinema rec /tmp/recording.json
+    echo "Uploading ..."
+    asciinema upload /tmp/recording.json
+    rm /tmp/recording.json
+}
