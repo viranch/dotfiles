@@ -52,5 +52,3 @@ tmv() { tmux movew -s $1 -t $2 }
 pbcopy() { nc `echo $SSH_CONNECTION | cut -d'=' -f2 | cut -d' ' -f1` 12000 }
 #pbcopy() { fixssh; output=`cat`; echo $output | nc `echo $SSH_CONNECTION | cut -d'=' -f2 | cut -d' ' -f1` 12000 }
 alias -g CC='| tee /tmp/paste; fixssh; sleep 1; cat /tmp/paste | pbcopy'
-
-test -d /usr/local/go/bin && export PATH=$PATH:/usr/local/go/bin
