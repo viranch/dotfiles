@@ -10,8 +10,8 @@ source $COMMON_DOTFILES/zshrc
 # my aliases
 x=$(sysctl -n hw.ncpu)
 
-PATH=/usr/local/bin:/usr/local/sbin:$PATH # Add /usr/local to PATH
+test -d /usr/local/sbin && export PATH=$PATH:/usr/local/sbin # Add /usr/local to PATH
 
-PATH=/export/apps/python/2.7/bin:$PATH # python stuff
+test -d /export/apps/python/2.7/bin && export PATH=/export/apps/python/2.7/bin:$PATH # python stuff
 
 [[ `hostname` = "vimehta-mn1" ]] && test -z "$(netstat -atnp tcp | grep -i "listen" | grep "\.12000")" && (listen_clipboard &)
