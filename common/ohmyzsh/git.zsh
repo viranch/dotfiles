@@ -111,7 +111,7 @@ alias gp='git push'
 compdef _git gp=git-push
 alias g\[=gp # common mistake to type '[' in place of 'p'
 
-alias gll='git log --pretty=format:"%C(yellow)%h %C(green)%cd %C(reset)%s %C(red)[%cn]" --color=auto'
+alias gll='git log --pretty=format:"%C(yellow)%h %C(green)%cd %C(reset)%s %C(red)[%an <%ae>]" --color=auto'
 compdef _git gll=git-log
 
 alias glg='gll --numstat --date=relative'
