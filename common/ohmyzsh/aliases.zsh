@@ -56,6 +56,7 @@ alias sl='sudo less'
 alias lr='sudo less -r'
 alias gg='sudo grep --color=auto'
 alias gr='gg -inr'
+alias grf='gr -F'
 alias gnr='gg -nr'
 alias mcat='sudo tail -n +1' # multicat
 ff() { sudo find ${2:-.} -name $1 }
