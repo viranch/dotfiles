@@ -54,6 +54,9 @@ bindkey ' ' magic-space                               # [Space] - do history exp
 bindkey '^[[1;5C' forward-word                        # [Ctrl-RightArrow] - move forward one word
 bindkey '^[[1;5D' backward-word                       # [Ctrl-LeftArrow] - move backward one word
 
+# clear stuff on left of cursor
+bindkey "^U" backward-kill-line                       # [Ctrl-U] - delete line left of cursor
+
 if [[ "${terminfo[kcbt]}" != "" ]]; then
   bindkey "${terminfo[kcbt]}" reverse-menu-complete   # [Shift-Tab] - move through the completion menu backwards
 fi
