@@ -91,6 +91,9 @@ compdef _git gdn=git-diff
 alias gc='git commit -am'
 compdef _git gc=git-commit
 
+# Stash -> Pull -> rebase -> Unstash
+gsl() { git stash && git pull --rebase && git stash pop }
+
 # Commit -> Push
 gcp() { git commit -am "$1" && git push }
 
