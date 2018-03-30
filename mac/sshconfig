@@ -6,12 +6,8 @@ Host xbox vimehta-ld*
     StrictHostKeyChecking no
     ForwardAgent yes
     GSSAPIAuthentication no
-    LocalForward 9100 127.0.0.1:9100
-    LocalForward 9200 127.0.0.1:9200
-    LocalForward 5601 127.0.0.1:5601
-    LocalForward 19200 127.0.0.1:19200
-    LocalForward 29200 127.0.0.1:29200
-    LocalForward 9202 127.0.0.1:9202
+    LocalForward 29200 127.0.0.1:8082
+    LocalForward 39200 127.0.0.1:8083
 
 Host *bssh* eng-portal*
     User vimehta
