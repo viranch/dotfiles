@@ -71,8 +71,8 @@ alias nd='sudo ncdu -x'
 alias df='df -h | grep --color=never "^\(Filesystem\|/dev/\)"'
 alias dfa='/usr/bin/df -h'
 alias ctc='grep -v -e "^$" -e "^\s*#"'
-alias curld='curl -so /dev/null -D-'
-alias curlv='curl -so /dev/null -v'
+alias curld='curl -Sso /dev/null -D-'
+alias curlv='curl -Sso /dev/null -v'
 alias py=python
 # kill stuff
 alias kint='sudo kill -INT'
