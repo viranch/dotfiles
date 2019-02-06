@@ -73,7 +73,8 @@ alias dfa='/usr/bin/df -h'
 alias ctc='grep -v -e "^$" -e "^\s*#"'
 alias curld='curl -Sso /dev/null -D-'
 alias curlv='curl -Sso /dev/null -v'
-alias py=python
+alias py=python3
+alias py2=python
 # kill stuff
 alias kint='sudo kill -INT'
 alias cunt='sudo kill -INT'
@@ -116,7 +117,7 @@ alias drm='docker rm'
 
 function chpwd() {
   emulate -L zsh
-  /bin/ls
+  /bin/ls --color=tty
   find . -maxdepth 1 -name .\*.zsh | while read f; do source $f; done
   find . -maxdepth 1 -type d | while read d; do test -f $d/bin/activate && source $d/bin/activate && break; done || deactivate 2>/dev/null
 }

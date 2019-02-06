@@ -49,3 +49,12 @@ alias ri='sudo rpm -ivh'
 # paste stuff around
 alias rpb='nc -l 10000'
 wpb() { nc $1 10000 }
+
+# svn stuff
+unalias sd
+sd() { svn diff $@ }
+compdef _svndiff sd=svndiff
+sc() { svn ci -m $@ }
+compdef _svndiff sc=svndiff
+st() { svn status $@ }
+compdef _svndiff st=svndiff
