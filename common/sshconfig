@@ -1,5 +1,5 @@
 ControlMaster auto
-ControlPath ~/.ssh/cm_socket/%r@%h:%p
+ControlPath ~/.ssh/cm_socket/%h
 
 Host *.amazonaws.com
     IdentityFile ~/.ssh/id_rsa-personal
@@ -12,14 +12,14 @@ Host vps
 
 Host pi
     User alarm
-    Hostname 192.168.1.10
+    Hostname 192.168.0.102
     IdentityFile ~/.ssh/id_rsa-personal
 Host ppi
     User alarm
-    Hostname viranch.servebeer.com
+    Hostname home.viranch.me
     Port 2222
     IdentityFile ~/.ssh/id_rsa-personal
-    LocalForward 8088 192.168.1.1:80
+    LocalForward 8088 192.168.0.1:80
 
 Host github.com bitbucket.org straightup.tvaddons.ag
     IdentityFile ~/.ssh/id_rsa-personal
