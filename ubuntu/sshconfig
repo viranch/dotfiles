@@ -1,3 +1,0 @@
-Include ~/.dotfiles/common/sshconfig
-
-ControlPath ~/.ssh/cm_socket/%h
