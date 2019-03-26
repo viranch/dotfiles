@@ -51,7 +51,8 @@ compdef _vim sv=sudoedit
 pg() { ps aux | grep --color=always $* | grep -vw "grep" }
 vb() { $EDITOR `which $@` }
 compdef _which vb=which
-alias dig='dig +short'
+alias digs='dig +short'
+alias digns='dig +short +noshort'
 alias tf='sudo tail -f'
 alias sl='sudo less'
 alias lr='sudo less -r'
