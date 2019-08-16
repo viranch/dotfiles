@@ -75,6 +75,9 @@ compdef _git gb=git-checkout
 alias gl='git pull'
 compdef _git gl=git-pull
 
+# Stash -> Pull -> rebase -> Unstash
+alias glr='git stash && git pull --rebase && git stash pop'
+
 alias gd='git diff --color=auto'
 compdef _git gd=git-diff
 
@@ -91,14 +94,11 @@ compdef _git gdn=git-diff
 alias gc='git commit -am'
 compdef _git gc=git-commit
 
-# Stash -> Pull -> rebase -> Unstash
-gsl() { git stash && git pull --rebase && git stash pop }
-
 # Commit -> Push
 gcp() { git commit -am "$1" && git push }
 
 # Pull -> Commit -> Push
-glcp() { git pull && git commit -am "$1" && git push }
+glcp() { glr && gc "$1" && gp }
 
 # Commit only specifically staged files
 alias gcm='git commit -m'
