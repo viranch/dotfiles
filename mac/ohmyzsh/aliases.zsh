@@ -14,7 +14,7 @@ alias bif='brew info'
 alias bl='brew list'
 
 # gnu coreutils
-alias grep=ggrep
+alias grep='ggrep --color=auto'
 alias date=gdate
 alias md5sum=gmd5sum
 alias sed=gsed

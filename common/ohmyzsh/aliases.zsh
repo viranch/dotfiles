@@ -28,8 +28,9 @@ alias -g WG='| swget -ci -'
 alias -g Cd='| cutd'
 alias -g A='| awkp'
 alias -g XX='-print0 | xargs -0'
-alias -g DF="| sed 's/^-\\([^-]*\\)/\\x1b[31;1m-\\1/;s/^+\\([^+]*\\)/\\x1b[32;1m+\\1/;s/^@/\\x1b[36;1m@/;s/$/\\x1b[0m/' | less -SR"
+alias -g DF="| sed 's/^-\\([^-]*\\)/\\x1b[31;1m-\\1/;s/^+\\([^+]*\\)/\\x1b[32;1m+\\1/;s/^@/\\x1b[36;1m@/;s/$/\\x1b[0m/' | less -SRF"
 alias -g JJ='| jq -C . | less -SR'
+alias -g AV='| awk "{ total += \$1; count++ } END { print total/count }"'
 
 # Make folks talk
 alias cp='cp -v'
@@ -53,15 +54,15 @@ vb() { $EDITOR `which $@` }
 compdef _which vb=which
 alias digs='dig +short'
 alias digns='dig +short +noshort'
-alias tf='sudo tail -f'
+alias tf='tail -f'
 alias sl='sudo less'
 alias lr='sudo less -r'
-alias gg='sudo grep --color=auto'
+alias gg='grep --color=auto'
 alias gr='gg -inr'
 alias grf='gr -F'
 alias gnr='gg -nr'
-alias mcat='sudo tail -n +1' # multicat
-ff() { sudo find ${2:-.} -name $1 }
+alias mcat='tail -n +1' # multicat
+ff() { find ${2:-.} -name $1 }
 alias cf='cat << EOF'
 alias cal='cal -3'
 alias e='echo' # :)
