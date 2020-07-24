@@ -5,9 +5,24 @@ Host *.amazonaws.com
     IdentityFile ~/.ssh/id_rsa-personal
     ControlMaster no
 
-Host vps
+Host sgp tv
     User dhinchak
     Hostname li1752-244.members.linode.com
+    IdentityFile ~/.ssh/id_rsa-vps
+
+Host azr vps
+    User viranch
+    Hostname vps.viranch.me
+    IdentityFile ~/.ssh/id_rsa-vps
+
+Host ind
+    User dhinchak
+    Hostname 103.146.177.189
+    IdentityFile ~/.ssh/id_rsa-vps
+
+Host aws
+    User ubuntu
+    Hostname ec2-13-233-186-186.ap-south-1.compute.amazonaws.com
     IdentityFile ~/.ssh/id_rsa-vps
 
 Host pi
