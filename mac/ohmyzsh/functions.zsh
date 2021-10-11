@@ -12,9 +12,5 @@ function share() {
     rm -rf $temp
 }
 
-function listen_clipboard() {
-    while true; do nc -l 12000 | pbcopy; pbpaste > /tmp/paste; done
-}
-
 unalias ff
 ff() { find_file $@ . }

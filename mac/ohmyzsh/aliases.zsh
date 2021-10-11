@@ -5,6 +5,7 @@ alias sv='sudo vim'
 alias ns='sudo netstat -nap tcp'
 alias ipp='ifconfig en0 | grep "inet " | awk "{print \$2}"'
 du() { /usr/bin/du -sh $@ | gsort -rhk 1 } # install gsort with brew install coreutils
+alias nd='sudo ncdu --exclude /System/Volumes/Data -x'
 
 # home brew
 alias b='brew'

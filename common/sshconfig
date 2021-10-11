@@ -1,40 +1,17 @@
 ControlMaster auto
 ControlPath ~/.ssh/cm_socket/%h
 
-Host *.amazonaws.com
-    IdentityFile ~/.ssh/id_rsa-personal
-    ControlMaster no
-
-Host sgp tv
-    User dhinchak
-    Hostname li1752-244.members.linode.com
-    IdentityFile ~/.ssh/id_rsa-vps
-
 Host azr vps
     User viranch
-    Hostname vps.viranch.me
+    #Hostname vps.viranch.me
+    Hostname az1752-244.westus2.cloudapp.azure.com.
     IdentityFile ~/.ssh/id_rsa-vps
 
-Host ind
-    User dhinchak
-    Hostname 103.146.177.189
-    IdentityFile ~/.ssh/id_rsa-vps
-
-Host aws
-    User ubuntu
-    Hostname ec2-13-233-186-186.ap-south-1.compute.amazonaws.com
-    IdentityFile ~/.ssh/id_rsa-vps
-
-Host pi
-    User alarm
-    Hostname 192.168.0.102
-    IdentityFile ~/.ssh/id_rsa-personal
-Host ppi
-    User alarm
+Host tiny
+    User neo
     Hostname home.viranch.me
-    Port 2222
     IdentityFile ~/.ssh/id_rsa-personal
-    LocalForward 8088 192.168.0.1:80
+    ForwardAgent yes
 
 Host github.com bitbucket.org straightup.tvaddons.ag
     IdentityFile ~/.ssh/id_rsa-personal
