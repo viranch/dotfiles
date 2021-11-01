@@ -5,8 +5,8 @@ zmodload -i zsh/complist
 
 # shipped with oh-my-zsh
 alias history='fc -l 1'
-alias l='ls -lh'
-alias ll='ls -lha'
+alias l='ls -lhN'
+alias ll='ls -lhaN'
 alias x=extract
 alias afind='ack-grep -il'
 

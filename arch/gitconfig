@@ -1,6 +1,7 @@
 [user]
     name = Viranch Mehta
     email = email@viranch.me
+    signingkey = D83D1392AE9F93B4
 [url "git://anongit.kde.org/"]
     insteadOf = kde:
 [url "git@git.kde.org:"]
@@ -14,6 +15,8 @@
 [url "https://aur.archlinux.org/"]
     insteadOf = aur:
 [push]
-	default = current
+    default = current
 [pull]
-	ff = only
+    ff = only
+[commit]
+    gpgsign = true
