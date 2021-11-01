@@ -57,3 +57,9 @@ whose() { pqo -q $(which -p $1) }
 plist() { pacman -Qei|awk ' BEGIN {FS=":"}/^Name/{printf("\033[1;36m%s\033[1;37m", $2)}/^Description/{print $2}' }
 compdef _which whose=which
 alias ya=yaourt
+
+# headless aliases
+alias git='fixssh; git'
+
+alias vf=vim
+compdef _vf vf=vf

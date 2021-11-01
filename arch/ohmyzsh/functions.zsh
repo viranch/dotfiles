@@ -25,3 +25,16 @@ function share() {
     cd -
     rm -rf $temp
 }
+
+function fixssh() {
+  if [ -n "$TMUX" ] # set only if within running tmux
+  then
+    for key in SSH_AUTH_SOCK SSH_CONNECTION SSH_CLIENT; do
+        if (tmux show-environment | grep "^${key}" > /dev/null); then
+            #value=`tmux show-environment | grep "^${key}" | sed -e "s/^[A-Z_]*=//"`
+            #export ${key}="${value}"
+            export "`tmux show-environment | grep "^${key}="`"
+        fi
+    done
+  fi
+}
