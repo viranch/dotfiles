@@ -5,7 +5,7 @@ Host azr vps
     User viranch
     #Hostname vps.viranch.me
     Hostname az1752-244.westus2.cloudapp.azure.com.
-    IdentityFile ~/.ssh/id_rsa-vps
+    IdentityFile ~/.ssh/id_rsa-personal
 
 Host tiny
     User neo

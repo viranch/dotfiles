@@ -12,4 +12,6 @@ x=$(sysctl -n hw.ncpu)
 
 test -d /usr/local/sbin && export PATH=$PATH:/usr/local/sbin # Add /usr/local to PATH
 
-test -d /export/apps/python/2.7/bin && export PATH=/export/apps/python/2.7/bin:$PATH # python stuff
+# homebrew bin paths
+test -d /opt/homebrew/opt/coreutils/libexec/gnubin && export PATH=/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH
+test -d /opt/homebrew/opt/grep/libexec/gnubin && export PATH=/opt/homebrew/opt/grep/libexec/gnubin:$PATH

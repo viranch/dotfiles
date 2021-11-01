@@ -117,9 +117,13 @@ alias dstop='docker stop'
 alias drst='docker restart'
 alias drm='docker rm'
 
+function chpwdls() {
+  /bin/ls --color=tty
+}
+
 function chpwd() {
   emulate -L zsh
-  /bin/ls --color=tty
+  chpwdls
   find . -maxdepth 1 -name .\*.zsh | while read f; do source $f; done
   find . -maxdepth 1 -type d | while read d; do test -f $d/bin/activate && source $d/bin/activate && break; done || deactivate 2>/dev/null
 }
