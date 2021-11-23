@@ -117,7 +117,7 @@ alias g\[=gp # common mistake to type '[' in place of 'p'
 alias gll='git log --pretty=format:"%C(yellow)%h %C(green)%cd %C(reset)%s %C(red)[%an <%ae>]" --color=auto'
 compdef _git gll=git-log
 
-alias glg='gll --numstat --date=relative'
+alias glg='gll --stat --date=relative'
 compdef _git glg=git-log
 
 alias glgp='glg -p'
