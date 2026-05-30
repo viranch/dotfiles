@@ -14,7 +14,7 @@ alias sdisable='sys disable'
 alias sys-reload='sys daemon-reload'
 
 # apt-get aliases
-alias ag='sudo apt-get'
+alias ag='sudo apt'
 alias agi='ag install'
 alias agu='ag update'
 alias agr='ag remove --auto-remove'

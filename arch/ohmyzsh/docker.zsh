@@ -1,6 +1,13 @@
 export DOCKER_COMPOSE_DIR="$HOME/code/docker-compose-files/tiny"
 
+# aliases
+alias dps=dpsa
+alias de='docker exec -it'
+alias dlf='docker logs -f'
+alias din='docker inspect'
+
 # compose wrapper
+unalias dc
 dc() {
     sub=$1; shift
     dcfile="$DOCKER_COMPOSE_DIR"/$sub/docker-compose.yml
