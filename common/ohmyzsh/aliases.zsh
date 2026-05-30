@@ -8,7 +8,6 @@ alias history='fc -l 1'
 alias l='ls -lhN'
 alias ll='ls -lhaN'
 alias x=extract
-alias afind='ack-grep -il'
 
 # one liners
 cutd() { cut -d $1 -f $2 }
@@ -39,28 +38,20 @@ alias rm='rm -v'
 
 # My useful aliases
 alias wget='wget --read-timeout=10'
-alias swget='swget --read-timeout=10'
 alias aa='axel' # very tidious to type a-x-e-l
 alias ax='axel -a -n8'
 alias utube='youtube-dl -c'
 alias rsync='rsync --append -zh --progress'
 alias v=vim
-alias sp="curl -s -F 'sprunge=<-' http://sprunge.us/"
 alias sv='SUDO_EDITOR=vim sudoedit' #sudo vim
 compdef _vim sv=sudoedit
 #alias pg='ps aux | grep'
 pg() { ps aux | grep --color=always $* | grep -vw "grep" }
-vb() { $EDITOR `which $@` }
-compdef _which vb=which
 alias digs='dig +short'
 alias digns='dig +short +noshort'
 alias tf='tail -f'
-alias sl='sudo less'
-alias lr='sudo less -r'
 alias gg='grep --color=auto'
 alias gr='gg -inr'
-alias grf='gr -F'
-alias gnr='gg -nr'
 alias mcat='tail -n +1' # multicat
 ff() { find ${2:-.} -name $1 }
 alias cf='cat << EOF'
@@ -70,22 +61,17 @@ alias pwf='readlink -f'
 #alias sudo='sudo ' # awesome trick to use aliases with sudo # doesn't fucking work with nocorrect
 du() { /usr/bin/du -sh $@ | sort -rhk 1 }
 alias nd='sudo ncdu -x'
-alias df='df -h | grep --color=never "^\(Filesystem\|/dev/\)"'
-alias dfa='/usr/bin/df -h'
+alias df='df -h | grep --color=never "^\(Filesystem\|/dev/\|\S\+:\)"'
 alias ctc='grep -v -e "^$" -e "^\s*#"'
 alias curld='curl -Sso /dev/null -D-'
 alias curlv='curl -Sso /dev/null -v'
 alias py=python3
-alias py2=python
+alias wpy='which python3'
 # kill stuff
 alias kint='sudo kill -INT'
-alias cunt='sudo kill -INT'
-alias kcont='sudo kill -CONT'
 alias kterm='sudo kill -TERM'
 alias k9='sudo kill -KILL'
 compdef _kill kint=kill
-compdef _kill cunt=kill
-compdef _kill kcont=kill
 compdef _kill kterm=kill
 compdef _kill k9=kill
 # ssh
@@ -97,25 +83,6 @@ alias zshrc='vim ~/.zshrc && exec /bin/zsh'
 alias gitconfig='vim ~/.gitconfig'
 alias sshconfig='vim ~/.ssh/config'
 alias ee='exec zsh'
-# docker
-alias dc=docker
-alias db='docker build -t'
-alias dl='docker pull'
-alias dp='docker push'
-alias dim='docker images'
-alias dimclean='docker rmi `docker images | grep "<none>" | awk "{print \$3}"`'
-alias drmi='docker rmi'
-alias drn='docker run --rm -it'
-alias dps='docker ps'
-alias dpsa='docker ps -a'
-alias dpclean='docker rm `docker ps -a | tail -n +2 | grep -v " Up " | cut -d" " -f1`'
-alias de='docker exec -it'
-alias dll='docker logs -f'
-alias din='docker inspect'
-alias dstart='docker start'
-alias dstop='docker stop'
-alias drst='docker restart'
-alias drm='docker rm'
 
 function chpwdls() {
   /bin/ls --color=tty
@@ -131,5 +98,6 @@ function chpwd() {
 precmd() { test -n "$TMUX_PANE" && tmux rename-window -t $TMUX_PANE "`basename $PWD | cut -c -20`" }
 
 # Dev aliases
-makej() { n=`cat /proc/cpuinfo |grep processor -c`; make -j$((n+1)) $@ }
-alias m=makej
+alias wgst='wget https://mirrors.xtom.com/archlinux/iso/latest/archlinux-x86_64.iso -O/dev/null -nv --show-progress'
+alias curlst='curl -o/dev/null -r 0-300000000 https://mirrors.xtom.com/archlinux/iso/latest/archlinux-x86_64.iso'
+alias speedtest=wgst
