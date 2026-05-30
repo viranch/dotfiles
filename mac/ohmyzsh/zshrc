@@ -13,5 +13,6 @@ x=$(sysctl -n hw.ncpu)
 test -d /usr/local/sbin && export PATH=$PATH:/usr/local/sbin # Add /usr/local to PATH
 
 # homebrew bin paths
+test -d /opt/homebrew/bin && export PATH=/opt/homebrew/bin:$PAT
 test -d /opt/homebrew/opt/coreutils/libexec/gnubin && export PATH=/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH
 test -d /opt/homebrew/opt/grep/libexec/gnubin && export PATH=/opt/homebrew/opt/grep/libexec/gnubin:$PATH
