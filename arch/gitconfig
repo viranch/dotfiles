@@ -2,16 +2,9 @@
     name = Viranch Mehta
     email = email@viranch.me
     signingkey = D83D1392AE9F93B4
-[url "git://anongit.kde.org/"]
-    insteadOf = kde:
-[url "git@git.kde.org:"]
     pushInsteadOf = kde:
-[url "git://github.com/"]
-    insteadOf = gh:
 [url "git@github.com:"]
-    pushInsteadOf = gh:
-[url "git@bitbucket.org:viranch/"]
-    insteadOf = bb:
+    insteadOf = gh:
 [url "https://aur.archlinux.org/"]
     insteadOf = aur:
 [push]
@@ -20,3 +13,5 @@
     ff = only
 [commit]
     gpgsign = true
+[init]
+    defaultBranch = main

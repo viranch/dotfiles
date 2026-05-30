@@ -1,19 +1,11 @@
 [user]
     name = Viranch Mehta
     email = email@viranch.me
-[url "git://anongit.kde.org/"]
-    insteadOf = kde:
-[url "git@git.kde.org:"]
-    pushInsteadOf = kde:
-[url "git://github.com/"]
-    insteadOf = gh:
 [url "git@github.com:"]
-    pushInsteadOf = gh:
-[url "git@bitbucket.org:viranch/"]
-    insteadOf = bb:
-[url "https://aur.archlinux.org/"]
-    insteadOf = aur:
+    insteadOf = gh:
 [push]
-	default = current
+    default = current
 [pull]
-	ff = only
+    ff = only
+[init]
+    defaultBranch = main
